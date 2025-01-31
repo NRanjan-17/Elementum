@@ -1,10 +1,3 @@
-//
-//  ElementumUITests.swift
-//  ElementumUITests
-//
-//  Created by Test on 29/01/25.
-//
-
 import XCTest
 
 final class ElementumUITests: XCTestCase {
