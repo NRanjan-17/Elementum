@@ -4,25 +4,28 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                SearchBar(text: .constant(""))
                 ScrollView{
                     NavigationLink(destination: S_Group(text: "View 1 Details")) {
-                        ImageButton(image: "PeriodicTable", text: "View 1")
+                        ImageButton(image: "PeriodicTable", text: "Periodic Table")
                     }
                     .padding()
                     
                     NavigationLink(destination: S_Group(text: "View 2 Details")) {
-                        ImageButton(image: "pencil", text: "View 2")
+                        ImageButton(image: "pencil", text: "S Group Elements")
                     }
                     .padding()
                     
                     NavigationLink(destination: S_Group(text: "View 3 Details")) {
-                        ImageButton(image: "heart", text: "View 3")
+                        ImageButton(image: "heart", text: "P Group Elements")
                     }
                     .padding()
                     
                     NavigationLink(destination: S_Group(text: "View 4 Details")) {
-                        ImageButton(image: "heart", text: "View 4")
+                        ImageButton(image: "heart", text: "D Group Elements")
+                    }
+                    .padding()
+                    NavigationLink(destination: S_Group(text: "View 4 Details")) {
+                        ImageButton(image: "heart", text: "F Group Elements")
                     }
                     .padding()
                     
@@ -42,7 +45,6 @@ struct ImageButton: View {
             Image(systemName: image)
                 .resizable()
                 .scaledToFill()
-                .frame(width:350, height:150)
                 .clipped()
                 .overlay(
                     Color.black.opacity(0.2)
@@ -58,19 +60,6 @@ struct ImageButton: View {
         .cornerRadius(10)
     }
 }
-
-struct SearchBar: View {
-    @Binding var text: String
-
-    var body: some View {
-        TextField("Search for Elements", text: $text)
-            .padding(8)
-            .frame(width: 375)
-            .background(Color(.systemGray6))
-            .cornerRadius(10)
-    }
-}
-
 
 #Preview {
     HomeView()

@@ -11,6 +11,18 @@ struct ContentView: View {
                     Label("Home", systemImage: "house")
                 }
                 .tag(0)
+            
+            Text("Combine two chemical elements.")
+                .tabItem{
+                    Label("Combine", systemImage: "atom" )
+                }
+                .tag(1)
+            
+            Text("Find the Elements.")
+                .tabItem{
+                    Label("Finder", systemImage: "magnifyingglass" )
+                }
+                .tag(2)
         }
     }
 }
