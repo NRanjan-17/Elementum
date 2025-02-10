@@ -60,7 +60,3 @@ struct ImageButton: View {
         .cornerRadius(10)
     }
 }
-
-#Preview {
-    HomeView()
-}
