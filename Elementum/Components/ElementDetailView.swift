@@ -23,6 +23,9 @@ struct ElementDetailView: View {
                     LabeledContent("Atomic Mass", value: "\(element.mass) u")
                     LabeledContent("Symbol", value: element.symbol)
                     LabeledContent("Name", value: element.element)
+                    LabeledContent("Block", value: element.block)
+                    LabeledContent("Bonds Type", value: element.bonds)
+                    LabeledContent("Noble Element", value: element.noble)
                 }
                 .textSelection(.enabled)
             }

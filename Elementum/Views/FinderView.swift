@@ -1,12 +1,15 @@
 import SwiftUI
 
 struct FinderView: View {
+
     @Namespace var animation
     @State private var selected: Element?
     @State private var listMode = false
     @State private var searchText = ""
     @State private var randomElements: [Element] = []
+    
     var elements: [Element] = ElementModel().load("Elements.json")
+    
     let formatter = NumberFormatter()
     
     init() {
@@ -15,11 +18,15 @@ struct FinderView: View {
         formatter.maximumFractionDigits = 4
     }
     
+    // Updated filtering to support searching by both element name and ID
     var filteredElements: [Element] {
         if searchText.isEmpty {
             return randomElements
         } else {
-            return elements.filter { $0.element.lowercased().contains(searchText.lowercased()) }
+            return elements.filter {
+                $0.element.lowercased().contains(searchText.lowercased()) ||
+                String($0.id).contains(searchText) // Search by element ID
+            }
         }
     }
     
@@ -79,4 +86,8 @@ struct FinderView: View {
             }
         }
     }
+}
+
+#Preview {
+    FinderView()
 }

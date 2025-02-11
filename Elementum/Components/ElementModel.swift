@@ -22,4 +22,7 @@ struct Element: Identifiable, Codable {
     var mass: Double
     var row: Int
     var column: Int
+    var block: String
+    var bonds: String
+    var noble: String
 }
