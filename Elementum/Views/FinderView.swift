@@ -87,7 +87,3 @@ struct FinderView: View {
         }
     }
 }
-
-#Preview {
-    FinderView()
-}

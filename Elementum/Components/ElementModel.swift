@@ -14,7 +14,6 @@ class ElementModel {
     }
 }
 
-// MARK: Element Struct
 struct Element: Identifiable, Codable {
     var id: Int
     var element: String

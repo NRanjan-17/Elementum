@@ -12,17 +12,17 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            Text("Combine two chemical elements.")
+            CombineView()
                 .tabItem {
                     Label("Combine", systemImage: "atom")
                 }
                 .tag(1)
             
-                FinderView()
-                    .tabItem {
-                        Label("Finder", systemImage: "magnifyingglass")
-                    }
-                    .tag(2)
+            FinderView()
+                .tabItem {
+                    Label("Finder", systemImage: "magnifyingglass")
+                }
+                .tag(2)
         }
     }
 }
