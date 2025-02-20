@@ -7,14 +7,13 @@ struct CombineView: View {
     @State private var numberOfElements: Int = 2
     @State private var result: String? = nil
     @State private var allElements: [Element] = []
-    
+
     private let combinationValidator = CombinationValidator()
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(spacing: 30) {
-                    
+                VStack(spacing: 25) {
                     Menu {
                         Button("Two") { updateNumberOfElements(to: 2) }
                         Button("Three") { updateNumberOfElements(to: 3) }
@@ -33,8 +32,7 @@ struct CombineView: View {
                         .padding(.horizontal)
                     }
 
-                    // Element Selection Grid
-                    VStack(spacing: 30) {
+                    VStack(spacing: 20) {
                         ForEach(0..<numberOfElements, id: \.self) { index in
                             Button(action: {
                                 currentSelectionIndex = index
@@ -57,30 +55,28 @@ struct CombineView: View {
                     }
                     .padding(.horizontal)
 
-                    // Combine Button
                     Button(action: {
                         result = validateCombination()
                     }) {
                         Text("Combine")
                             .font(.title2)
                             .bold()
-                            .frame(width: 200)
+                            .frame(width: 250)
                             .padding()
                             .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
                             .foregroundColor(.white)
-                            .cornerRadius(15)
+                            .cornerRadius(12.5)
                     }
                     .padding(.horizontal)
 
-                    // Result Display
                     if let result = result {
                         Text(result)
                             .font(.title2)
                             .bold()
                             .padding()
-                            .frame(width: 350)
+                            .frame(width: 285)
                             .background(Color.green.opacity(0.2))
-                            .cornerRadius(10)
+                            .cornerRadius(12.5)
                             .padding(.horizontal)
                     }
 
@@ -89,17 +85,19 @@ struct CombineView: View {
                 .padding(.vertical)
             }
             .navigationTitle("Combine Elements")
+            .onAppear {
+                if allElements.isEmpty {
+                    loadElements()
+                }
+            }
         }
         .sheet(isPresented: $showElementList) {
             ElementListView(elements: allElements) { selectedElement in
                 if let index = currentSelectionIndex {
                     selectedElements[index] = selectedElement
+                    selectedElements = selectedElements.map { $0 }
                 }
             }
-        }
-        .onAppear {
-            loadElements()
-            
         }
     }
 
@@ -110,13 +108,27 @@ struct CombineView: View {
 
     private func validateCombination() -> String {
         let validElements = selectedElements.compactMap { $0 }
-        return combinationValidator.validate(elements: validElements)
+        guard validElements.count == numberOfElements else {
+            return "Please select \(numberOfElements) elements."
+        }
+
+        return combinationValidator.validate(elements: validElements) ?? "No valid combination found"
     }
 
     private func loadElements() {
-        let elementModel = ElementModel()
-        if let loadedElements: [Element] = elementModel.load("Elements.json") {
-            allElements = loadedElements
+        guard let url = Bundle.main.url(forResource: "Elements", withExtension: "json") else {
+            return
+        }
+
+        do {
+            let data = try Data(contentsOf: url)
+            let decodedElements = try JSONDecoder().decode([Element].self, from: data)
+            
+            DispatchQueue.main.async {
+                self.allElements = decodedElements
+                self.selectedElements = Array(repeating: nil, count: self.numberOfElements)
+            }
+        } catch {
         }
     }
 }

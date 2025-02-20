@@ -1,26 +1,37 @@
 import Foundation
 
-class CombinationValidator {
-    private var Combinations: [String: String] = [:]
+struct CombinationValidator {
+    private var combinations: [Combination] = []
 
     init() {
         loadCombinations()
     }
 
-    private func loadCombinations() {
-        if let url = Bundle.main.url(forResource: "Combinations", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                Combinations = try JSONDecoder().decode([String: String].self, from: data)
-            } catch {
-                print("Failed to load Combinations.json: \(error)")
-            }
+    private mutating func loadCombinations() {
+        guard let url = Bundle.main.url(forResource: "Combinations", withExtension: "json") else {
+            return
+        }
+
+        do {
+            let data = try Data(contentsOf: url)
+            combinations = try JSONDecoder().decode([Combination].self, from: data)
+        } catch {
         }
     }
 
-    func validate(elements: [Element]) -> String {
-        let sortedSymbols = elements.map { $0.symbol }.sorted()
-        let key = sortedSymbols.joined(separator: "+")
-        return Combinations[key] ?? "No valid combination found"
+    func validate(elements: [Element]) -> String? {
+        let selectedSymbols = elements.map { $0.symbol }.sorted()
+
+        for combo in combinations {
+            if combo.elements.sorted() == selectedSymbols {
+                return combo.result
+            }
+        }
+        return nil
     }
+}
+
+struct Combination: Codable {
+    let elements: [String]
+    let result: String
 }
