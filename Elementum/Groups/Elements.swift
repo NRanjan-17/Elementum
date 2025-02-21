@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct S_Group: View {
+struct Elements: View {
     
     @Namespace var animation
     @State private var selected: Element?
@@ -72,11 +72,7 @@ struct S_Group: View {
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .contentMargins(10, for: .scrollContent)
         .scrollIndicators(.hidden)
-        .navigationTitle("Elements")
+        .navigationTitle("Periodic Table")
     }
-}
-
-#Preview {
-    S_Group()
 }
 

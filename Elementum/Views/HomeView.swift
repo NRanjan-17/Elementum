@@ -5,26 +5,26 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 ScrollView{
-                    NavigationLink(destination: S_Group(text: "View 1 Details")) {
+                    NavigationLink(destination: Elements()) {
                         ImageButton(image: "PeriodicTable", text: "Periodic Table")
                     }
                     .padding()
                     
-                    NavigationLink(destination: S_Group(text: "View 2 Details")) {
+                    NavigationLink(destination: S_Group()) {
                         ImageButton(image: "pencil", text: "S Group Elements")
                     }
                     .padding()
                     
-                    NavigationLink(destination: S_Group(text: "View 3 Details")) {
+                    NavigationLink(destination: S_Group()) {
                         ImageButton(image: "heart", text: "P Group Elements")
                     }
                     .padding()
                     
-                    NavigationLink(destination: S_Group(text: "View 4 Details")) {
+                    NavigationLink(destination: S_Group()) {
                         ImageButton(image: "heart", text: "D Group Elements")
                     }
                     .padding()
-                    NavigationLink(destination: S_Group(text: "View 4 Details")) {
+                    NavigationLink(destination: S_Group()) {
                         ImageButton(image: "heart", text: "F Group Elements")
                     }
                     .padding()
