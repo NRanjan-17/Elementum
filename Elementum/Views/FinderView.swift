@@ -18,14 +18,13 @@ struct FinderView: View {
         formatter.maximumFractionDigits = 4
     }
     
-    // Updated filtering to support searching by both element name and ID
     var filteredElements: [Element] {
         if searchText.isEmpty {
             return randomElements
         } else {
             return elements.filter {
                 $0.element.lowercased().contains(searchText.lowercased()) ||
-                String($0.id).contains(searchText) // Search by element ID
+                String($0.id).contains(searchText)
             }
         }
     }
@@ -33,7 +32,6 @@ struct FinderView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                // Search bar
                 TextField("Search elements...", text: $searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
@@ -80,7 +78,6 @@ struct FinderView: View {
                 .contentMargins(10, for: .scrollContent)
                 .scrollIndicators(.hidden)
                 .onAppear {
-                    // Generate random elements when the view appears
                     randomElements = Array(elements.shuffled().prefix(5))
                 }
             }

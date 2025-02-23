@@ -259,7 +259,7 @@
         "mass": 51.996,
         "column": 4,
         "row": 6,
-        "block": "d Block",
+        "block": "D Block",
         "bonds": "Covalent",
         "noble": "No"
     },
@@ -1128,7 +1128,7 @@
         "mass": 262,
         "column": 9,
         "row": 17,
-        "block": "D Block",
+        "block": "F Block",
         "bonds": "Ionic",
         "noble": "No"
     },

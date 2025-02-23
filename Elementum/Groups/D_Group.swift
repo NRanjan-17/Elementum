@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Elements: View {
+struct D_Group: View {
     @Namespace var animation
     @State private var selected: Element?
     @State private var listMode = false
@@ -18,7 +18,7 @@ struct Elements: View {
             LazyHStack(alignment: .top) {
                 ForEach(1..<19, id: \.self) { row in
                     elementGrid(for: row)
-                    
+
                     if row == 3 {
                         emptyCell()
                     }
@@ -31,12 +31,12 @@ struct Elements: View {
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .contentMargins(10, for: .scrollContent)
         .scrollIndicators(.hidden)
-        .navigationTitle("Periodic Table")
+        .navigationTitle("D Group Elements")
     }
 
     private func elementGrid(for row: Int) -> some View {
         LazyVStack(alignment: .leading) {
-            ForEach(1..<10) { column in
+            ForEach(1..<19) { column in
                 if let element = elements.first(where: { $0.column == column && $0.row == row }) {
                     elementButton(for: element)
                 } else {
@@ -50,9 +50,10 @@ struct Elements: View {
 
     private func elementButton(for element: Element) -> some View {
         let formattedMass = formatter.string(from: NSNumber(value: element.mass)) ?? "N/A"
-        
+        let isDBlock = element.block == "D Block"
+
         return Button {
-            selected = element
+            if isDBlock { selected = element }
         } label: {
             ElementCellView(
                 element: element.element,
@@ -61,21 +62,13 @@ struct Elements: View {
                 atomicMass: formattedMass,
                 block: element.block
             )
-            .contextMenu {
-                Button {
-                    UIPasteboard.general.string = element.element
-                } label: {
-                    Label(element.element, systemImage: "document.on.document")
-                }
-                
-                Button {
-                    UIPasteboard.general.string = "\(formattedMass) u"
-                } label: {
-                    Label("\(formattedMass) u", systemImage: "document.on.document")
-                }
-            }
+            .foregroundColor(isDBlock ? .white : .gray)
+            .background(isDBlock ? Color.blue : Color.gray.opacity(0.3))
+            .cornerRadius(15)
+            .opacity(isDBlock ? 1 : 0.5)
+            .saturation(isDBlock ? 1 : 0)
         }
-        .matchedTransitionSource(id: element.id, in: animation)
+        .disabled(!isDBlock)
     }
 
     private func emptyCell() -> some View {
@@ -84,3 +77,4 @@ struct Elements: View {
             .opacity(0)
     }
 }
+

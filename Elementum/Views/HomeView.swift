@@ -6,26 +6,26 @@ struct HomeView: View {
             VStack {
                 ScrollView{
                     NavigationLink(destination: Elements()) {
-                        ImageButton(image: "PeriodicTable", text: "Periodic Table")
+                        ImageButton(image: "Table", text: "Periodic Table")
                     }
                     .padding()
                     
                     NavigationLink(destination: S_Group()) {
-                        ImageButton(image: "pencil", text: "S Group Elements")
+                        ImageButton(image: "S_Block", text: "S Group Elements")
                     }
                     .padding()
                     
-                    NavigationLink(destination: S_Group()) {
-                        ImageButton(image: "heart", text: "P Group Elements")
+                    NavigationLink(destination: P_Group()) {
+                        ImageButton(image: "P_Block", text: "P Group Elements")
                     }
                     .padding()
                     
-                    NavigationLink(destination: S_Group()) {
-                        ImageButton(image: "heart", text: "D Group Elements")
+                    NavigationLink(destination: D_Group()) {
+                        ImageButton(image: "D_Block", text: "D Group Elements")
                     }
                     .padding()
-                    NavigationLink(destination: S_Group()) {
-                        ImageButton(image: "heart", text: "F Group Elements")
+                    NavigationLink(destination: F_Group()) {
+                        ImageButton(image: "F_Block", text: "F Group Elements")
                     }
                     .padding()
                     
@@ -42,7 +42,7 @@ struct ImageButton: View {
     
     var body: some View {
         ZStack {
-            Image(systemName: image)
+            Image(image)
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -53,10 +53,12 @@ struct ImageButton: View {
             
             Text(text)
                 .foregroundColor(.white)
-                .font(.title3)
+                .font(.title2)
                 .fontWeight(.bold)
         }
         .frame(width: 350, height: 150)
         .cornerRadius(10)
     }
 }
+
+

@@ -1,7 +1,6 @@
 import SwiftUI
 
 class ElementModel {
-    // For loading and decoding JSON files
     func load<T: Decodable>(_ filename: String) -> T {
         let url = Bundle.main.url(forResource: filename, withExtension: nil)!
         
@@ -24,4 +23,16 @@ struct Element: Identifiable, Codable {
     var block: String
     var bonds: String
     var noble: String
+}
+
+struct ElementColor {
+    static func color(for block: String) -> Color {
+        switch block.lowercased() {
+        case "s block": return Color.blue
+        case "p block": return Color.green
+        case "d block": return Color.orange
+        case "f block": return Color.purple
+        default: return Color.gray
+        }
+    }
 }

@@ -39,7 +39,7 @@ struct CombineView: View {
                                 showElementList.toggle()
                             }) {
                                 if let element = selectedElements[index] {
-                                    ElementCellView(element: element.element, symbol: element.symbol, atomicNumber: element.id, atomicMass: "\(element.mass)")
+                                    ElementCellView(element: element.element, symbol: element.symbol, atomicNumber: element.id, atomicMass: "\(element.mass)", block: element.block)
                                 } else {
                                     RoundedRectangle(cornerRadius: 10)
                                         .frame(width: 100, height: 100)
@@ -131,8 +131,4 @@ struct CombineView: View {
         } catch {
         }
     }
-}
-
-#Preview {
-    CombineView()
 }

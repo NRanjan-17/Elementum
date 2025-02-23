@@ -10,13 +10,12 @@ struct ElementDetailView: View {
             Button {
                 dismiss()
             } label: {
-                ElementCellView(element: element.element, symbol: element.symbol, atomicNumber: element.id, atomicMass: "\(element.mass)")
+                ElementCellView(element: element.element, symbol: element.symbol, atomicNumber: element.id, atomicMass: "\(element.mass)", block: element.block)
             }
             .matchedTransitionSource(id: element.id, in: animation)
             .frame(maxWidth: .infinity, alignment: .center)
             .listRowBackground(Color.clear)
             
-            // Information Section
             Section("Information") {
                 Group {
                     LabeledContent("Atomic Number", value: "\(element.id)")
