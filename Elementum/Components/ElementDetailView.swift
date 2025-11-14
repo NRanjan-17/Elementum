@@ -29,6 +29,7 @@ struct ElementDetailView: View {
                 .textSelection(.enabled)
             }
         }
+        .allowLandscape()
         .navigationTransition(.zoom(sourceID: element.id, in: animation))
     }
 }

@@ -28,6 +28,7 @@ struct S_Group: View {
                 ElementDetailView(element: element, animation: animation)
             }
         }
+        .allowLandscape()
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .contentMargins(10, for: .scrollContent)
         .scrollIndicators(.hidden)
