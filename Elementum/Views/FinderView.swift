@@ -33,13 +33,30 @@ struct FinderView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 
-                // MARK: - Search Bar
-                TextField("Search elements...", text: $searchText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                    .padding(.top, 8)
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.secondary)
+                    
+                    TextField("Search elements...", text: $searchText)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                    
+                    if !searchText.isEmpty {
+                        Button {
+                            searchText = ""
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 10)
+                .background(Color(.systemGray6))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(.horizontal)
+                .padding(.top, 8)
                 
-                // MARK: - List of Elements
                 List {
                     ForEach(filteredElements) { element in
                         
@@ -58,7 +75,7 @@ struct FinderView: View {
                                         
                                         Spacer()
                                         
-                                        VStack {
+                                        VStack(spacing: 2) {
                                             Text(element.symbol)
                                             Text("\(formattedMass) u")
                                         }
@@ -67,33 +84,19 @@ struct FinderView: View {
                                 }
                             }
                             .matchedTransitionSource(id: element.id, in: animation)
-                            .contextMenu {
-                                Button {
-                                    UIPasteboard.general.string = element.element
-                                } label: {
-                                    Label(element.element, systemImage: "document.on.document")
-                                }
-                                
-                                Button {
-                                    UIPasteboard.general.string = "\(formattedMass) u"
-                                } label: {
-                                    Label("\(formattedMass) u", systemImage: "document.on.document")
-                                }
-                            }
                         }
+                        .listRowInsets(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                     }
                 }
-                // IMPORTANT: Dismiss keyboard correctly without blocking taps
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+                .padding(.horizontal)
                 .scrollDismissesKeyboard(.immediately)
-                
-                .navigationTitle("Finder")
-                .frame(maxWidth: .infinity, alignment: .topLeading)
-                .contentMargins(10, for: .scrollContent)
-                .scrollIndicators(.hidden)
-                
-                .onAppear {
-                    randomElements = Array(elements.shuffled().prefix(5))
-                }
+            }
+            .navigationTitle("Finder")
+            .background(Color(.systemBackground).ignoresSafeArea())
+            .onAppear {
+                randomElements = Array(elements.shuffled().prefix(5))
             }
         }
     }
