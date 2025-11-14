@@ -69,6 +69,8 @@ struct P_Group: View {
             .cornerRadius(15)
             .opacity(isPBlock ? 1 : 0.5)
             .saturation(isPBlock ? 1 : 0)
+            
+            .matchedGeometryEffect(id: element.id, in: animation)
         }
         .disabled(!isPBlock)
     }

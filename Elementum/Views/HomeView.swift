@@ -57,7 +57,7 @@ struct ImageButton: View {
                 .fontWeight(.bold)
         }
         .frame(width: 350, height: 150)
-        .cornerRadius(10)
+        .cornerRadius(12.5)
     }
 }
 
