@@ -20,9 +20,28 @@ struct ElementListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Search Elements...", text: $searchText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray.opacity(0.6))
+
+                    TextField("Search Elements...", text: $searchText)
+                        .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
+
+                    if !searchText.isEmpty {
+                        Button {
+                            searchText = ""
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.gray.opacity(0.6))
+                        }
+                    }
+                }
+                .padding(12.5)
+                .background(Color(.systemGray5).opacity(0.75))
+                .cornerRadius(20)
+                .padding(.horizontal)
+                .padding(.top, 10)
 
                 List(filteredElements) { element in
                     Button(action: {
