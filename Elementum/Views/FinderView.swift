@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct FinderView: View {
-
+    
     @Namespace var animation
-    @State private var selected: Element?
-    @State private var listMode = false
     @State private var searchText = ""
     @State private var randomElements: [Element] = []
     
+    // Load elements using your existing ElementModel
     var elements: [Element] = ElementModel().load("Elements.json")
     
+    // Formatter configuration
     let formatter = NumberFormatter()
     
     init() {
@@ -24,6 +24,7 @@ struct FinderView: View {
         } else {
             return elements.filter {
                 $0.element.lowercased().contains(searchText.lowercased()) ||
+                $0.symbol.lowercased().contains(searchText.lowercased()) ||
                 String($0.id).contains(searchText)
             }
         }
@@ -33,70 +34,80 @@ struct FinderView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 
+                // MARK: - Custom Search Bar
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.secondary)
                     
-                    TextField("Search elements...", text: $searchText)
+                    TextField("Search name, symbol, or ID...", text: $searchText)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
+                        .submitLabel(.done)
                     
                     if !searchText.isEmpty {
                         Button {
                             searchText = ""
+                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         } label: {
                             Image(systemName: "xmark.circle.fill")
                                 .foregroundColor(.secondary)
                         }
                     }
                 }
-                .padding(.horizontal, 12)
-                .padding(.vertical, 10)
-                .background(Color(.systemGray6))
+                .padding(12)
+                .background(Color(.secondarySystemGroupedBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.horizontal)
                 .padding(.top, 8)
+                .padding(.bottom, 10)
                 
+                // MARK: - Element List
                 List {
                     ForEach(filteredElements) { element in
-                        
-                        let formattedMass = formatter.string(from: NSNumber(value: element.mass))!
-                        
-                        NavigationLink(
-                            destination: ElementDetailView(element: element, animation: animation)
-                        ) {
-                            HStack {
-                                Text("\(element.id)")
-                                    .frame(minWidth: 35, alignment: .leading)
+                        NavigationLink(value: element) {
+                            HStack(spacing: 16) {
+                                // 1. Reusing existing ElementCellView
+                                let massString = formatter.string(from: NSNumber(value: element.mass)) ?? ""
                                 
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        Text(element.element)
-                                        
-                                        Spacer()
-                                        
-                                        VStack(spacing: 2) {
-                                            Text(element.symbol)
-                                            Text("\(formattedMass) u")
-                                        }
+                                ElementCellView(
+                                    element: element.element,
+                                    symbol: element.symbol,
+                                    atomicNumber: element.id,
+                                    atomicMass: massString,
+                                    block: element.block
+                                )
+                                .scaleEffect(0.65)
+                                .frame(width: 70, height: 70)
+                                .matchedTransitionSource(id: element.id, in: animation)
+                                
+                                // 2. Text Info
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(element.element)
+                                        .font(.headline)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.primary)
+                                    
+                                    Text("\(massString) u")
+                                        .font(.subheadline)
                                         .foregroundStyle(.secondary)
-                                    }
                                 }
                             }
-                            .matchedTransitionSource(id: element.id, in: animation)
+                            .padding(.vertical, 4)
                         }
-                        .listRowInsets(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                     }
                 }
-                .listStyle(.plain)
-                .scrollContentBackground(.hidden)
-                .padding(.horizontal)
+                .listStyle(.insetGrouped)
                 .scrollDismissesKeyboard(.immediately)
+                .navigationDestination(for: Element.self) { element in
+                    ElementDetailView(element: element, animation: animation)
+                }
             }
             .navigationTitle("Finder")
-            .background(Color(.systemBackground).ignoresSafeArea())
+            .background(Color(.systemGroupedBackground))
             .onAppear {
-                randomElements = Array(elements.shuffled().prefix(5))
+                if randomElements.isEmpty {
+                    randomElements = Array(elements.shuffled().prefix(5))
+                }
             }
         }
     }

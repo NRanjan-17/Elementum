@@ -13,7 +13,7 @@ class ElementModel {
     }
 }
 
-struct Element: Identifiable, Codable {
+struct Element: Identifiable, Codable, Hashable {
     var id: Int
     var element: String
     var symbol: String
