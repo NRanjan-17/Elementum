@@ -80,7 +80,6 @@ struct FinderView: View {
                                 .frame(width: 70, height: 70)
                                 .matchedTransitionSource(id: element.id, in: animation)
                                 
-                                // 2. Text Info
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(element.element)
                                         .font(.headline)
