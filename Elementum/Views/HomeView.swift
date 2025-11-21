@@ -9,25 +9,31 @@ struct HomeView: View {
                         ImageButton(image: "Table", text: "Periodic Table")
                     }
                     .padding()
+                    .buttonStyle(.plain)
                     
                     NavigationLink(destination: S_Group()) {
                         ImageButton(image: "S_Block", text: "S Group Elements")
                     }
                     .padding()
+                    .buttonStyle(.plain)
                     
                     NavigationLink(destination: P_Group()) {
                         ImageButton(image: "P_Block", text: "P Group Elements")
                     }
                     .padding()
+                    .buttonStyle(.plain)
                     
                     NavigationLink(destination: D_Group()) {
                         ImageButton(image: "D_Block", text: "D Group Elements")
                     }
                     .padding()
+                    .buttonStyle(.plain)
+                    
                     NavigationLink(destination: F_Group()) {
                         ImageButton(image: "F_Block", text: "F Group Elements")
                     }
                     .padding()
+                    .buttonStyle(.plain)
                     
                 }
             }
@@ -39,6 +45,9 @@ struct HomeView: View {
 struct ImageButton: View {
     let image: String
     let text: String
+    
+    // Detect the device's width class (iPad vs iPhone)
+    @Environment(\.horizontalSizeClass) var sizeClass
     
     var body: some View {
         ZStack {
@@ -56,8 +65,16 @@ struct ImageButton: View {
                 .font(.title2)
                 .fontWeight(.bold)
         }
-        .frame(width: 350, height: 150)
-        .cornerRadius(12.5)
+        .frame(maxWidth: .infinity, minHeight: 150)
+        
+        // Logic: If iPad/Desktop (Regular), use 25. If iPhone (Compact), use 12.5.
+        // We also use 'style: .continuous' for that smooth Apple look.
+        .clipShape(
+            RoundedRectangle(
+                cornerRadius: sizeClass == .regular ? 25 : 12.5,
+                style: .continuous
+            )
+        )
     }
 }
 
