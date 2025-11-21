@@ -25,6 +25,7 @@ struct ElementDetailView: View {
                     LabeledContent("Block", value: element.block)
                     LabeledContent("Bonds Type", value: element.bonds)
                     LabeledContent("Noble Element", value: element.noble)
+                    LabeledContent("Description", value: element.description)
                 }
                 .textSelection(.enabled)
             }

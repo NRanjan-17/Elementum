@@ -53,7 +53,7 @@ struct FinderView: View {
                 .padding(.horizontal, 12)
                 .padding(.vertical, 10)
                 .background(Color(.systemGray6))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.horizontal)
                 .padding(.top, 8)
                 

@@ -8,7 +8,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "The lightest and most abundant element in the universe, essential for water and organic compounds."
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "row": 18,
         "block": "S Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "A light, colorless, odorless noble gas used in balloons, airships, and cryogenics."
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A soft, silvery-white metal widely used in rechargeable batteries and psychiatric medication."
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
         "row": 2,
         "block": "S Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A lightweight but strong alkaline earth metal used in aerospace components and X-ray windows."
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
         "row": 13,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metalloid found in borax, used in heat-resistant glass (Pyrex) and detergents."
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
         "row": 14,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "The basis of all known life, capable of forming vast chains; forms include charcoal, graphite, and diamond."
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
         "row": 15,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A colorless gas making up 78% of Earth's atmosphere, essential for DNA and fertilizers."
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@
         "row": 16,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A reactive gas essential for respiration and combustion; the most abundant element in Earth's crust."
     },
     {
         "id": 9,
@@ -96,7 +104,8 @@
         "row": 17,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "The most reactive electronegative element, used in toothpaste (fluoride) and Teflon."
     },
     {
         "id": 10,
@@ -107,7 +116,8 @@
         "row": 18,
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "An inert noble gas known for its bright red-orange glow in high-voltage discharge lamps."
     },
     {
         "id": 11,
@@ -118,7 +128,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A soft, reactive metal found in table salt and essential for nerve function and fluid balance."
     },
     {
         "id": 12,
@@ -129,7 +140,8 @@
         "row": 2,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A light structural metal used in alloys and essential for biological energy production in plants and animals."
     },
     {
         "id": 13,
@@ -140,7 +152,8 @@
         "row": 13,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A lightweight, corrosion-resistant metal widely used in packaging, construction, and aerospace."
     },
     {
         "id": 14,
@@ -151,7 +164,8 @@
         "row": 14,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metalloid semiconductor that is the foundation of modern electronics, computer chips, and glass."
     },
     {
         "id": 15,
@@ -162,7 +176,8 @@
         "row": 15,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A reactive nonmetal essential for life (DNA, ATP), also used in matches and fertilizers."
     },
     {
         "id": 16,
@@ -173,7 +188,8 @@
         "row": 16,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A yellow, brittle nonmetal used in gunpowder, sulfuric acid production, and rubber vulcanization."
     },
     {
         "id": 17,
@@ -184,7 +200,8 @@
         "row": 17,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A reactive yellow-green gas used for water purification, disinfectants, and making PVC plastic."
     },
     {
         "id": 18,
@@ -195,7 +212,8 @@
         "row": 18,
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "An abundant noble gas used in welding, double-glazed windows, and light bulbs to prevent oxidation."
     },
     {
         "id": 19,
@@ -206,7 +224,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly reactive metal essential for plant growth (fertilizers) and animal nerve transmission."
     },
     {
         "id": 20,
@@ -217,7 +236,8 @@
         "row": 2,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "An alkaline earth metal essential for bones, teeth, and shell formation; also used in cement."
     },
     {
         "id": 21,
@@ -228,7 +248,8 @@
         "row": 3,
         "block": "D Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth-like metal used in high-strength aluminum alloys for aerospace components and sports equipment."
     },
     {
         "id": 22,
@@ -239,7 +260,8 @@
         "row": 4,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A strong, lightweight, corrosion-resistant metal used in aerospace, medical implants, and white pigment."
     },
     {
         "id": 23,
@@ -250,7 +272,8 @@
         "row": 5,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A hard, silvery metal added to steel to improve strength, toughness, and corrosion resistance."
     },
     {
         "id": 24,
@@ -261,7 +284,8 @@
         "row": 6,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A hard metal used in stainless steel and chrome plating to provide a shiny, corrosion-resistant finish."
     },
     {
         "id": 25,
@@ -272,7 +296,8 @@
         "row": 7,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metal crucial for steel production to remove impurities and improve durability; also found in batteries."
     },
     {
         "id": 26,
@@ -283,7 +308,8 @@
         "row": 8,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A ferromagnetic metal that forms the Earth's core and is the primary component of steel."
     },
     {
         "id": 27,
@@ -294,7 +320,8 @@
         "row": 9,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A magnetic metal used in high-strength alloys, powerful magnets, and rechargeable lithium-ion batteries."
     },
     {
         "id": 28,
@@ -305,7 +332,8 @@
         "row": 10,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A corrosion-resistant metal used in coins, stainless steel, and plating."
     },
     {
         "id": 29,
@@ -316,7 +344,8 @@
         "row": 11,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A reddish metal with excellent electrical and thermal conductivity, used in wiring and plumbing."
     },
     {
         "id": 30,
@@ -327,7 +356,8 @@
         "row": 12,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metal primarily used to galvanize steel to prevent rusting and in die-casting alloys."
     },
     {
         "id": 31,
@@ -338,7 +368,8 @@
         "row": 13,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A soft metal that melts in your hand; used in semiconductors (GaAs) and blue LEDs."
     },
     {
         "id": 32,
@@ -349,7 +380,8 @@
         "row": 14,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metalloid semiconductor used in fiber optics, infrared optics, and early transistors."
     },
     {
         "id": 33,
@@ -360,7 +392,8 @@
         "row": 15,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A toxic metalloid historically used as a poison, but also used in semiconductors and wood preservatives."
     },
     {
         "id": 34,
@@ -371,7 +404,8 @@
         "row": 16,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A nonmetal used in photocopiers, glass coloring, and as a nutritional supplement."
     },
     {
         "id": 35,
@@ -382,7 +416,8 @@
         "row": 17,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A reddish-brown liquid halogen used in flame retardants, drilling fluids, and photography."
     },
     {
         "id": 36,
@@ -393,7 +428,8 @@
         "row": 18,
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "A noble gas used in high-speed photography flashes and energy-saving fluorescent lamps."
     },
     {
         "id": 37,
@@ -404,7 +440,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly reactive alkali metal used in atomic clocks, research, and photocells."
     },
     {
         "id": 38,
@@ -415,7 +452,8 @@
         "row": 2,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "An alkaline earth metal used in red fireworks, flares, and glow-in-the-dark paints."
     },
     {
         "id": 39,
@@ -426,7 +464,8 @@
         "row": 3,
         "block": "D Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A transition metal used in red LEDs, phosphors for screens, and superconductors."
     },
     {
         "id": 40,
@@ -437,7 +476,8 @@
         "row": 4,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly corrosion-resistant metal used in nuclear reactors and as synthetic gemstone (cubic zirconia)."
     },
     {
         "id": 41,
@@ -448,7 +488,8 @@
         "row": 5,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metal used in superconducting magnets for MRI scanners and in high-strength steel alloys."
     },
     {
         "id": 42,
@@ -459,7 +500,8 @@
         "row": 6,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metal with a very high melting point, used in high-strength steel, missiles, and lubricants."
     },
     {
         "id": 43,
@@ -470,7 +512,8 @@
         "row": 7,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "The first artificially produced element, radioactive and widely used in medical diagnostic imaging."
     },
     {
         "id": 44,
@@ -481,7 +524,8 @@
         "row": 8,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare platinum-group metal used in wear-resistant electrical contacts and chip resistors."
     },
     {
         "id": 45,
@@ -492,7 +536,8 @@
         "row": 9,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare, highly reflective metal used in catalytic converters and jewelry plating."
     },
     {
         "id": 46,
@@ -503,7 +548,8 @@
         "row": 10,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metal used in catalytic converters, electronics, and hydrogen storage and purification."
     },
     {
         "id": 47,
@@ -514,7 +560,8 @@
         "row": 11,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A precious metal with the highest electrical and thermal conductivity, used in jewelry and electronics."
     },
     {
         "id": 48,
@@ -525,7 +572,8 @@
         "row": 12,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A toxic metal historically used in NiCd batteries, pigments (yellow/red), and protective coatings."
     },
     {
         "id": 49,
@@ -536,7 +584,8 @@
         "row": 13,
         "block": "P Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A soft metal used in touchscreens (Indium Tin Oxide), LCDs, and low-melting solders."
     },
     {
         "id": 50,
@@ -547,7 +596,8 @@
         "row": 14,
         "block": "P Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A pliable metal used in solder, plating steel cans, and making bronze alloys."
     },
     {
         "id": 51,
@@ -558,7 +608,8 @@
         "row": 15,
         "block": "P Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A brittle metalloid used in flame retardants, lead-acid batteries, and semiconductor alloys."
     },
     {
         "id": 52,
@@ -569,7 +620,8 @@
         "row": 16,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metalloid used in solar panels (cadmium telluride), thermoelectric devices, and rewritable discs."
     },
     {
         "id": 53,
@@ -580,7 +632,8 @@
         "row": 17,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A dark purple halogen used as a medical disinfectant and essential for thyroid hormone production."
     },
     {
         "id": 54,
@@ -591,7 +644,8 @@
         "row": 18,
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "A heavy noble gas used in ion thrusters for spacecraft, flash lamps, and anesthesia."
     },
     {
         "id": 55,
@@ -602,7 +656,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "The most reactive metal, used in atomic clocks for precise timekeeping and drilling fluids."
     },
     {
         "id": 56,
@@ -613,7 +668,8 @@
         "row": 2,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A heavy alkaline earth metal used in medical imaging (barium swallow) and green fireworks."
     },
     {
         "id": 57,
@@ -624,7 +680,8 @@
         "row": 3,
         "block": "D Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in hybrid car batteries, high-quality camera lenses, and flints."
     },
     {
         "id": 58,
@@ -635,7 +692,8 @@
         "row": 4,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "The most abundant rare earth metal, used in catalytic converters and mischmetal for lighters."
     },
     {
         "id": 59,
@@ -646,7 +704,8 @@
         "row": 5,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in high-strength alloys for aircraft engines and yellow glass coloring."
     },
     {
         "id": 60,
@@ -657,7 +716,8 @@
         "row": 6,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal famous for creating the strongest permanent magnets found in motors and speakers."
     },
     {
         "id": 61,
@@ -668,7 +728,8 @@
         "row": 7,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A radioactive rare earth element used in nuclear batteries for pacemakers and guided missiles."
     },
     {
         "id": 62,
@@ -679,7 +740,8 @@
         "row": 8,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in high-temperature magnets and control rods for nuclear reactors."
     },
     {
         "id": 63,
@@ -690,7 +752,8 @@
         "row": 9,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used as a phosphor to create red colors in TV screens, monitors, and LEDs."
     },
     {
         "id": 64,
@@ -701,7 +764,8 @@
         "row": 10,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A magnetic rare earth metal widely used in MRI contrast agents and neutron radiography."
     },
     {
         "id": 65,
@@ -712,7 +776,8 @@
         "row": 11,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in green phosphors for fluorescent lamps and in sonar systems."
     },
     {
         "id": 66,
@@ -723,7 +788,8 @@
         "row": 12,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in high-temperature permanent magnets for electric vehicles and wind turbines."
     },
     {
         "id": 67,
@@ -734,7 +800,8 @@
         "row": 13,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal with the highest magnetic strength of any element, used in magnets and lasers."
     },
     {
         "id": 68,
@@ -745,7 +812,8 @@
         "row": 14,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in fiber optic amplifiers, dental lasers, and pink glass coloring."
     },
     {
         "id": 69,
@@ -756,7 +824,8 @@
         "row": 15,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "One of the rarest lanthanides, used in portable X-ray machines and high-intensity discharge lamps."
     },
     {
         "id": 70,
@@ -767,7 +836,8 @@
         "row": 16,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare earth metal used in atomic clocks, stainless steel strengthening, and fiber optic lasers."
     },
     {
         "id": 71,
@@ -778,7 +848,8 @@
         "row": 17,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A dense, expensive rare earth metal used in PET scan detectors and as a catalyst in oil refining."
     },
     {
         "id": 72,
@@ -789,7 +860,8 @@
         "row": 4,
         "block": "D Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A corrosion-resistant metal used in nuclear reactor control rods and high-temperature alloys."
     },
     {
         "id": 73,
@@ -800,7 +872,8 @@
         "row": 5,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly corrosion-resistant metal widely used in capacitors for mobile phones and other electronics."
     },
     {
         "id": 74,
@@ -811,7 +884,8 @@
         "row": 6,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A metal with the highest melting point of all elements, used in light bulb filaments and rocket nozzles."
     },
     {
         "id": 75,
@@ -822,7 +896,8 @@
         "row": 7,
         "block": "D Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A dense metal with a high melting point, used in high-temperature superalloys for jet engines."
     },
     {
         "id": 76,
@@ -833,7 +908,8 @@
         "row": 8,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "The densest naturally occurring element, used in fountain pen tips and electrical contacts."
     },
     {
         "id": 77,
@@ -844,7 +920,8 @@
         "row": 9,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A brittle, extremely corrosion-resistant metal used in high-end spark plugs and crucibles."
     },
     {
         "id": 78,
@@ -855,7 +932,8 @@
         "row": 10,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A dense, non-reactive precious metal widely used in jewelry, catalytic converters, and lab equipment."
     },
     {
         "id": 79,
@@ -866,7 +944,8 @@
         "row": 11,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly valuable, malleable metal that does not corrode, used in jewelry, currency, and electronics."
     },
     {
         "id": 80,
@@ -877,7 +956,8 @@
         "row": 12,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A heavy silvery metal that is liquid at room temperature, used in thermometers and fluorescent lamps."
     },
     {
         "id": 81,
@@ -888,7 +968,8 @@
         "row": 13,
         "block": "P Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A toxic soft metal historically used in rat poison, now used in electronics and medical imaging."
     },
     {
         "id": 82,
@@ -899,7 +980,8 @@
         "row": 14,
         "block": "P Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A dense, toxic metal used in car batteries, radiation shielding, and weights."
     },
     {
         "id": 83,
@@ -910,7 +992,8 @@
         "row": 15,
         "block": "P Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A brittle metal with low toxicity, used in cosmetics, pharmaceuticals (Pepto-Bismol), and fire sprinklers."
     },
     {
         "id": 84,
@@ -921,7 +1004,8 @@
         "row": 16,
         "block": "P Block",
         "bonds": "Metallic/Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly radioactive element discovered by Marie Curie, used in antistatic devices."
     },
     {
         "id": 85,
@@ -932,7 +1016,8 @@
         "row": 17,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "One of the rarest natural elements, highly radioactive and used in targeted cancer therapy research."
     },
     {
         "id": 86,
@@ -943,7 +1028,8 @@
         "row": 18,
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "A radioactive noble gas that naturally accumulates in basements and poses lung cancer risks."
     },
     {
         "id": 87,
@@ -954,7 +1040,8 @@
         "row": 1,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "An extremely rare and radioactive alkali metal with no commercial uses due to its instability."
     },
     {
         "id": 88,
@@ -965,7 +1052,8 @@
         "row": 2,
         "block": "S Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A radioactive metal formerly used in glow-in-the-dark paint, now treated with caution."
     },
     {
         "id": 89,
@@ -976,7 +1064,8 @@
         "row": 3,
         "block": "D Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A radioactive metal that glows blue in the dark, used as a neutron source in research."
     },
     {
         "id": 90,
@@ -987,7 +1076,8 @@
         "row": 4,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A weakly radioactive metal with potential as a cleaner, more abundant alternative nuclear fuel."
     },
     {
         "id": 91,
@@ -998,7 +1088,8 @@
         "row": 5,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A rare, toxic, radioactive metal usually found in uranium ores, used primarily in research."
     },
     {
         "id": 92,
@@ -1009,7 +1100,8 @@
         "row": 6,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A dense radioactive metal used as the primary fuel in nuclear power plants and weapons."
     },
     {
         "id": 93,
@@ -1020,7 +1112,8 @@
         "row": 7,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A radioactive metal produced in nuclear reactors, used in detectors and research."
     },
     {
         "id": 94,
@@ -1031,7 +1124,8 @@
         "row": 8,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A radioactive metal used in nuclear weapons and as fuel for spacecraft generators (RTGs)."
     },
     {
         "id": 95,
@@ -1042,7 +1136,8 @@
         "row": 9,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive metal widely used in small amounts in household smoke detectors."
     },
     {
         "id": 96,
@@ -1053,7 +1148,8 @@
         "row": 10,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly radioactive metal used as a power source for space missions and in alpha particle X-ray spectrometers."
     },
     {
         "id": 97,
@@ -1064,7 +1160,8 @@
         "row": 11,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A radioactive synthetic element used mainly for synthesizing heavier elements."
     },
     {
         "id": 98,
@@ -1075,7 +1172,8 @@
         "row": 12,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A strong neutron emitter used in metal detectors, oil well logging, and cancer treatment."
     },
     {
         "id": 99,
@@ -1086,7 +1184,8 @@
         "row": 13,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element discovered in the debris of the first hydrogen bomb test; used in research."
     },
     {
         "id": 100,
@@ -1097,7 +1196,8 @@
         "row": 14,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element produced in nuclear explosions, usable only in scientific research."
     },
     {
         "id": 101,
@@ -1108,7 +1208,8 @@
         "row": 15,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive element named after the creator of the periodic table, Dmitri Mendeleev."
     },
     {
         "id": 102,
@@ -1119,7 +1220,8 @@
         "row": 16,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive element named after Alfred Nobel, existing only for seconds in labs."
     },
     {
         "id": 103,
@@ -1130,7 +1232,8 @@
         "row": 17,
         "block": "F Block",
         "bonds": "Ionic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive element that concludes the actinide series; of research interest only."
     },
     {
         "id": 104,
@@ -1141,7 +1244,8 @@
         "row": 4,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive element named after physicist Ernest Rutherford, with a very short half-life."
     },
     {
         "id": 105,
@@ -1152,7 +1256,8 @@
         "row": 5,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly radioactive synthetic element named after the research town of Dubna, Russia."
     },
     {
         "id": 106,
@@ -1163,7 +1268,8 @@
         "row": 6,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element named after Glenn Seaborg; one of the first elements named after a living person."
     },
     {
         "id": 107,
@@ -1174,7 +1280,8 @@
         "row": 7,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive element named after physicist Niels Bohr, with no commercial application."
     },
     {
         "id": 108,
@@ -1185,7 +1292,8 @@
         "row": 8,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly radioactive synthetic element named after the German state of Hesse."
     },
     {
         "id": 109,
@@ -1196,7 +1304,8 @@
         "row": 9,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element named after physicist Lise Meitner, produced only in tiny amounts."
     },
     {
         "id": 110,
@@ -1207,7 +1316,8 @@
         "row": 10,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element named after Darmstadt, Germany; it decays within microseconds."
     },
     {
         "id": 111,
@@ -1218,7 +1328,8 @@
         "row": 11,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic radioactive element named after Wilhelm Röntgen, discoverer of X-rays."
     },
     {
         "id": 112,
@@ -1229,7 +1340,8 @@
         "row": 12,
         "block": "D Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element named after Nicolaus Copernicus, with extremely short-lived isotopes."
     },
     {
         "id": 113,
@@ -1240,7 +1352,8 @@
         "row": 13,
         "block": "P Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element and the first to be discovered by Asian scientists (RIKEN institute, Japan)."
     },
     {
         "id": 114,
@@ -1251,7 +1364,8 @@
         "row": 14,
         "block": "P Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic superheavy element named after the Flerov Laboratory of Nuclear Reactions in Russia."
     },
     {
         "id": 115,
@@ -1262,7 +1376,8 @@
         "row": 15,
         "block": "P Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A highly radioactive synthetic element named after the Moscow region."
     },
     {
         "id": 116,
@@ -1273,7 +1388,8 @@
         "row": 16,
         "block": "P Block",
         "bonds": "Metallic",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic element named after Lawrence Livermore National Laboratory in California."
     },
     {
         "id": 117,
@@ -1284,7 +1400,8 @@
         "row": 17,
         "block": "P Block",
         "bonds": "Covalent",
-        "noble": "No"
+        "noble": "No",
+        "description": "A synthetic halogen named after the state of Tennessee, known for its nuclear research contributions."
     },
     {
         "id": 118,
@@ -1295,6 +1412,7 @@
         "row": 18,
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
-        "noble": "Yes"
+        "noble": "Yes",
+        "description": "The heaviest element currently known, a synthetic noble gas named after physicist Yuri Oganessian."
     }
 ]

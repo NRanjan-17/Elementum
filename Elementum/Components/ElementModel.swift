@@ -23,6 +23,7 @@ struct Element: Identifiable, Codable {
     var block: String
     var bonds: String
     var noble: String
+    var description: String
 }
 
 struct ElementColor {
