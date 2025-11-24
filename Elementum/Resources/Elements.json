@@ -9,7 +9,12 @@
         "block": "S Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "The lightest and most abundant element in the universe, essential for water and organic compounds."
+        "description": "The lightest and most abundant element in the universe, essential for water and organic compounds.",
+        "phase": "Gas",
+        "discoveredBy": "Henry Cavendish",
+        "appearance": "colorless gas",
+        "electronicConfiguration": "1s1",
+        "source": "https://en.wikipedia.org/wiki/Hydrogen"
     },
     {
         "id": 2,
@@ -21,7 +26,12 @@
         "block": "S Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "A light, colorless, odorless noble gas used in balloons, airships, and cryogenics."
+        "description": "A light, colorless, odorless noble gas used in balloons, airships, and cryogenics.",
+        "phase": "Gas",
+        "discoveredBy": "Pierre Janssen",
+        "appearance": "colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",
+        "electronicConfiguration": "1s2",
+        "source": "https://en.wikipedia.org/wiki/Helium"
     },
     {
         "id": 3,
@@ -33,7 +43,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A soft, silvery-white metal widely used in rechargeable batteries and psychiatric medication."
+        "description": "A soft, silvery-white metal widely used in rechargeable batteries and psychiatric medication.",
+        "phase": "Solid",
+        "discoveredBy": "Johan August Arfwedson",
+        "appearance": "silvery-white",
+        "electronicConfiguration": "1s2 2s1",
+        "source": "https://en.wikipedia.org/wiki/Lithium"
     },
     {
         "id": 4,
@@ -45,7 +60,12 @@
         "block": "S Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A lightweight but strong alkaline earth metal used in aerospace components and X-ray windows."
+        "description": "A lightweight but strong alkaline earth metal used in aerospace components and X-ray windows.",
+        "phase": "Solid",
+        "discoveredBy": "Louis Nicolas Vauquelin",
+        "appearance": "white-gray metallic",
+        "electronicConfiguration": "1s2 2s2",
+        "source": "https://en.wikipedia.org/wiki/Beryllium"
     },
     {
         "id": 5,
@@ -57,7 +77,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metalloid found in borax, used in heat-resistant glass (Pyrex) and detergents."
+        "description": "A metalloid found in borax, used in heat-resistant glass (Pyrex) and detergents.",
+        "phase": "Solid",
+        "discoveredBy": "Joseph Louis Gay-Lussac",
+        "appearance": "black-brown",
+        "electronicConfiguration": "1s2 2s2 2p1",
+        "source": "https://en.wikipedia.org/wiki/Boron"
     },
     {
         "id": 6,
@@ -69,7 +94,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "The basis of all known life, capable of forming vast chains; forms include charcoal, graphite, and diamond."
+        "description": "The basis of all known life, capable of forming vast chains; forms include charcoal, graphite, and diamond.",
+        "phase": "Solid",
+        "discoveredBy": "Ancient Egypt",
+        "appearance": "black (graphite); transparent (diamond)",
+        "electronicConfiguration": "1s2 2s2 2p2",
+        "source": "https://en.wikipedia.org/wiki/Carbon"
     },
     {
         "id": 7,
@@ -81,7 +111,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A colorless gas making up 78% of Earth's atmosphere, essential for DNA and fertilizers."
+        "description": "A colorless gas making up 78% of Earth's atmosphere, essential for DNA and fertilizers.",
+        "phase": "Gas",
+        "discoveredBy": "Daniel Rutherford",
+        "appearance": "colorless gas, liquid or solid",
+        "electronicConfiguration": "1s2 2s2 2p3",
+        "source": "https://en.wikipedia.org/wiki/Nitrogen"
     },
     {
         "id": 8,
@@ -93,7 +128,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A reactive gas essential for respiration and combustion; the most abundant element in Earth's crust."
+        "description": "A reactive gas essential for respiration and combustion; the most abundant element in Earth's crust.",
+        "phase": "Gas",
+        "discoveredBy": "Carl Wilhelm Scheele",
+        "appearance": "colorless gas",
+        "electronicConfiguration": "1s2 2s2 2p4",
+        "source": "https://en.wikipedia.org/wiki/Oxygen"
     },
     {
         "id": 9,
@@ -105,7 +145,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "The most reactive electronegative element, used in toothpaste (fluoride) and Teflon."
+        "description": "The most reactive electronegative element, used in toothpaste (fluoride) and Teflon.",
+        "phase": "Gas",
+        "discoveredBy": "André-Marie Ampère",
+        "appearance": "pale yellow gas",
+        "electronicConfiguration": "1s2 2s2 2p5",
+        "source": "https://en.wikipedia.org/wiki/Fluorine"
     },
     {
         "id": 10,
@@ -117,7 +162,12 @@
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "An inert noble gas known for its bright red-orange glow in high-voltage discharge lamps."
+        "description": "An inert noble gas known for its bright red-orange glow in high-voltage discharge lamps.",
+        "phase": "Gas",
+        "discoveredBy": "Morris Travers",
+        "appearance": "colorless gas exhibiting an orange-red glow when placed in a high voltage electric field",
+        "electronicConfiguration": "1s2 2s2 2p6",
+        "source": "https://en.wikipedia.org/wiki/Neon"
     },
     {
         "id": 11,
@@ -129,7 +179,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A soft, reactive metal found in table salt and essential for nerve function and fluid balance."
+        "description": "A soft, reactive metal found in table salt and essential for nerve function and fluid balance.",
+        "phase": "Solid",
+        "discoveredBy": "Humphry Davy",
+        "appearance": "silvery white metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s1",
+        "source": "https://en.wikipedia.org/wiki/Sodium"
     },
     {
         "id": 12,
@@ -141,7 +196,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A light structural metal used in alloys and essential for biological energy production in plants and animals."
+        "description": "A light structural metal used in alloys and essential for biological energy production in plants and animals.",
+        "phase": "Solid",
+        "discoveredBy": "Joseph Black",
+        "appearance": "shiny grey solid",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2",
+        "source": "https://en.wikipedia.org/wiki/Magnesium"
     },
     {
         "id": 13,
@@ -153,7 +213,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A lightweight, corrosion-resistant metal widely used in packaging, construction, and aerospace."
+        "description": "A lightweight, corrosion-resistant metal widely used in packaging, construction, and aerospace.",
+        "phase": "Solid",
+        "discoveredBy": "Hans Christian Ørsted",
+        "appearance": "silvery gray metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p1",
+        "source": "https://en.wikipedia.org/wiki/Aluminium"
     },
     {
         "id": 14,
@@ -165,7 +230,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metalloid semiconductor that is the foundation of modern electronics, computer chips, and glass."
+        "description": "A metalloid semiconductor that is the foundation of modern electronics, computer chips, and glass.",
+        "phase": "Solid",
+        "discoveredBy": "Jöns Jacob Berzelius",
+        "appearance": "crystalline, reflective with bluish-tinged faces",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p2",
+        "source": "https://en.wikipedia.org/wiki/Silicon"
     },
     {
         "id": 15,
@@ -177,7 +247,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A reactive nonmetal essential for life (DNA, ATP), also used in matches and fertilizers."
+        "description": "A reactive nonmetal essential for life (DNA, ATP), also used in matches and fertilizers.",
+        "phase": "Solid",
+        "discoveredBy": "Hennig Brand",
+        "appearance": "colourless, waxy white, yellow, scarlet, red, violet, black",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p3",
+        "source": "https://en.wikipedia.org/wiki/Phosphorus"
     },
     {
         "id": 16,
@@ -189,7 +264,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A yellow, brittle nonmetal used in gunpowder, sulfuric acid production, and rubber vulcanization."
+        "description": "A yellow, brittle nonmetal used in gunpowder, sulfuric acid production, and rubber vulcanization.",
+        "phase": "Solid",
+        "discoveredBy": "Ancient china",
+        "appearance": "lemon yellow sintered microcrystals",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p4",
+        "source": "https://en.wikipedia.org/wiki/Sulfur"
     },
     {
         "id": 17,
@@ -201,7 +281,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A reactive yellow-green gas used for water purification, disinfectants, and making PVC plastic."
+        "description": "A reactive yellow-green gas used for water purification, disinfectants, and making PVC plastic.",
+        "phase": "Gas",
+        "discoveredBy": "Carl Wilhelm Scheele",
+        "appearance": "pale yellow-green gas",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p5",
+        "source": "https://en.wikipedia.org/wiki/Chlorine"
     },
     {
         "id": 18,
@@ -213,7 +298,12 @@
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "An abundant noble gas used in welding, double-glazed windows, and light bulbs to prevent oxidation."
+        "description": "An abundant noble gas used in welding, double-glazed windows, and light bulbs to prevent oxidation.",
+        "phase": "Gas",
+        "discoveredBy": "Lord Rayleigh",
+        "appearance": "colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6",
+        "source": "https://en.wikipedia.org/wiki/Argon"
     },
     {
         "id": 19,
@@ -225,7 +315,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A highly reactive metal essential for plant growth (fertilizers) and animal nerve transmission."
+        "description": "A highly reactive metal essential for plant growth (fertilizers) and animal nerve transmission.",
+        "phase": "Solid",
+        "discoveredBy": "Humphry Davy",
+        "appearance": "silvery gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 4s1",
+        "source": "https://en.wikipedia.org/wiki/Potassium"
     },
     {
         "id": 20,
@@ -237,7 +332,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "An alkaline earth metal essential for bones, teeth, and shell formation; also used in cement."
+        "description": "An alkaline earth metal essential for bones, teeth, and shell formation; also used in cement.",
+        "phase": "Solid",
+        "discoveredBy": "Humphry Davy",
+        "appearance": "silvery-white metal",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 4s2",
+        "source": "https://en.wikipedia.org/wiki/Calcium"
     },
     {
         "id": 21,
@@ -249,7 +349,12 @@
         "block": "D Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth-like metal used in high-strength aluminum alloys for aerospace components and sports equipment."
+        "description": "A rare earth-like metal used in high-strength aluminum alloys for aerospace components and sports equipment.",
+        "phase": "Solid",
+        "discoveredBy": "Lars Fredrik Nilson",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d1 4s2",
+        "source": "https://en.wikipedia.org/wiki/Scandium"
     },
     {
         "id": 22,
@@ -261,7 +366,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A strong, lightweight, corrosion-resistant metal used in aerospace, medical implants, and white pigment."
+        "description": "A strong, lightweight, corrosion-resistant metal used in aerospace, medical implants, and white pigment.",
+        "phase": "Solid",
+        "discoveredBy": "William Gregor",
+        "appearance": "silvery grey-white metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d2 4s2",
+        "source": "https://en.wikipedia.org/wiki/Titanium"
     },
     {
         "id": 23,
@@ -273,7 +383,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A hard, silvery metal added to steel to improve strength, toughness, and corrosion resistance."
+        "description": "A hard, silvery metal added to steel to improve strength, toughness, and corrosion resistance.",
+        "phase": "Solid",
+        "discoveredBy": "Andrés Manuel del Río",
+        "appearance": "blue-silver-grey metal",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d3 4s2",
+        "source": "https://en.wikipedia.org/wiki/Vanadium"
     },
     {
         "id": 24,
@@ -285,7 +400,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A hard metal used in stainless steel and chrome plating to provide a shiny, corrosion-resistant finish."
+        "description": "A hard metal used in stainless steel and chrome plating to provide a shiny, corrosion-resistant finish.",
+        "phase": "Solid",
+        "discoveredBy": "Louis Nicolas Vauquelin",
+        "appearance": "silvery metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d5 4s1",
+        "source": "https://en.wikipedia.org/wiki/Chromium"
     },
     {
         "id": 25,
@@ -297,7 +417,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metal crucial for steel production to remove impurities and improve durability; also found in batteries."
+        "description": "A metal crucial for steel production to remove impurities and improve durability; also found in batteries.",
+        "phase": "Solid",
+        "discoveredBy": "Torbern Olof Bergman",
+        "appearance": "silvery metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d5 4s2",
+        "source": "https://en.wikipedia.org/wiki/Manganese"
     },
     {
         "id": 26,
@@ -309,7 +434,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A ferromagnetic metal that forms the Earth's core and is the primary component of steel."
+        "description": "A ferromagnetic metal that forms the Earth's core and is the primary component of steel.",
+        "phase": "Solid",
+        "discoveredBy": "5000 BC",
+        "appearance": "lustrous metallic with a grayish tinge",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d6 4s2",
+        "source": "https://en.wikipedia.org/wiki/Iron"
     },
     {
         "id": 27,
@@ -321,7 +451,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A magnetic metal used in high-strength alloys, powerful magnets, and rechargeable lithium-ion batteries."
+        "description": "A magnetic metal used in high-strength alloys, powerful magnets, and rechargeable lithium-ion batteries.",
+        "phase": "Solid",
+        "discoveredBy": "Georg Brandt",
+        "appearance": "hard lustrous gray metal",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d7 4s2",
+        "source": "https://en.wikipedia.org/wiki/Cobalt"
     },
     {
         "id": 28,
@@ -333,7 +468,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A corrosion-resistant metal used in coins, stainless steel, and plating."
+        "description": "A corrosion-resistant metal used in coins, stainless steel, and plating.",
+        "phase": "Solid",
+        "discoveredBy": "Axel Fredrik Cronstedt",
+        "appearance": "lustrous, metallic, and silver with a gold tinge",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d8 4s2",
+        "source": "https://en.wikipedia.org/wiki/Nickel"
     },
     {
         "id": 29,
@@ -345,7 +485,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A reddish metal with excellent electrical and thermal conductivity, used in wiring and plumbing."
+        "description": "A reddish metal with excellent electrical and thermal conductivity, used in wiring and plumbing.",
+        "phase": "Solid",
+        "discoveredBy": "Middle East",
+        "appearance": "red-orange metallic luster",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s1",
+        "source": "https://en.wikipedia.org/wiki/Copper"
     },
     {
         "id": 30,
@@ -357,7 +502,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metal primarily used to galvanize steel to prevent rusting and in die-casting alloys."
+        "description": "A metal primarily used to galvanize steel to prevent rusting and in die-casting alloys.",
+        "phase": "Solid",
+        "discoveredBy": "India",
+        "appearance": "silver-gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2",
+        "source": "https://en.wikipedia.org/wiki/Zinc"
     },
     {
         "id": 31,
@@ -369,7 +519,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A soft metal that melts in your hand; used in semiconductors (GaAs) and blue LEDs."
+        "description": "A soft metal that melts in your hand; used in semiconductors (GaAs) and blue LEDs.",
+        "phase": "Solid",
+        "discoveredBy": "Lecoq de Boisbaudran",
+        "appearance": "silver-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p1",
+        "source": "https://en.wikipedia.org/wiki/Gallium"
     },
     {
         "id": 32,
@@ -381,7 +536,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metalloid semiconductor used in fiber optics, infrared optics, and early transistors."
+        "description": "A metalloid semiconductor used in fiber optics, infrared optics, and early transistors.",
+        "phase": "Solid",
+        "discoveredBy": "Clemens Winkler",
+        "appearance": "grayish-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p2",
+        "source": "https://en.wikipedia.org/wiki/Germanium"
     },
     {
         "id": 33,
@@ -393,7 +553,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A toxic metalloid historically used as a poison, but also used in semiconductors and wood preservatives."
+        "description": "A toxic metalloid historically used as a poison, but also used in semiconductors and wood preservatives.",
+        "phase": "Solid",
+        "discoveredBy": "Bronze Age",
+        "appearance": "metallic grey",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p3",
+        "source": "https://en.wikipedia.org/wiki/Arsenic"
     },
     {
         "id": 34,
@@ -405,7 +570,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A nonmetal used in photocopiers, glass coloring, and as a nutritional supplement."
+        "description": "A nonmetal used in photocopiers, glass coloring, and as a nutritional supplement.",
+        "phase": "Solid",
+        "discoveredBy": "Jöns Jakob Berzelius",
+        "appearance": "black, red, and gray (not pictured) allotropes",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p4",
+        "source": "https://en.wikipedia.org/wiki/Selenium"
     },
     {
         "id": 35,
@@ -417,7 +587,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A reddish-brown liquid halogen used in flame retardants, drilling fluids, and photography."
+        "description": "A reddish-brown liquid halogen used in flame retardants, drilling fluids, and photography.",
+        "phase": "Liquid",
+        "discoveredBy": "Antoine Jérôme Balard",
+        "appearance": "reddish-brown liquid",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p5",
+        "source": "https://en.wikipedia.org/wiki/Bromine"
     },
     {
         "id": 36,
@@ -429,7 +604,12 @@
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "A noble gas used in high-speed photography flashes and energy-saving fluorescent lamps."
+        "description": "A noble gas used in high-speed photography flashes and energy-saving fluorescent lamps.",
+        "phase": "Gas",
+        "discoveredBy": "William Ramsay",
+        "appearance": "colorless gas, exhibiting a whitish glow in a high electric field",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6",
+        "source": "https://en.wikipedia.org/wiki/Krypton"
     },
     {
         "id": 37,
@@ -441,7 +621,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A highly reactive alkali metal used in atomic clocks, research, and photocells."
+        "description": "A highly reactive alkali metal used in atomic clocks, research, and photocells.",
+        "phase": "Solid",
+        "discoveredBy": "Robert Bunsen",
+        "appearance": "grey white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 5s1",
+        "source": "https://en.wikipedia.org/wiki/Rubidium"
     },
     {
         "id": 38,
@@ -453,7 +638,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "An alkaline earth metal used in red fireworks, flares, and glow-in-the-dark paints."
+        "description": "An alkaline earth metal used in red fireworks, flares, and glow-in-the-dark paints.",
+        "phase": "Solid",
+        "discoveredBy": "William Cruickshank (chemist)",
+        "appearance": "silvery-white metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 5s2",
+        "source": "https://en.wikipedia.org/wiki/Strontium"
     },
     {
         "id": 39,
@@ -465,7 +655,12 @@
         "block": "D Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A transition metal used in red LEDs, phosphors for screens, and superconductors."
+        "description": "A transition metal used in red LEDs, phosphors for screens, and superconductors.",
+        "phase": "Solid",
+        "discoveredBy": "Johan Gadolin",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d1 5s2",
+        "source": "https://en.wikipedia.org/wiki/Yttrium"
     },
     {
         "id": 40,
@@ -477,7 +672,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A highly corrosion-resistant metal used in nuclear reactors and as synthetic gemstone (cubic zirconia)."
+        "description": "A highly corrosion-resistant metal used in nuclear reactors and as synthetic gemstone (cubic zirconia).",
+        "phase": "Solid",
+        "discoveredBy": "Martin Heinrich Klaproth",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d2 5s2",
+        "source": "https://en.wikipedia.org/wiki/Zirconium"
     },
     {
         "id": 41,
@@ -489,7 +689,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metal used in superconducting magnets for MRI scanners and in high-strength steel alloys."
+        "description": "A metal used in superconducting magnets for MRI scanners and in high-strength steel alloys.",
+        "phase": "Solid",
+        "discoveredBy": "Charles Hatchett",
+        "appearance": "gray metallic, bluish when oxidized",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d4 5s1",
+        "source": "https://en.wikipedia.org/wiki/Niobium"
     },
     {
         "id": 42,
@@ -501,7 +706,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metal with a very high melting point, used in high-strength steel, missiles, and lubricants."
+        "description": "A metal with a very high melting point, used in high-strength steel, missiles, and lubricants.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Wilhelm Scheele",
+        "appearance": "gray metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d5 5s1",
+        "source": "https://en.wikipedia.org/wiki/Molybdenum"
     },
     {
         "id": 43,
@@ -513,7 +723,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "The first artificially produced element, radioactive and widely used in medical diagnostic imaging."
+        "description": "The first artificially produced element, radioactive and widely used in medical diagnostic imaging.",
+        "phase": "Solid",
+        "discoveredBy": "Emilio Segrè",
+        "appearance": "shiny gray metal",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d5 5s2",
+        "source": "https://en.wikipedia.org/wiki/Technetium"
     },
     {
         "id": 44,
@@ -525,7 +740,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A rare platinum-group metal used in wear-resistant electrical contacts and chip resistors."
+        "description": "A rare platinum-group metal used in wear-resistant electrical contacts and chip resistors.",
+        "phase": "Solid",
+        "discoveredBy": "Karl Ernst Claus",
+        "appearance": "silvery white metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d7 5s1",
+        "source": "https://en.wikipedia.org/wiki/Ruthenium"
     },
     {
         "id": 45,
@@ -537,7 +757,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A rare, highly reflective metal used in catalytic converters and jewelry plating."
+        "description": "A rare, highly reflective metal used in catalytic converters and jewelry plating.",
+        "phase": "Solid",
+        "discoveredBy": "William Hyde Wollaston",
+        "appearance": "silvery white metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d8 5s1",
+        "source": "https://en.wikipedia.org/wiki/Rhodium"
     },
     {
         "id": 46,
@@ -549,7 +774,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A metal used in catalytic converters, electronics, and hydrogen storage and purification."
+        "description": "A metal used in catalytic converters, electronics, and hydrogen storage and purification.",
+        "phase": "Solid",
+        "discoveredBy": "William Hyde Wollaston",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10",
+        "source": "https://en.wikipedia.org/wiki/Palladium"
     },
     {
         "id": 47,
@@ -561,7 +791,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A precious metal with the highest electrical and thermal conductivity, used in jewelry and electronics."
+        "description": "A precious metal with the highest electrical and thermal conductivity, used in jewelry and electronics.",
+        "phase": "Solid",
+        "discoveredBy": "unknown, before 5000 BC",
+        "appearance": "lustrous white metal",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s1",
+        "source": "https://en.wikipedia.org/wiki/Silver"
     },
     {
         "id": 48,
@@ -573,7 +808,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A toxic metal historically used in NiCd batteries, pigments (yellow/red), and protective coatings."
+        "description": "A toxic metal historically used in NiCd batteries, pigments (yellow/red), and protective coatings.",
+        "phase": "Solid",
+        "discoveredBy": "Karl Samuel Leberecht Hermann",
+        "appearance": "silvery bluish-gray metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2",
+        "source": "https://en.wikipedia.org/wiki/Cadmium"
     },
     {
         "id": 49,
@@ -585,7 +825,12 @@
         "block": "P Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A soft metal used in touchscreens (Indium Tin Oxide), LCDs, and low-melting solders."
+        "description": "A soft metal used in touchscreens (Indium Tin Oxide), LCDs, and low-melting solders.",
+        "phase": "Solid",
+        "discoveredBy": "Ferdinand Reich",
+        "appearance": "silvery lustrous gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p1",
+        "source": "https://en.wikipedia.org/wiki/Indium"
     },
     {
         "id": 50,
@@ -597,7 +842,12 @@
         "block": "P Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A pliable metal used in solder, plating steel cans, and making bronze alloys."
+        "description": "A pliable metal used in solder, plating steel cans, and making bronze alloys.",
+        "phase": "Solid",
+        "discoveredBy": "unknown, before 3500 BC",
+        "appearance": "silvery-white (beta, β) or gray (alpha, α)",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p2",
+        "source": "https://en.wikipedia.org/wiki/Tin"
     },
     {
         "id": 51,
@@ -609,7 +859,12 @@
         "block": "P Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A brittle metalloid used in flame retardants, lead-acid batteries, and semiconductor alloys."
+        "description": "A brittle metalloid used in flame retardants, lead-acid batteries, and semiconductor alloys.",
+        "phase": "Solid",
+        "discoveredBy": "unknown, in 1600 BC",
+        "appearance": "silvery lustrous gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p3",
+        "source": "https://en.wikipedia.org/wiki/Antimony"
     },
     {
         "id": 52,
@@ -621,7 +876,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A metalloid used in solar panels (cadmium telluride), thermoelectric devices, and rewritable discs."
+        "description": "A metalloid used in solar panels (cadmium telluride), thermoelectric devices, and rewritable discs.",
+        "phase": "Solid",
+        "discoveredBy": "Franz-Joseph Müller von Reichenstein",
+        "appearance": "silvery-white luster",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p4",
+        "source": "https://en.wikipedia.org/wiki/Tellurium"
     },
     {
         "id": 53,
@@ -633,7 +893,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A dark purple halogen used as a medical disinfectant and essential for thyroid hormone production."
+        "description": "A dark purple halogen used as a medical disinfectant and essential for thyroid hormone production.",
+        "phase": "Solid",
+        "discoveredBy": "Bernard Courtois",
+        "appearance": "lustrous metallic gray, violet as a gas",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p5",
+        "source": "https://en.wikipedia.org/wiki/Iodine"
     },
     {
         "id": 54,
@@ -645,7 +910,12 @@
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "A heavy noble gas used in ion thrusters for spacecraft, flash lamps, and anesthesia."
+        "description": "A heavy noble gas used in ion thrusters for spacecraft, flash lamps, and anesthesia.",
+        "phase": "Gas",
+        "discoveredBy": "William Ramsay",
+        "appearance": "colorless gas, exhibiting a blue glow when placed in a high voltage electric field",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6",
+        "source": "https://en.wikipedia.org/wiki/Xenon"
     },
     {
         "id": 55,
@@ -657,7 +927,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "The most reactive metal, used in atomic clocks for precise timekeeping and drilling fluids."
+        "description": "The most reactive metal, used in atomic clocks for precise timekeeping and drilling fluids.",
+        "phase": "Solid",
+        "discoveredBy": "Robert Bunsen",
+        "appearance": "silvery gold",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 6s1",
+        "source": "https://en.wikipedia.org/wiki/Cesium"
     },
     {
         "id": 56,
@@ -669,7 +944,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A heavy alkaline earth metal used in medical imaging (barium swallow) and green fireworks."
+        "description": "A heavy alkaline earth metal used in medical imaging (barium swallow) and green fireworks.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Wilhelm Scheele",
+        "appearance": "silvery-gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Barium"
     },
     {
         "id": 57,
@@ -681,7 +961,12 @@
         "block": "D Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in hybrid car batteries, high-quality camera lenses, and flints."
+        "description": "A rare earth metal used in hybrid car batteries, high-quality camera lenses, and flints.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Gustaf Mosander",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 5d1 6s2",
+        "source": "https://en.wikipedia.org/wiki/Lanthanum"
     },
     {
         "id": 58,
@@ -693,7 +978,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "The most abundant rare earth metal, used in catalytic converters and mischmetal for lighters."
+        "description": "The most abundant rare earth metal, used in catalytic converters and mischmetal for lighters.",
+        "phase": "Solid",
+        "discoveredBy": "Martin Heinrich Klaproth",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f1 5s2 5p6 5d1 6s2",
+        "source": "https://en.wikipedia.org/wiki/Cerium"
     },
     {
         "id": 59,
@@ -705,7 +995,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in high-strength alloys for aircraft engines and yellow glass coloring."
+        "description": "A rare earth metal used in high-strength alloys for aircraft engines and yellow glass coloring.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Auer von Welsbach",
+        "appearance": "grayish white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f3 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Praseodymium"
     },
     {
         "id": 60,
@@ -717,7 +1012,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal famous for creating the strongest permanent magnets found in motors and speakers."
+        "description": "A rare earth metal famous for creating the strongest permanent magnets found in motors and speakers.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Auer von Welsbach",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f4 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Neodymium"
     },
     {
         "id": 61,
@@ -729,7 +1029,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A radioactive rare earth element used in nuclear batteries for pacemakers and guided missiles."
+        "description": "A radioactive rare earth element used in nuclear batteries for pacemakers and guided missiles.",
+        "phase": "Solid",
+        "discoveredBy": "Chien Shiung Wu",
+        "appearance": "metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f5 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Promethium"
     },
     {
         "id": 62,
@@ -741,7 +1046,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in high-temperature magnets and control rods for nuclear reactors."
+        "description": "A rare earth metal used in high-temperature magnets and control rods for nuclear reactors.",
+        "phase": "Solid",
+        "discoveredBy": "Lecoq de Boisbaudran",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f6 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Samarium"
     },
     {
         "id": 63,
@@ -753,7 +1063,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used as a phosphor to create red colors in TV screens, monitors, and LEDs."
+        "description": "A rare earth metal used as a phosphor to create red colors in TV screens, monitors, and LEDs.",
+        "phase": "Solid",
+        "discoveredBy": "Eugène-Anatole Demarçay",
+        "appearance": "silvery-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f7 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Europium"
     },
     {
         "id": 64,
@@ -765,7 +1080,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A magnetic rare earth metal widely used in MRI contrast agents and neutron radiography."
+        "description": "A magnetic rare earth metal widely used in MRI contrast agents and neutron radiography.",
+        "phase": "Solid",
+        "discoveredBy": "Jean Charles Galissard de Marignac",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f7 5s2 5p6 5d1 6s2",
+        "source": "https://en.wikipedia.org/wiki/Gadolinium"
     },
     {
         "id": 65,
@@ -777,7 +1097,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in green phosphors for fluorescent lamps and in sonar systems."
+        "description": "A rare earth metal used in green phosphors for fluorescent lamps and in sonar systems.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Gustaf Mosander",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f9 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Terbium"
     },
     {
         "id": 66,
@@ -789,7 +1114,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in high-temperature permanent magnets for electric vehicles and wind turbines."
+        "description": "A rare earth metal used in high-temperature permanent magnets for electric vehicles and wind turbines.",
+        "phase": "Solid",
+        "discoveredBy": "Lecoq de Boisbaudran",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f10 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Dysprosium"
     },
     {
         "id": 67,
@@ -801,7 +1131,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal with the highest magnetic strength of any element, used in magnets and lasers."
+        "description": "A rare earth metal with the highest magnetic strength of any element, used in magnets and lasers.",
+        "phase": "Solid",
+        "discoveredBy": "Marc Delafontaine",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f11 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Holmium"
     },
     {
         "id": 68,
@@ -813,7 +1148,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in fiber optic amplifiers, dental lasers, and pink glass coloring."
+        "description": "A rare earth metal used in fiber optic amplifiers, dental lasers, and pink glass coloring.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Gustaf Mosander",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f12 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Erbium"
     },
     {
         "id": 69,
@@ -825,7 +1165,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "One of the rarest lanthanides, used in portable X-ray machines and high-intensity discharge lamps."
+        "description": "One of the rarest lanthanides, used in portable X-ray machines and high-intensity discharge lamps.",
+        "phase": "Solid",
+        "discoveredBy": "Per Teodor Cleve",
+        "appearance": "silvery gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f13 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Thulium"
     },
     {
         "id": 70,
@@ -837,7 +1182,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare earth metal used in atomic clocks, stainless steel strengthening, and fiber optic lasers."
+        "description": "A rare earth metal used in atomic clocks, stainless steel strengthening, and fiber optic lasers.",
+        "phase": "Solid",
+        "discoveredBy": "Jean Charles Galissard de Marignac",
+        "appearance": "silvery-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Ytterbium"
     },
     {
         "id": 71,
@@ -849,7 +1199,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A dense, expensive rare earth metal used in PET scan detectors and as a catalyst in oil refining."
+        "description": "A dense, expensive rare earth metal used in PET scan detectors and as a catalyst in oil refining.",
+        "phase": "Solid",
+        "discoveredBy": "Georges Urbain",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d1 6s2",
+        "source": "https://en.wikipedia.org/wiki/Lutetium"
     },
     {
         "id": 72,
@@ -861,7 +1216,12 @@
         "block": "D Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A corrosion-resistant metal used in nuclear reactor control rods and high-temperature alloys."
+        "description": "A corrosion-resistant metal used in nuclear reactor control rods and high-temperature alloys.",
+        "phase": "Solid",
+        "discoveredBy": "Dirk Coster",
+        "appearance": "steel gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d2 6s2",
+        "source": "https://en.wikipedia.org/wiki/Hafnium"
     },
     {
         "id": 73,
@@ -873,7 +1233,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A highly corrosion-resistant metal widely used in capacitors for mobile phones and other electronics."
+        "description": "A highly corrosion-resistant metal widely used in capacitors for mobile phones and other electronics.",
+        "phase": "Solid",
+        "discoveredBy": "Anders Gustaf Ekeberg",
+        "appearance": "gray blue",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d3 6s2",
+        "source": "https://en.wikipedia.org/wiki/Tantalum"
     },
     {
         "id": 74,
@@ -885,7 +1250,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A metal with the highest melting point of all elements, used in light bulb filaments and rocket nozzles."
+        "description": "A metal with the highest melting point of all elements, used in light bulb filaments and rocket nozzles.",
+        "phase": "Solid",
+        "discoveredBy": "Carl Wilhelm Scheele",
+        "appearance": "grayish white, lustrous",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d4 6s2",
+        "source": "https://en.wikipedia.org/wiki/Tungsten"
     },
     {
         "id": 75,
@@ -897,7 +1267,12 @@
         "block": "D Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A dense metal with a high melting point, used in high-temperature superalloys for jet engines."
+        "description": "A dense metal with a high melting point, used in high-temperature superalloys for jet engines.",
+        "phase": "Solid",
+        "discoveredBy": "Masataka Ogawa",
+        "appearance": "silvery-grayish",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d5 6s2",
+        "source": "https://en.wikipedia.org/wiki/Rhenium"
     },
     {
         "id": 76,
@@ -909,7 +1284,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "The densest naturally occurring element, used in fountain pen tips and electrical contacts."
+        "description": "The densest naturally occurring element, used in fountain pen tips and electrical contacts.",
+        "phase": "Solid",
+        "discoveredBy": "Smithson Tennant",
+        "appearance": "silvery, blue cast",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d6 6s2",
+        "source": "https://en.wikipedia.org/wiki/Osmium"
     },
     {
         "id": 77,
@@ -921,7 +1301,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A brittle, extremely corrosion-resistant metal used in high-end spark plugs and crucibles."
+        "description": "A brittle, extremely corrosion-resistant metal used in high-end spark plugs and crucibles.",
+        "phase": "Solid",
+        "discoveredBy": "Smithson Tennant",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d7 6s2",
+        "source": "https://en.wikipedia.org/wiki/Iridium"
     },
     {
         "id": 78,
@@ -933,7 +1318,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A dense, non-reactive precious metal widely used in jewelry, catalytic converters, and lab equipment."
+        "description": "A dense, non-reactive precious metal widely used in jewelry, catalytic converters, and lab equipment.",
+        "phase": "Solid",
+        "discoveredBy": "Antonio de Ulloa",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d9 6s1",
+        "source": "https://en.wikipedia.org/wiki/Platinum"
     },
     {
         "id": 79,
@@ -945,7 +1335,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A highly valuable, malleable metal that does not corrode, used in jewelry, currency, and electronics."
+        "description": "A highly valuable, malleable metal that does not corrode, used in jewelry, currency, and electronics.",
+        "phase": "Solid",
+        "discoveredBy": "Middle East",
+        "appearance": "metallic yellow",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s1",
+        "source": "https://en.wikipedia.org/wiki/Gold"
     },
     {
         "id": 80,
@@ -957,7 +1352,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A heavy silvery metal that is liquid at room temperature, used in thermometers and fluorescent lamps."
+        "description": "A heavy silvery metal that is liquid at room temperature, used in thermometers and fluorescent lamps.",
+        "phase": "Liquid",
+        "discoveredBy": "Ancient Egyptians (before 1500 BCE)",
+        "appearance": "silvery",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2",
+        "source": "https://en.wikipedia.org/wiki/Mercury (Element)"
     },
     {
         "id": 81,
@@ -969,7 +1369,12 @@
         "block": "P Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A toxic soft metal historically used in rat poison, now used in electronics and medical imaging."
+        "description": "A toxic soft metal historically used in rat poison, now used in electronics and medical imaging.",
+        "phase": "Solid",
+        "discoveredBy": "William Crookes",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p1",
+        "source": "https://en.wikipedia.org/wiki/Thallium"
     },
     {
         "id": 82,
@@ -981,7 +1386,12 @@
         "block": "P Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A dense, toxic metal used in car batteries, radiation shielding, and weights."
+        "description": "A dense, toxic metal used in car batteries, radiation shielding, and weights.",
+        "phase": "Solid",
+        "discoveredBy": "Middle East",
+        "appearance": "metallic gray",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p2",
+        "source": "https://en.wikipedia.org/wiki/Lead_(element)"
     },
     {
         "id": 83,
@@ -993,7 +1403,12 @@
         "block": "P Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A brittle metal with low toxicity, used in cosmetics, pharmaceuticals (Pepto-Bismol), and fire sprinklers."
+        "description": "A brittle metal with low toxicity, used in cosmetics, pharmaceuticals (Pepto-Bismol), and fire sprinklers.",
+        "phase": "Solid",
+        "discoveredBy": "Claude François Geoffroy",
+        "appearance": "lustrous silver",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p3",
+        "source": "https://en.wikipedia.org/wiki/Bismuth"
     },
     {
         "id": 84,
@@ -1005,7 +1420,12 @@
         "block": "P Block",
         "bonds": "Metallic/Covalent",
         "noble": "No",
-        "description": "A highly radioactive element discovered by Marie Curie, used in antistatic devices."
+        "description": "A highly radioactive element discovered by Marie Curie, used in antistatic devices.",
+        "phase": "Solid",
+        "discoveredBy": "Pierre Curie",
+        "appearance": "silvery",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p4",
+        "source": "https://en.wikipedia.org/wiki/Polonium"
     },
     {
         "id": 85,
@@ -1017,7 +1437,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "One of the rarest natural elements, highly radioactive and used in targeted cancer therapy research."
+        "description": "One of the rarest natural elements, highly radioactive and used in targeted cancer therapy research.",
+        "phase": "Solid",
+        "discoveredBy": "Dale R. Corson",
+        "appearance": "unknown, probably metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p5",
+        "source": "https://en.wikipedia.org/wiki/Astatine"
     },
     {
         "id": 86,
@@ -1029,7 +1454,12 @@
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "A radioactive noble gas that naturally accumulates in basements and poses lung cancer risks."
+        "description": "A radioactive noble gas that naturally accumulates in basements and poses lung cancer risks.",
+        "phase": "Gas",
+        "discoveredBy": "Friedrich Ernst Dorn",
+        "appearance": "colorless gas, occasionally glows green or red in discharge tubes",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6",
+        "source": "https://en.wikipedia.org/wiki/Radon"
     },
     {
         "id": 87,
@@ -1041,7 +1471,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "An extremely rare and radioactive alkali metal with no commercial uses due to its instability."
+        "description": "An extremely rare and radioactive alkali metal with no commercial uses due to its instability.",
+        "phase": "Solid",
+        "discoveredBy": "Marguerite Perey",
+        "appearance": "silvery-gray metallic (presumed)",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s24p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 7s1",
+        "source": "https://en.wikipedia.org/wiki/Francium"
     },
     {
         "id": 88,
@@ -1053,7 +1488,12 @@
         "block": "S Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A radioactive metal formerly used in glow-in-the-dark paint, now treated with caution."
+        "description": "A radioactive metal formerly used in glow-in-the-dark paint, now treated with caution.",
+        "phase": "Solid",
+        "discoveredBy": "Pierre Curie",
+        "appearance": "silvery white metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Radium"
     },
     {
         "id": 89,
@@ -1065,7 +1505,12 @@
         "block": "D Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A radioactive metal that glows blue in the dark, used as a neutron source in research."
+        "description": "A radioactive metal that glows blue in the dark, used as a neutron source in research.",
+        "phase": "Solid",
+        "discoveredBy": "Friedrich Oskar Giesel",
+        "appearance": "silvery-white, glowing blue in the dark",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 6d1 7s2",
+        "source": "https://en.wikipedia.org/wiki/Actinium"
     },
     {
         "id": 90,
@@ -1077,7 +1522,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A weakly radioactive metal with potential as a cleaner, more abundant alternative nuclear fuel."
+        "description": "A weakly radioactive metal with potential as a cleaner, more abundant alternative nuclear fuel.",
+        "phase": "Solid",
+        "discoveredBy": "Jöns Jakob Berzelius",
+        "appearance": "silvery, often with black tarnish",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 6d2 7s2",
+        "source": "https://en.wikipedia.org/wiki/Thorium"
     },
     {
         "id": 91,
@@ -1089,7 +1539,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A rare, toxic, radioactive metal usually found in uranium ores, used primarily in research."
+        "description": "A rare, toxic, radioactive metal usually found in uranium ores, used primarily in research.",
+        "phase": "Solid",
+        "discoveredBy": "William Crookes",
+        "appearance": "bright, silvery metallic luster",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f2 6s2 6p6 6d1 7s2",
+        "source": "https://en.wikipedia.org/wiki/Protactinium"
     },
     {
         "id": 92,
@@ -1101,7 +1556,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A dense radioactive metal used as the primary fuel in nuclear power plants and weapons."
+        "description": "A dense radioactive metal used as the primary fuel in nuclear power plants and weapons.",
+        "phase": "Solid",
+        "discoveredBy": "Martin Heinrich Klaproth",
+        "appearance": "silvery-gray metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f3 6s2 6p6 6d1 7s2",
+        "source": "https://en.wikipedia.org/wiki/Uranium"
     },
     {
         "id": 93,
@@ -1113,7 +1573,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A radioactive metal produced in nuclear reactors, used in detectors and research."
+        "description": "A radioactive metal produced in nuclear reactors, used in detectors and research.",
+        "phase": "Solid",
+        "discoveredBy": "Edwin McMillan",
+        "appearance": "silvery metallic",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f4 6s2 6p6 6d1 7s2",
+        "source": "https://en.wikipedia.org/wiki/Neptunium"
     },
     {
         "id": 94,
@@ -1125,7 +1590,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A radioactive metal used in nuclear weapons and as fuel for spacecraft generators (RTGs)."
+        "description": "A radioactive metal used in nuclear weapons and as fuel for spacecraft generators (RTGs).",
+        "phase": "Solid",
+        "discoveredBy": "Glenn T. Seaborg",
+        "appearance": "silvery white, tarnishing to dark gray in air",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Plutonium"
     },
     {
         "id": 95,
@@ -1137,7 +1607,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A synthetic radioactive metal widely used in small amounts in household smoke detectors."
+        "description": "A synthetic radioactive metal widely used in small amounts in household smoke detectors.",
+        "phase": "Solid",
+        "discoveredBy": "Glenn T. Seaborg",
+        "appearance": "silvery white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f7 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Americium"
     },
     {
         "id": 96,
@@ -1149,7 +1624,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A highly radioactive metal used as a power source for space missions and in alpha particle X-ray spectrometers."
+        "description": "A highly radioactive metal used as a power source for space missions and in alpha particle X-ray spectrometers.",
+        "phase": "Solid",
+        "discoveredBy": "Glenn T. Seaborg",
+        "appearance": "silvery metallic, glows purple in the dark",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f7 6s2 6p6 6d1 7s2",
+        "source": "https://en.wikipedia.org/wiki/Curium"
     },
     {
         "id": 97,
@@ -1161,7 +1641,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A radioactive synthetic element used mainly for synthesizing heavier elements."
+        "description": "A radioactive synthetic element used mainly for synthesizing heavier elements.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "silvery",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f9 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Berkelium"
     },
     {
         "id": 98,
@@ -1173,7 +1658,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A strong neutron emitter used in metal detectors, oil well logging, and cancer treatment."
+        "description": "A strong neutron emitter used in metal detectors, oil well logging, and cancer treatment.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "silvery",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f10 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Californium"
     },
     {
         "id": 99,
@@ -1185,7 +1675,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A synthetic element discovered in the debris of the first hydrogen bomb test; used in research."
+        "description": "A synthetic element discovered in the debris of the first hydrogen bomb test; used in research.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "silver-colored",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f11 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Einsteinium"
     },
     {
         "id": 100,
@@ -1197,7 +1692,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A synthetic element produced in nuclear explosions, usable only in scientific research."
+        "description": "A synthetic element produced in nuclear explosions, usable only in scientific research.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "unknown, probably silvery-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f12 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Fermium"
     },
     {
         "id": 101,
@@ -1209,7 +1709,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A synthetic radioactive element named after the creator of the periodic table, Dmitri Mendeleev."
+        "description": "A synthetic radioactive element named after the creator of the periodic table, Dmitri Mendeleev.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "unknown, probably silvery-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f13 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Mendelevium"
     },
     {
         "id": 102,
@@ -1221,7 +1726,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A synthetic radioactive element named after Alfred Nobel, existing only for seconds in labs."
+        "description": "A synthetic radioactive element named after Alfred Nobel, existing only for seconds in labs.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown, probably silvery-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Nobelium"
     },
     {
         "id": 103,
@@ -1233,7 +1743,12 @@
         "block": "F Block",
         "bonds": "Ionic",
         "noble": "No",
-        "description": "A synthetic radioactive element that concludes the actinide series; of research interest only."
+        "description": "A synthetic radioactive element that concludes the actinide series; of research interest only.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "unknown, probably silvery-white",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 7s2 7p1",
+        "source": "https://en.wikipedia.org/wiki/Lawrencium"
     },
     {
         "id": 104,
@@ -1245,7 +1760,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic radioactive element named after physicist Ernest Rutherford, with a very short half-life."
+        "description": "A synthetic radioactive element named after physicist Ernest Rutherford, with a very short half-life.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d2 7s2",
+        "source": "https://en.wikipedia.org/wiki/Rutherfordium"
     },
     {
         "id": 105,
@@ -1257,7 +1777,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A highly radioactive synthetic element named after the research town of Dubna, Russia."
+        "description": "A highly radioactive synthetic element named after the research town of Dubna, Russia.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d3 7s2",
+        "source": "https://en.wikipedia.org/wiki/Dubnium"
     },
     {
         "id": 106,
@@ -1269,7 +1794,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic element named after Glenn Seaborg; one of the first elements named after a living person."
+        "description": "A synthetic element named after Glenn Seaborg; one of the first elements named after a living person.",
+        "phase": "Solid",
+        "discoveredBy": "Lawrence Berkeley National Laboratory",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d4 7s2",
+        "source": "https://en.wikipedia.org/wiki/Seaborgium"
     },
     {
         "id": 107,
@@ -1281,7 +1811,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic radioactive element named after physicist Niels Bohr, with no commercial application."
+        "description": "A synthetic radioactive element named after physicist Niels Bohr, with no commercial application.",
+        "phase": "Solid",
+        "discoveredBy": "Gesellschaft für Schwerionenforschung",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d5 7s2",
+        "source": "https://en.wikipedia.org/wiki/Bohrium"
     },
     {
         "id": 108,
@@ -1293,7 +1828,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A highly radioactive synthetic element named after the German state of Hesse."
+        "description": "A highly radioactive synthetic element named after the German state of Hesse.",
+        "phase": "Solid",
+        "discoveredBy": "Gesellschaft für Schwerionenforschung",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d6 7s2",
+        "source": "https://en.wikipedia.org/wiki/Hassium"
     },
     {
         "id": 109,
@@ -1305,7 +1845,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic element named after physicist Lise Meitner, produced only in tiny amounts."
+        "description": "A synthetic element named after physicist Lise Meitner, produced only in tiny amounts.",
+        "phase": "Solid",
+        "discoveredBy": "Gesellschaft für Schwerionenforschung",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d7 7s2",
+        "source": "https://en.wikipedia.org/wiki/Meitnerium"
     },
     {
         "id": 110,
@@ -1317,7 +1862,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic element named after Darmstadt, Germany; it decays within microseconds."
+        "description": "A synthetic element named after Darmstadt, Germany; it decays within microseconds.",
+        "phase": "Solid",
+        "discoveredBy": "Gesellschaft für Schwerionenforschung",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d8 7s2",
+        "source": "https://en.wikipedia.org/wiki/Darmstadtium"
     },
     {
         "id": 111,
@@ -1329,7 +1879,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic radioactive element named after Wilhelm Röntgen, discoverer of X-rays."
+        "description": "A synthetic radioactive element named after Wilhelm Röntgen, discoverer of X-rays.",
+        "phase": "Solid",
+        "discoveredBy": "Gesellschaft für Schwerionenforschung",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d9 7s2",
+        "source": "https://en.wikipedia.org/wiki/Roentgenium"
     },
     {
         "id": 112,
@@ -1341,7 +1896,12 @@
         "block": "D Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic element named after Nicolaus Copernicus, with extremely short-lived isotopes."
+        "description": "A synthetic element named after Nicolaus Copernicus, with extremely short-lived isotopes.",
+        "phase": "Gas",
+        "discoveredBy": "Gesellschaft für Schwerionenforschung",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2",
+        "source": "https://en.wikipedia.org/wiki/Copernicium"
     },
     {
         "id": 113,
@@ -1353,7 +1913,12 @@
         "block": "P Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic element and the first to be discovered by Asian scientists (RIKEN institute, Japan)."
+        "description": "A synthetic element and the first to be discovered by Asian scientists (RIKEN institute, Japan).",
+        "phase": "Solid",
+        "discoveredBy": "RIKEN",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2 7p1",
+        "source": "https://en.wikipedia.org/wiki/Ununtrium"
     },
     {
         "id": 114,
@@ -1365,7 +1930,12 @@
         "block": "P Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic superheavy element named after the Flerov Laboratory of Nuclear Reactions in Russia."
+        "description": "A synthetic superheavy element named after the Flerov Laboratory of Nuclear Reactions in Russia.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2 7p2",
+        "source": "https://en.wikipedia.org/wiki/Flerovium"
     },
     {
         "id": 115,
@@ -1377,7 +1947,12 @@
         "block": "P Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A highly radioactive synthetic element named after the Moscow region."
+        "description": "A highly radioactive synthetic element named after the Moscow region.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2 7p3",
+        "source": "https://en.wikipedia.org/wiki/Ununpentium"
     },
     {
         "id": 116,
@@ -1389,7 +1964,12 @@
         "block": "P Block",
         "bonds": "Metallic",
         "noble": "No",
-        "description": "A synthetic element named after Lawrence Livermore National Laboratory in California."
+        "description": "A synthetic element named after Lawrence Livermore National Laboratory in California.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2 7p4",
+        "source": "https://en.wikipedia.org/wiki/Livermorium"
     },
     {
         "id": 117,
@@ -1401,7 +1981,12 @@
         "block": "P Block",
         "bonds": "Covalent",
         "noble": "No",
-        "description": "A synthetic halogen named after the state of Tennessee, known for its nuclear research contributions."
+        "description": "A synthetic halogen named after the state of Tennessee, known for its nuclear research contributions.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2 7p5",
+        "source": "https://en.wikipedia.org/wiki/Tennessine"
     },
     {
         "id": 118,
@@ -1413,6 +1998,11 @@
         "block": "P Block",
         "bonds": "None (Noble Gas - Inert)",
         "noble": "Yes",
-        "description": "The heaviest element currently known, a synthetic noble gas named after physicist Yuri Oganessian."
+        "description": "The heaviest element currently known, a synthetic noble gas named after physicist Yuri Oganessian.",
+        "phase": "Solid",
+        "discoveredBy": "Joint Institute for Nuclear Research",
+        "appearance": "unknown",
+        "electronicConfiguration": "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 6d10 7s2 7p6",
+        "source": "https://en.wikipedia.org/wiki/Oganesson"
     }
 ]

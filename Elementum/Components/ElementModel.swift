@@ -23,7 +23,12 @@ struct Element: Identifiable, Codable, Hashable {
     var block: String
     var bonds: String
     var noble: String
+    var phase: String?
+    var discoveredBy: String?
+    var appearance: String?
+    var electronicConfiguration: String?
     var description: String
+    var source: String?
 }
 
 struct ElementColor {

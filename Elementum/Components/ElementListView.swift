@@ -30,7 +30,6 @@ struct ElementListView: View {
         NavigationView {
             VStack(spacing: 0) {
                 
-                // MARK: - Custom Search Bar (Matches Finder)
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.secondary)
@@ -55,7 +54,6 @@ struct ElementListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.horizontal)
                 .padding(.top, 10)
-                .padding(.bottom, 10)
 
                 // MARK: - Selection List
                 List(filteredElements) { element in
