@@ -59,6 +59,7 @@ struct FinderView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.horizontal)
                 .padding(.top, 8)
+                .padding(.bottom, 10)
                 
                 // MARK: - Element List
                 List {

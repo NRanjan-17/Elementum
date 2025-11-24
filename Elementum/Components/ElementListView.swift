@@ -54,6 +54,7 @@ struct ElementListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.horizontal)
                 .padding(.top, 10)
+                .padding(.bottom, 10)
 
                 // MARK: - Selection List
                 List(filteredElements) { element in

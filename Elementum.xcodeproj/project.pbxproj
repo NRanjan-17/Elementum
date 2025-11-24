@@ -29,9 +29,22 @@
 		52189D9D2D4AA16500670465 /* ElementumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E24079A72ED41CA40007DA2D /* Exceptions for "Elementum" folder in "Elementum" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52189D822D4AA16200670465 /* Elementum */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		52189D852D4AA16200670465 /* Elementum */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E24079A72ED41CA40007DA2D /* Exceptions for "Elementum" folder in "Elementum" target */,
+			);
 			path = Elementum;
 			sourceTree = "<group>";
 		};
@@ -401,7 +414,9 @@
 				DEVELOPMENT_TEAM = 667V7CCT79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Elementum/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Elementum;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -437,7 +452,9 @@
 				DEVELOPMENT_TEAM = 667V7CCT79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Elementum/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Elementum;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
