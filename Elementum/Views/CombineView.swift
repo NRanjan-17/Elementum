@@ -7,9 +7,9 @@ struct CombineView: View {
     @State private var numberOfElements: Int = 2
     @State private var result: String? = nil
     @State private var allElements: [Element] = []
-    
+
     private let combinationValidator = CombinationValidator()
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -31,7 +31,7 @@ struct CombineView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                     }
-                    
+
                     VStack(spacing: 20) {
                         ForEach(0..<numberOfElements, id: \.self) { index in
                             Button(action: {
@@ -54,7 +54,7 @@ struct CombineView: View {
                         }
                     }
                     .padding(.horizontal)
-                    
+
                     Button(action: {
                         result = validateCombination()
                     }) {
@@ -68,7 +68,7 @@ struct CombineView: View {
                             .cornerRadius(12.5)
                     }
                     .padding(.horizontal)
-                    
+
                     if let result = result {
                         Text(result)
                             .font(.title2)
@@ -79,7 +79,7 @@ struct CombineView: View {
                             .cornerRadius(12.5)
                             .padding(.horizontal)
                     }
-                    
+
                     Spacer()
                 }
                 .padding(.vertical)
@@ -100,26 +100,26 @@ struct CombineView: View {
             }
         }
     }
-    
+
     private func updateNumberOfElements(to count: Int) {
         numberOfElements = count
         selectedElements = Array(selectedElements.prefix(count)) + Array(repeating: nil, count: max(0, count - selectedElements.count))
     }
-    
+
     private func validateCombination() -> String {
         let validElements = selectedElements.compactMap { $0 }
         guard validElements.count == numberOfElements else {
             return "Please select \(numberOfElements) elements."
         }
-        
+
         return combinationValidator.validate(elements: validElements) ?? "No valid combination found"
     }
-    
+
     private func loadElements() {
         guard let url = Bundle.main.url(forResource: "Elements", withExtension: "json") else {
             return
         }
-        
+
         do {
             let data = try Data(contentsOf: url)
             let decodedElements = try JSONDecoder().decode([Element].self, from: data)
