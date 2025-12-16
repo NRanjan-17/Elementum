@@ -83,7 +83,7 @@ struct ElementDetailView: View {
             }
         }
         .allowLandscape()
-        .navigationTransition(.zoom(sourceID: element.id, in: animation))
+        .navigationTransition(.automatic)
         .toolbarVisibility(.visible, for: .navigationBar)
         .presentationDragIndicator(.visible)
     }
