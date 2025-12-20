@@ -1,6 +1,7 @@
 [
     { "elements": ["H", "O"], "result": "Water (H2O)" },
     { "elements": ["Na", "Cl"], "result": "Salt (NaCl)" },
+    { "elements": ["C", "O"], "result": "Carbon Monoxide (CO)" },
     { "elements": ["C", "O2"], "result": "Carbon Dioxide (CO2)" },
     { "elements": ["N", "H3"], "result": "Ammonia (NH3)" },
     { "elements": ["C", "H4"], "result": "Methane (CH4)" },

@@ -42,3 +42,8 @@ struct ElementColor {
         }
     }
 }
+
+struct Combination: Codable {
+    let elements: [String]
+    let result: String
+}
