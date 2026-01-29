@@ -7,7 +7,7 @@ struct ElementumApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .onAppear {
                     // Default orientation for entire app = portrait
                     OrientationManager.shared.allowed = .portrait
