@@ -24,9 +24,6 @@ struct F_Group: View {
                     }
                 }
             }
-            .sheet(item: $selected) { element in
-                ElementDetailView(element: element, animation: animation)
-            }
         }
         .allowLandscape()
         .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -53,6 +50,11 @@ struct F_Group: View {
         let formattedMass = formatter.string(from: NSNumber(value: element.mass)) ?? "N/A"
         let isFBlock = element.block == "F Block"
 
+        let isSelected = Binding<Bool>(
+            get: { selected?.id == element.id },
+            set: { if !$0 { selected = nil } }
+        )
+        
         return Button {
             if isFBlock { selected = element }
         } label: {
@@ -63,6 +65,19 @@ struct F_Group: View {
                 atomicMass: formattedMass,
                 block: element.block
             )
+            .contextMenu {
+                Button {
+                    UIPasteboard.general.string = element.element
+                } label: {
+                    Label(element.element, systemImage: "document.on.document")
+                }
+                
+                Button {
+                    UIPasteboard.general.string = "\(formattedMass) u"
+                } label: {
+                    Label("\(formattedMass) u", systemImage: "document.on.document")
+                }
+            }
             .foregroundColor(isFBlock ? .white : .gray)
             .background(isFBlock ? Color.blue : Color.gray.opacity(0.3))
             .cornerRadius(15)
@@ -70,6 +85,12 @@ struct F_Group: View {
             .saturation(isFBlock ? 1 : 0)
         }
         .disabled(!isFBlock)
+        .matchedTransitionSource(id: element.id, in: animation)
+        .popover(isPresented: isSelected, attachmentAnchor: .rect(.bounds)) {
+            ElementDetailView(element: element, animation: animation)
+                .frame(minWidth: 400, minHeight: 550)
+                .presentationCompactAdaptation(.sheet)
+        }
     }
 
     private func emptyCell() -> some View {
