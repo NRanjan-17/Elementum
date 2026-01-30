@@ -12,11 +12,11 @@ struct MainView: View {
                 }
                 .tag(0)
             
-            CombineView()
-                .tabItem {
-                    Label("Combine", systemImage: "atom")
-                }
-                .tag(1)
+//            CombineView()
+//                .tabItem {
+//                    Label("Combine", systemImage: "atom")
+//                }
+//                .tag(1)
             
             FinderView()
                 .tabItem {
