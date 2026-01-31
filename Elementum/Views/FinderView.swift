@@ -2,9 +2,13 @@ import SwiftUI
 
 struct FinderView: View {
     
+    @Environment(\.horizontalSizeClass) var sizeClass
+    
     @Namespace var animation
     @State private var searchText = ""
     @State private var randomElements: [Element] = []
+    
+    @State private var selectedElement: Element?
     
     // Load elements using your existing ElementModel
     var elements: [Element] = ElementModel().load("Elements.json")
@@ -31,7 +35,7 @@ struct FinderView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationSplitView {
             VStack(spacing: 0) {
                 
                 // MARK: - Custom Search Bar
@@ -62,7 +66,7 @@ struct FinderView: View {
                 .padding(.bottom, 10)
                 
                 // MARK: - Element List
-                List {
+                List(selection: $selectedElement) {
                     ForEach(filteredElements) { element in
                         NavigationLink(value: element) {
                             HStack(spacing: 16) {
@@ -105,9 +109,17 @@ struct FinderView: View {
             .background(Color(.systemGroupedBackground))
             .onAppear {
                 if randomElements.isEmpty {
-                    randomElements = Array(elements.shuffled().prefix(5))
+                    randomElements = Array(elements.shuffled().prefix((sizeClass == .regular) ? 10 : 5))
                 }
             }
+        } detail: {
+            if let element = selectedElement {
+                ElementDetailView(element: element, animation: animation)
+                    .id(element.id)
+            } else {
+                ContentUnavailableView("Select an Element", systemImage: "atom")
+            }
         }
+        .navigationSplitViewStyle(.balanced)
     }
 }
