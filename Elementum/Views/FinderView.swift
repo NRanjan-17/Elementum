@@ -3,15 +3,13 @@ import SwiftUI
 struct FinderView: View {
     
     @Environment(\.horizontalSizeClass) var sizeClass
+    @EnvironmentObject var elementStore: ElementStore
     
     @Namespace var animation
     @State private var searchText = ""
     @State private var randomElements: [Element] = []
     
     @State private var selectedElement: Element?
-    
-    // Load elements using your existing ElementModel
-    var elements: [Element] = ElementModel().load("Elements.json")
     
     // Formatter configuration
     let formatter = NumberFormatter()
@@ -26,7 +24,7 @@ struct FinderView: View {
         if searchText.isEmpty {
             return randomElements
         } else {
-            return elements.filter {
+            return elementStore.elements.filter {
                 $0.element.lowercased().contains(searchText.lowercased()) ||
                 $0.symbol.lowercased().contains(searchText.lowercased()) ||
                 String($0.id).contains(searchText)
@@ -68,6 +66,7 @@ struct FinderView: View {
                 // MARK: - Element List
                 List(selection: $selectedElement) {
                     ForEach(filteredElements) { element in
+                        let formattedMass = formatter.string(from: NSNumber(value: element.mass)) ?? "N/A"
                         NavigationLink(value: element) {
                             HStack(spacing: 16) {
                                 // 1. Reusing existing ElementCellView
@@ -97,6 +96,19 @@ struct FinderView: View {
                             }
                             .padding(.vertical, 4)
                         }
+                        .contextMenu {
+                            Button {
+                                UIPasteboard.general.string = element.element
+                            } label: {
+                                Label(element.element, systemImage: "document.on.document")
+                            }
+                            
+                            Button {
+                                UIPasteboard.general.string = "\(formattedMass) u"
+                            } label: {
+                                Label("\(formattedMass) u", systemImage: "document.on.document")
+                            }
+                        }
                     }
                 }
                 .listStyle(.insetGrouped)
@@ -109,7 +121,7 @@ struct FinderView: View {
             .background(Color(.systemGroupedBackground))
             .onAppear {
                 if randomElements.isEmpty {
-                    randomElements = Array(elements.shuffled().prefix((sizeClass == .regular) ? 10 : 5))
+                    randomElements = Array(elementStore.elements.shuffled().prefix((sizeClass == .regular) ? 10 : 5))
                 }
             }
         } detail: {

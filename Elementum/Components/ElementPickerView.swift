@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ElementListView: View {
+struct ElementPickerView: View {
     var elements: [Element]
     var onSelect: (Element) -> Void
     @Environment(\.dismiss) var dismiss
@@ -102,7 +102,7 @@ struct ElementListView: View {
             .navigationTitle("Select Element")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     Button("Close") {
                         dismiss()
                     }

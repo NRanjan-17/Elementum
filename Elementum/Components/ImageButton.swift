@@ -43,7 +43,7 @@ struct ImageButton: View {
         .clipShape(RoundedRectangle(cornerRadius: sizeClass == .regular ? 25 : 12.5, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: sizeClass == .regular ? 25 : 12.5, style: .continuous)
-                .stroke(Color.blue, lineWidth: (isSelected && isPad) ? 4 : 0)
+                .stroke(Color.accentColor, lineWidth: (isSelected && isPad) ? 4 : 0)
         )
         .scaleEffect(isSelected ? 1.0 : 0.98)
         .animation(.spring(), value: isSelected)

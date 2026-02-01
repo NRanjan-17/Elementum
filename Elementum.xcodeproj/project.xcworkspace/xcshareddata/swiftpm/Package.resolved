@@ -1,0 +1,15 @@
+{
+  "originHash" : "dc17a9a67d2f41559e3a4c1a45dc68fcc0a87ce84e5996b1ffd4240771882507",
+  "pins" : [
+    {
+      "identity" : "deprecated-generative-ai-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google-gemini/deprecated-generative-ai-swift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "44a40daf54bcb8db2695f4af618107e72c472b36"
+      }
+    }
+  ],
+  "version" : 3
+}

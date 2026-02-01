@@ -4,7 +4,7 @@ struct D_Group: View {
     @Namespace var animation
     @State private var selected: Element?
     @State private var listMode = false
-    var elements: [Element] = ElementModel().load("Elements.json")
+    @EnvironmentObject var elementStore: ElementStore
     let formatter = NumberFormatter()
 
     init() {
@@ -35,7 +35,7 @@ struct D_Group: View {
     private func elementGrid(for row: Int) -> some View {
         LazyVStack(alignment: .leading) {
             ForEach(1..<19) { column in
-                if let element = elements.first(where: { $0.column == column && $0.row == row }) {
+                if let element = elementStore.elements.first(where: { $0.column == column && $0.row == row }) {
                     elementButton(for: element)
                 } else {
                     emptyCell()

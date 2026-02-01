@@ -75,7 +75,7 @@ struct ElementDetailView: View {
                                 Spacer()
                                 Image(systemName: "arrow.up.right.square.fill")
                             }
-                            .foregroundColor(.blue)
+                            .foregroundColor(.accentColor)
                         }
                     }
                 }

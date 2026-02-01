@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 class ElementModel {
     func load<T: Decodable>(_ filename: String) -> T {
@@ -9,6 +10,26 @@ class ElementModel {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
             fatalError("Couldn't load \(filename): \(error)")
+        }
+    }
+}
+
+@MainActor
+class ElementStore: ObservableObject {
+    @Published var elements: [Element] = []
+    
+    init() {
+        loadElements()
+    }
+    
+    func loadElements() {
+        Task.detached(priority: .userInitiated) {
+            let loadedElements: [Element] = ElementModel().load("Elements.json")
+            
+            await MainActor.run {
+                self.elements = loadedElements
+                print("ElementStore loaded \(self.elements.count) elements via ElementModel.")
+            }
         }
     }
 }
@@ -41,11 +62,6 @@ struct ElementColor {
         default: return Color.gray
         }
     }
-}
-
-struct Combination: Codable {
-    let elements: [String]
-    let result: String
 }
 
 enum SelectedView: String, CaseIterable, Hashable {
@@ -91,5 +107,6 @@ enum SelectedView: String, CaseIterable, Hashable {
         }
     }
 }
+
 
 
