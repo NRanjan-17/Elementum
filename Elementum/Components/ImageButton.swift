@@ -25,7 +25,7 @@ struct ImageButton: View {
             Image(image)
                 .resizable()
                 .scaledToFill()
-                .frame(maxWidth: .infinity, minHeight: 150)
+                .frame(maxWidth: .infinity)
                 .clipped()
                 .overlay(
                     Color.black.opacity(0.2)
@@ -37,7 +37,7 @@ struct ImageButton: View {
                 .font(.title2)
                 .fontWeight(.bold)
         }
-        .frame(maxWidth: .infinity, minHeight: 150)
+        .frame(maxWidth: .infinity)
         // Logic: If iPad/Desktop (Regular), use 25. If iPhone (Compact), use 12.5.
         // We also use 'style: .continuous' for that smooth Apple look.
         .clipShape(RoundedRectangle(cornerRadius: sizeClass == .regular ? 25 : 12.5, style: .continuous))

@@ -30,6 +30,7 @@ struct F_Group: View {
         .contentMargins(10, for: .scrollContent)
         .scrollIndicators(.hidden)
         .navigationTitle("F Group Elements")
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     private func elementGrid(for row: Int) -> some View {

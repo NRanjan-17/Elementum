@@ -31,6 +31,7 @@ struct P_Group: View {
         .contentMargins(10, for: .scrollContent)
         .scrollIndicators(.hidden)
         .navigationTitle("P Group Elements")
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     private func elementGrid(for row: Int) -> some View {

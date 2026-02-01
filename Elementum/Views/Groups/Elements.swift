@@ -30,6 +30,7 @@ struct Elements: View {
         .contentMargins(10, for: .scrollContent)
         .scrollIndicators(.hidden)
         .navigationTitle("Periodic Table")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     private func elementGrid(for row: Int) -> some View {
