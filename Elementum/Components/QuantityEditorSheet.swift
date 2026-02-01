@@ -21,7 +21,7 @@ struct QuantityEditorSheet: View {
             HStack(spacing: 30) {
                 Text(reactant.symbol)
                     .font(.system(size: 40, weight: .bold))
-                    .foregroundColor(.blue)
+                    .foregroundColor(.accentColor)
                     .frame(minWidth: 60)
                 
                 Divider()
@@ -36,7 +36,7 @@ struct QuantityEditorSheet: View {
                     } label: {
                         Image(systemName: "minus.circle.fill")
                             .font(.system(size: 32))
-                            .foregroundColor(reactant.quantity > 1 ? .gray : .gray.opacity(0.3))
+                            .foregroundColor(reactant.quantity > 1 ? .accentColor : .gray.opacity(0.3))
                     }
                     .disabled(reactant.quantity <= 1)
                     
@@ -53,7 +53,7 @@ struct QuantityEditorSheet: View {
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.system(size: 32))
-                            .foregroundColor(.blue)
+                            .foregroundColor(.accentColor)
                     }
                 }
             }

@@ -33,10 +33,10 @@ actor ReactionModel {
             You are a chemistry expert. Analyze the reaction between: \(reactants).
             
             Provide your response in exactly this format:
-            EQUATION: [The balanced chemical equation including all primary and by-products]
+            EQUATION: [The balanced chemical equation including all primary and by-products and if the reaction is not possible don't give any equation just give the description]
             DESCRIPTION: [A one-sentence explanation of what happens and the type of reaction]
             
-            Do not include markdown or extra text.
+            Do not include markdown or extra text and don't halucinate and if the reactants don't match in any equation just return "Correct the reactants".
             """
         
         do {

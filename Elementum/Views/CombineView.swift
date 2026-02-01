@@ -12,6 +12,8 @@ struct CombineView: View {
     @State private var isPredicting = false
     @State private var result: String?
     
+    @State private var showHelp = false
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -110,7 +112,7 @@ struct CombineView: View {
                         
                         // Equation Box
                         Text(result.components(separatedBy: "DESCRIPTION:").first?.replacingOccurrences(of: "EQUATION:", with: "") ?? result)
-                            .font(.system(size: 24, weight: .bold, design: .serif))
+                            .font(.system(size: 24, weight: .bold))
                             .multilineTextAlignment(.center)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 15).fill(Color.green.opacity(0.1)))
@@ -136,12 +138,28 @@ struct CombineView: View {
                 
                 Button(action: runPrediction) {
                     HStack { Image(systemName: "wand.and.stars"); Text("Combine") }
-                        .font(.title3.bold()).foregroundColor(.white).frame(width: 200,height: 55)
+                        .font(.title3.bold()).foregroundColor(.white).frame(width: 150,height: 55)
                         .background(reactants.isEmpty ? Color.gray.opacity(0.5) : Color.accentColor).cornerRadius(15).padding()
                 }
                 .disabled(reactants.isEmpty || isPredicting)
             }
             .navigationTitle("Combine Elements")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showHelp = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .font(.system(size: 18, weight: .semibold))
+                    }
+                }
+            }
+            .sheet(isPresented: $showHelp) {
+                CombineHelpView()
+                    .presentationDetents([.fraction(0.75)])
+                    .presentationDragIndicator(.visible)
+                    .presentationBackground(.thinMaterial)
+            }
             
             .sheet(item: $activeSheet) { item in
                 switch item {
