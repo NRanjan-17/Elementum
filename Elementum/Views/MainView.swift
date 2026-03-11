@@ -6,23 +6,15 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-                .tag(0)
-            
-            CombineView()
-                .tabItem {
-                    Label("Combine", systemImage: "atom")
-                }
-                .tag(1)
-            
-            FinderView()
-                .tabItem {
-                    Label("Finder", systemImage: "magnifyingglass")
-                }
-                .tag(2)
+            Tab("Home", systemImage: "house", value: 0) {
+                HomeView()
+            }
+            Tab("Combine", systemImage: "atom", value: 1) {
+                CombineView()
+            }
+            Tab("Finder", systemImage: "magnifyingglass", value: 2) {
+                FinderView()
+            }
         }
         .accentColor(.blue)
     }

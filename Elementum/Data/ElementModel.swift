@@ -28,7 +28,7 @@ class ElementStore: ObservableObject {
             
             await MainActor.run {
                 self.elements = loadedElements
-                print("ElementStore loaded \(self.elements.count) elements via ElementModel.")
+//                print("ElementStore loaded \(self.elements.count) elements via ElementModel.")
             }
         }
     }
