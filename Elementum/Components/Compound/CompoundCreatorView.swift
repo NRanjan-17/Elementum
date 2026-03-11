@@ -125,7 +125,6 @@ struct CompoundCreatorView: View {
     }
     
     // MARK: - Logic Helpers
-    
     func addOrUpdatePart(symbol: String) {
         // If element already exists, just increase count
         if let index = formulaParts.firstIndex(where: { $0.symbol == symbol }) {

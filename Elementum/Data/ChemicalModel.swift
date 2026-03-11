@@ -115,3 +115,23 @@ enum ReactantItem {
     case element(Element)
     case compound(ChemicalEntity)
 }
+
+struct HFRequest: Codable {
+    let model: String
+    let messages: [HFMessage]
+    let max_tokens: Int
+    let temperature: Double
+}
+
+struct HFMessage: Codable {
+    let role: String
+    let content: String
+}
+
+struct HFResponse: Codable {
+    let choices: [HFChoice]
+}
+
+struct HFChoice: Codable {
+    let message: HFMessage
+}

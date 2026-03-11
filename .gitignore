@@ -1,0 +1,46 @@
+# Xcode
+# ##########################
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.playground
+
+# User-specific files (Never commit these!)
+# ##########################
+*.xcuserstate
+project.xcworkspace/xcuserdata/
+*.xcuserdatad
+xcbaselinedata/
+SharingViolation.txt
+
+# Swift Package Manager
+# ##########################
+.build/
+.swiftpm/
+# Keep Package.resolved if you want to lock dependency versions
+# Package.resolved
+
+# CocoaPods
+# ##########################
+# It is generally recommended to exclude the Pods directory 
+# and let teammates run 'pod install'
+Pods/
+Podfile.lock
+
+# Carthage
+# ##########################
+Carthage/Build/
+
+# Fastlane
+# ##########################
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Misc / OS generated
+# ##########################
+.DS_Store
+*.swp
+*.lock

@@ -83,6 +83,7 @@ struct ElementDetailView: View {
             }
         }
         .allowLandscape()
+        .scrollIndicators(.hidden)
         .navigationTransition(.automatic)
         .toolbarVisibility(.visible, for: .navigationBar)
         .presentationDragIndicator(.visible)
