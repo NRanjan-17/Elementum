@@ -24,6 +24,7 @@ struct CombineView: View {
                 iphoneLayout
             }
         }
+        .task { await reactionModel.warmUp() }
         .sheet(isPresented: $showHelp) {
             CombineHelpView()
                 .presentationDetents([.fraction(0.75)])
@@ -275,11 +276,15 @@ struct CombineView: View {
     
     @ViewBuilder
     func resultView(result: String) -> some View {
+        let equation = result.components(separatedBy: "DESCRIPTION:").first?
+            .replacingOccurrences(of: "EQUATION:", with: "")
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? result
+        
         VStack(spacing: 15) {
             Text("Reaction Product").font(.caption).textCase(.uppercase).foregroundColor(.secondary)
             
             // Equation Box
-            Text(result.components(separatedBy: "DESCRIPTION:").first?.replacingOccurrences(of: "EQUATION:", with: "") ?? result)
+            Text(ChemicalFormatter.format(equation))
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding()
@@ -287,7 +292,7 @@ struct CombineView: View {
             
             // Description Text
             if result.contains("DESCRIPTION:") {
-                Text(result.components(separatedBy: "DESCRIPTION:").last ?? "")
+                Text(ChemicalFormatter.format((result.components(separatedBy: "DESCRIPTION:").last ?? "").trimmingCharacters(in: .whitespacesAndNewlines)))
                     .font(.subheadline)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)

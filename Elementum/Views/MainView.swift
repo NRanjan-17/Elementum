@@ -3,6 +3,7 @@ import SwiftUI
 struct MainView: View {
     
     @State var selectedTab = 0
+    @EnvironmentObject var modelManager: ModelManager
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -10,7 +11,11 @@ struct MainView: View {
                 HomeView()
             }
             Tab("Combine", systemImage: "atom", value: 1) {
-                CombineView()
+                if modelManager.state == .ready {
+                    CombineView()
+                } else {
+                    ModelDownloadView()
+                }
             }
             Tab("Finder", systemImage: "magnifyingglass", value: 2) {
                 FinderView()
@@ -23,4 +28,5 @@ struct MainView: View {
 #Preview {
     MainView()
         .environmentObject(ElementStore())
+        .environmentObject(ModelManager())
 }
