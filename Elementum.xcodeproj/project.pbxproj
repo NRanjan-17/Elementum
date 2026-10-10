@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E26103FB307A68840078C5D1 /* Sapient in Frameworks */ = {isa = PBXBuildFile; productRef = E26103FA307A68840078C5D1 /* Sapient */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		52189D942D4AA16500670465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26103FB307A68840078C5D1 /* Sapient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = Elementum;
 			packageProductDependencies = (
+				E26103FA307A68840078C5D1 /* Sapient */,
 			);
 			productName = Elementum;
 			productReference = 52189D832D4AA16200670465 /* Elementum.app */;
@@ -209,6 +215,7 @@
 			mainGroup = 52189D7A2D4AA16200670465;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				E26103F9307A68840078C5D1 /* XCRemoteSwiftPackageReference "sapient-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 52189D842D4AA16200670465 /* Products */;
@@ -589,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E26103F9307A68840078C5D1 /* XCRemoteSwiftPackageReference "sapient-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openhorizon-labs/sapient-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E26103FA307A68840078C5D1 /* Sapient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E26103F9307A68840078C5D1 /* XCRemoteSwiftPackageReference "sapient-swift" */;
+			productName = Sapient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52189D7B2D4AA16200670465 /* Project object */;
 }

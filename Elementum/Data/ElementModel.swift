@@ -81,6 +81,16 @@ enum SelectedView: String, CaseIterable, Hashable {
         }
     }
     
+    var subtitle: String {
+        switch self {
+        case .periodicTable: return "All 118 elements at a glance"
+        case .sGroup: return "Alkali & alkaline earth metals"
+        case .pGroup: return "Nonmetals, halogens & noble gases"
+        case .dGroup: return "Transition metals"
+        case .fGroup: return "Lanthanides & actinides"
+        }
+    }
+    
     var imageName: String {
         switch self {
         case .periodicTable: return "Table"
