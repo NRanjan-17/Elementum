@@ -12,9 +12,17 @@ final class ModelManager: ObservableObject {
         case failed(String)
     }
     
-    /// Qwen2.5-1.5B-Instruct, Q4_K_M (~1 GB). SAPIENT's docs recommend the Q4 build on phones.
-    nonisolated static let modelAlias = "qwen2.5-1.5b-q4"
-    private static let downloadedKey = "sapientModelDownloaded"
+    /// Devices with more than this much RAM get the full-precision model; the rest get the 4-bit one.
+    /// (iOS reports slightly less than the marketing figure, so 6 GB phones land below this line.)
+    nonisolated static let fullModelMinimumMemory: UInt64 = 6 * 1024 * 1024 * 1024
+    
+    /// Qwen2.5-1.5B-Instruct: the standard build on devices with enough memory, otherwise the Q4_K_M build (~1 GB),
+    /// which SAPIENT's docs recommend on phones.
+    nonisolated static let modelAlias: String =
+        ProcessInfo.processInfo.physicalMemory > fullModelMinimumMemory ? "qwen2.5-1.5b" : "qwen2.5-1.5b-q4"
+    
+    // Keyed by alias so a different model choice is never mistaken for an already-downloaded one.
+    private static let downloadedKey = "sapientModelDownloaded.\(modelAlias)"
     
     @Published private(set) var state: State
     @Published private(set) var downloadSizeBytes: UInt64?

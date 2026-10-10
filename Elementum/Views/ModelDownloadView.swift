@@ -48,9 +48,10 @@ struct ModelDownloadView: View {
     private var statusSection: some View {
         switch modelManager.state {
         case .notDownloaded, .ready:
-            Button("Download Model", systemImage: "arrow.down.circle.fill", action: modelManager.download)
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
+            Button(action: modelManager.download) {
+                Label("Download Model", systemImage: "arrow.down.circle.fill")
+                    .modifier(PrimaryActionStyle())
+            }
             Text("Wi-Fi is recommended.")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
@@ -80,10 +81,23 @@ struct ModelDownloadView: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
-                Button("Try Again", systemImage: "arrow.clockwise", action: modelManager.download)
-                    .buttonStyle(.borderedProminent)
+                Button(action: modelManager.download) {
+                    Label("Try Again", systemImage: "arrow.clockwise")
+                        .modifier(PrimaryActionStyle())
+                }
             }
         }
+    }
+}
+
+/// Matches the Combine button: white bold label on an accent-colored rounded rectangle.
+private struct PrimaryActionStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title3.bold())
+            .foregroundStyle(.white)
+            .frame(width: 220, height: 55)
+            .background(Color.accentColor, in: .rect(cornerRadius: 15))
     }
 }
 
