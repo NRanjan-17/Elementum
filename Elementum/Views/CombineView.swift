@@ -6,7 +6,7 @@ struct CombineView: View {
     @Query(sort: \ChemicalEntity.name) private var savedCompounds: [ChemicalEntity]
     @Environment(\.horizontalSizeClass) private var sizeClass
     
-    @State private var reactionModel = ReactionModel()
+    private let reactionModel = ReactionModel.shared
     @State private var reactants: [ReactantWrapper] = []
     @State private var activeSheet: ActiveSheet? = nil
     

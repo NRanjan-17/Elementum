@@ -11,7 +11,11 @@ import Sapient
 /// Predicts reactions fully on-device with Qwen 2.5 1.5B through Sapient.
 actor ReactionModel {
     
+    /// One model per app: a second instance would load a second copy into memory.
+    static let shared = ReactionModel()
+    
     private var session: LlmSession?
+    private var loadTask: Task<LlmSession, Error>?
     
     // Users experiment with arbitrary element/compound combinations, so the prompt covers
     // impossible mixes and unusual quantities, and shows the exact output shape with examples
@@ -50,8 +54,13 @@ actor ReactionModel {
         """
     
     /// Loads the model on first use (downloads the weights on first run) and reuses it afterwards.
+    ///
+    /// Actors are re-entrant: while one caller awaits the load, another can enter. Without sharing the
+    /// in-flight load, a prediction started during warm-up would load a second copy of the model and
+    /// the app would be killed for memory. Every caller therefore awaits the same task.
     private func loadSession() async throws -> LlmSession {
         if let session { return session }
+        if let loadTask { return try await loadTask.value }
         
         let options = GenerationOptions(
             maxTokens: 150,
@@ -61,9 +70,13 @@ actor ReactionModel {
         )
         let model = ModelManager.modelAlias
         // `load` blocks (and downloads on first run), so keep it off the actor's executor.
-        let loaded = try await Task.detached(priority: .userInitiated) {
+        let task = Task.detached(priority: .userInitiated) {
             try LlmSession.load(model: model, options: options)
-        }.value
+        }
+        loadTask = task
+        defer { loadTask = nil }
+        
+        let loaded = try await task.value
         session = loaded
         return loaded
     }
