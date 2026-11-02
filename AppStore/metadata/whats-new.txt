@@ -1,0 +1,8 @@
+A fresh new look, and reactions that run on your device.
+
+- Redesigned Home: Element of the Day leads, and every block of the periodic table has its own tile, drawn from the real table.
+- Combine now predicts reactions with an AI model that runs entirely on your iPhone or iPad. Download it once and it works offline.
+- New app icon and launch animation.
+- Element of the Day shows a new element every day, and where it sits in the table.
+- Clearer chemical formulas with proper subscripts.
+- Fixes and performance improvements.
