@@ -70,6 +70,10 @@ struct ModelDownloadView: View {
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
+                Text("Keep Elementum open, the screen stays on until the download finishes.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
                 Button("Cancel", role: .cancel, action: modelManager.cancelDownload)
             }
             
