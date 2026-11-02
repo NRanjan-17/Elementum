@@ -190,7 +190,7 @@ def header(W, H):
 if __name__ == "__main__":
     for g in GRADIENTS:
         print(f"white on top of '{g}': {contrast(WHITE, top_colour(g)):.1f}:1")
-    for folder, (W, H) in (("iphone-6.9in", (1320, 2868)), ("iphone-6.5in", (1242, 2688))):
+    for folder, (W, H) in (("iphone-6.3in", (1206, 2622)), ("iphone-6.9in", (1320, 2868)), ("iphone-6.5in", (1242, 2688))):
         for name, *rest in PHONE_SLIDES:
             render(phone_slide(W, H, *rest), OUT / folder / name, W, H)
         render(phone_award(W, H), OUT / folder / "6-award", W, H)
