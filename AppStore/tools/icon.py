@@ -63,7 +63,10 @@ def flat(rounded=False):
 
 
 def icon_json():
-    dark_white = [{"appearance": "dark", "value": "system-light"}]
+    # White in dark mode, and in the tinted / clear glass looks.
+    dark_white = [{"appearance": "dark", "value": "system-light"},
+                  {"appearance": "tinted", "value": "system-light"}]
+    tinted_white = [{"appearance": "tinted", "value": "system-light"}]
     return {
         "color-space-for-untagged-svg-colors": "display-p3",
         "fill": {"solid": "srgb:1.00000,1.00000,1.00000,1.00000"},
@@ -81,9 +84,11 @@ def icon_json():
             },
             {   # Atomic number and name sit flatter, like the small print on a cell.
                 "layers": [
-                    # The magenta accent stays in dark mode too; it reads on the dark fill.
-                    {"image-name": "number.svg", "name": "Number", "glass": False},
-                    {"image-name": "name.svg", "name": "Name", "glass": False},
+                    # The magenta accent stays in light and dark; white when tinted.
+                    {"image-name": "number.svg", "name": "Number", "glass": False,
+                     "fill-specializations": tinted_white},
+                    {"image-name": "name.svg", "name": "Name", "glass": False,
+                     "fill-specializations": tinted_white},
                 ],
                 "shadow": {"kind": "neutral", "opacity": 0.2},
                 "specular": False,

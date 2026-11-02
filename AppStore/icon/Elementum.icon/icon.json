@@ -25,6 +25,10 @@
             {
               "appearance": "dark",
               "value": "system-light"
+            },
+            {
+              "appearance": "tinted",
+              "value": "system-light"
             }
           ]
         }
@@ -44,12 +48,24 @@
         {
           "image-name": "number.svg",
           "name": "Number",
-          "glass": false
+          "glass": false,
+          "fill-specializations": [
+            {
+              "appearance": "tinted",
+              "value": "system-light"
+            }
+          ]
         },
         {
           "image-name": "name.svg",
           "name": "Name",
-          "glass": false
+          "glass": false,
+          "fill-specializations": [
+            {
+              "appearance": "tinted",
+              "value": "system-light"
+            }
+          ]
         }
       ],
       "shadow": {
