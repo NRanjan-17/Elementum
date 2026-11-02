@@ -10,24 +10,17 @@ import SwiftUI
 ///
 /// Each part is a separate view so the splash can animate them one by one.
 /// `progress` values run from 0 (hidden) to 1 (in place).
-struct ElementumLogo: View, Animatable {
-    var size: CGFloat = 180
-    var tileProgress: CGFloat = 1
-    var symbolProgress: CGFloat = 1
-    var detailProgress: CGFloat = 1
-    var shineProgress: CGFloat = 1
+struct ElementumLogo: View {
+    var size = 180.0
+    var tileProgress = 1.0
+    var symbolProgress = 1.0
+    var detailProgress = 1.0
 
     /// Same navy and magenta as the icon's layers (magenta is from the Periodic Table card).
     static let ink = Color(red: 0.06, green: 0.13, blue: 0.29)
     static let accent = Color(red: 0.749, green: 0.165, blue: 0.51)
 
-    /// Only the sweep needs per-frame values; the other parts animate through their modifiers.
-    var animatableData: CGFloat {
-        get { shineProgress }
-        set { shineProgress = newValue }
-    }
-
-    private var corner: CGFloat { size * 0.2237 }   // iOS app icon corner ratio
+    private var corner: Double { size * 0.2237 }   // iOS app icon corner ratio
 
     var body: some View {
         ZStack {
@@ -37,7 +30,6 @@ struct ElementumLogo: View, Animatable {
             name
         }
         .frame(width: size, height: size)
-        .overlay { shine }
         .clipShape(.rect(cornerRadius: corner, style: .continuous))
         .scaleEffect(0.7 + 0.3 * tileProgress)
         .opacity(Double(min(tileProgress * 1.6, 1)))
@@ -91,20 +83,6 @@ struct ElementumLogo: View, Animatable {
             .opacity(Double(detailProgress))
     }
 
-    /// A soft band of light that sweeps across once, like light over glass.
-    private var shine: some View {
-        GeometryReader { geo in
-            let w = geo.size.width
-            LinearGradient(colors: [.white.opacity(0), .white.opacity(0.75), .white.opacity(0)],
-                           startPoint: .leading, endPoint: .trailing)
-                .frame(width: w * 0.45)
-                .rotationEffect(.degrees(20))
-                .offset(x: -w * 0.6 + shineProgress * w * 1.7)
-                // Fades in and out along the sweep, so it's invisible at rest.
-                .opacity(sin(Double(shineProgress) * .pi))
-        }
-        .allowsHitTesting(false)
-    }
 }
 
 #Preview {
