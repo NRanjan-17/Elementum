@@ -1,0 +1,2842 @@
+{
+  "date": "2026-11-02",
+  "model": "Qwen2.5-1.5B-Instruct Q4_K_M (same GGUF file)",
+  "settings": {
+    "temperature": 0,
+    "max_tokens": 150,
+    "passes": 3,
+    "cooldown_s": 2.0,
+    "order": "rotated per case, all servers running"
+  },
+  "system_prompt": "You are a careful chemistry tutor inside an app where students experiment by combining elements and compounds. You are given a list of reactants joined by \" + \". Quantities such as \"2 H2\" are optional and may be unbalanced.\n\nReply with exactly two lines and nothing else:\nEQUATION: <balanced chemical equation with every product and by-product, using → between sides>\nDESCRIPTION: <one sentence naming the reaction type and what is observed>\n\nRules:\n- Only describe reactions that really happen under common conditions. Never invent products.\n- If the substances do not react, write \"EQUATION: No reaction\" and explain why in DESCRIPTION.\n- If an entry is not a real element, compound or formula, reply only: Correct the reactants\n- If only the quantities are off, balance the equation using the correct ratio and say so.\n- Elements that exist as molecules are written in molecular form: H2, N2, O2, F2, Cl2, Br2, I2. Other elements are written as single atoms (Na, Fe, C).\n- Balance with the smallest whole-number coefficients and make sure every element has the same atom count on both sides.\n- Write formulas in plain ASCII (H2O, not subscripts). Write ionic charges with ^ (Fe^3+, SO4^2-).\n- Plain text only: no markdown, no extra commentary.\n\nExamples:\nReactants: H + O\nEQUATION: 2H2 + O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen burns in oxygen to form water.\n\nReactants: Na + Cl2\nEQUATION: 2Na + Cl2 → 2NaCl\nDESCRIPTION: A synthesis reaction in which sodium and chlorine form sodium chloride, releasing heat and bright light.\n\nReactants: Au + H2O\nEQUATION: No reaction\nDESCRIPTION: Gold is unreactive and does not react with water.",
+  "engines": {
+    "Sapient Metal": {
+      "summary": {
+        "correct": 10,
+        "cases": 16,
+        "accuracy": 0.625,
+        "median_ttft_ms": 989.0,
+        "median_total_ms": 1706.5,
+        "median_decode_tps": 54.5,
+        "grades": {
+          "correct": 10,
+          "unbalanced": 2,
+          "wrong products": 1,
+          "invented a reaction": 2,
+          "wrong": 1
+        }
+      },
+      "cases": [
+        {
+          "reactants": "Mg + O2",
+          "expected": [
+            "MgO"
+          ],
+          "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 984,
+          "total_ms": 1613,
+          "tokens": 34,
+          "tokens_from": "usage",
+          "decode_tps": 54.0,
+          "runs": [
+            {
+              "at": 1793636725.2,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 984,
+              "total_ms": 1613,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 54.0
+            },
+            {
+              "at": 1793636935.5,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 814,
+              "total_ms": 1367,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 61.5
+            },
+            {
+              "at": 1793637150.5,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 1084,
+              "total_ms": 1731,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 52.5
+            }
+          ]
+        },
+        {
+          "reactants": "Fe + O2",
+          "expected": [
+            "Fe2O3"
+          ],
+          "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 1064,
+          "total_ms": 1776,
+          "tokens": 39,
+          "tokens_from": "usage",
+          "decode_tps": 54.8,
+          "runs": [
+            {
+              "at": 1793636747.5,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 1086,
+              "total_ms": 1780,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 56.2
+            },
+            {
+              "at": 1793636957.5,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 1052,
+              "total_ms": 1764,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 54.7
+            },
+            {
+              "at": 1793637173.3,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 1064,
+              "total_ms": 1776,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 54.8
+            }
+          ]
+        },
+        {
+          "reactants": "CH4 + O2",
+          "expected": [
+            "CO2",
+            "H2O"
+          ],
+          "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 993,
+          "total_ms": 1713,
+          "tokens": 39,
+          "tokens_from": "usage",
+          "decode_tps": 54.4,
+          "runs": [
+            {
+              "at": 1793636757.4,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 996,
+              "total_ms": 1713,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 54.4
+            },
+            {
+              "at": 1793636967.5,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 993,
+              "total_ms": 1668,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 57.7
+            },
+            {
+              "at": 1793637183.0,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 956,
+              "total_ms": 1721,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 51.0
+            }
+          ]
+        },
+        {
+          "reactants": "Zn + HCl",
+          "expected": [
+            "ZnCl2",
+            "H2"
+          ],
+          "reply": "EQUATION: 2Zn + 2HCl → 2ZnCl2 + H2\nDESCRIPTION: A synthesis reaction in which zinc and hydrochloric acid form zinc chloride and hydrogen gas.",
+          "grade": "unbalanced",
+          "deterministic": true,
+          "ttft_ms": 951,
+          "total_ms": 1745,
+          "tokens": 44,
+          "tokens_from": "usage",
+          "decode_tps": 54.6,
+          "runs": [
+            {
+              "at": 1793636768.1,
+              "reply": "EQUATION: 2Zn + 2HCl → 2ZnCl2 + H2\nDESCRIPTION: A synthesis reaction in which zinc and hydrochloric acid form zinc chloride and hydrogen gas.",
+              "ttft_ms": 951,
+              "total_ms": 1812,
+              "tokens": 44,
+              "tokens_from": "usage",
+              "decode_tps": 51.1
+            },
+            {
+              "at": 1793636977.8,
+              "reply": "EQUATION: 2Zn + 2HCl → 2ZnCl2 + H2\nDESCRIPTION: A synthesis reaction in which zinc and hydrochloric acid form zinc chloride and hydrogen gas.",
+              "ttft_ms": 917,
+              "total_ms": 1722,
+              "tokens": 44,
+              "tokens_from": "usage",
+              "decode_tps": 54.6
+            },
+            {
+              "at": 1793637193.4,
+              "reply": "EQUATION: 2Zn + 2HCl → 2ZnCl2 + H2\nDESCRIPTION: A synthesis reaction in which zinc and hydrochloric acid form zinc chloride and hydrogen gas.",
+              "ttft_ms": 974,
+              "total_ms": 1745,
+              "tokens": 44,
+              "tokens_from": "usage",
+              "decode_tps": 57.1
+            }
+          ]
+        },
+        {
+          "reactants": "NaOH + HCl",
+          "expected": [
+            "NaCl",
+            "H2O"
+          ],
+          "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization (synthesis) reaction in which sodium hydroxide reacts with hydrochloric acid to form water and sodium chloride.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 902,
+          "total_ms": 1700,
+          "tokens": 46,
+          "tokens_from": "usage",
+          "decode_tps": 56.3,
+          "runs": [
+            {
+              "at": 1793636778.5,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization (synthesis) reaction in which sodium hydroxide reacts with hydrochloric acid to form water and sodium chloride.",
+              "ttft_ms": 902,
+              "total_ms": 1684,
+              "tokens": 46,
+              "tokens_from": "usage",
+              "decode_tps": 58.8
+            },
+            {
+              "at": 1793636988.3,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization (synthesis) reaction in which sodium hydroxide reacts with hydrochloric acid to form water and sodium chloride.",
+              "ttft_ms": 1166,
+              "total_ms": 2065,
+              "tokens": 46,
+              "tokens_from": "usage",
+              "decode_tps": 51.2
+            },
+            {
+              "at": 1793637203.4,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization (synthesis) reaction in which sodium hydroxide reacts with hydrochloric acid to form water and sodium chloride.",
+              "ttft_ms": 883,
+              "total_ms": 1700,
+              "tokens": 46,
+              "tokens_from": "usage",
+              "decode_tps": 56.3
+            }
+          ]
+        },
+        {
+          "reactants": "Na + H2O",
+          "expected": [
+            "NaOH",
+            "H2"
+          ],
+          "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A synthesis reaction in which sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 955,
+          "total_ms": 1691,
+          "tokens": 43,
+          "tokens_from": "usage",
+          "decode_tps": 58.4,
+          "runs": [
+            {
+              "at": 1793636800.7,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A synthesis reaction in which sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 828,
+              "total_ms": 1509,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 63.1
+            },
+            {
+              "at": 1793637011.5,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A synthesis reaction in which sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 992,
+              "total_ms": 1832,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 51.2
+            },
+            {
+              "at": 1793637226.1,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A synthesis reaction in which sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 955,
+              "total_ms": 1691,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 58.4
+            }
+          ]
+        },
+        {
+          "reactants": "Cu + AgNO3",
+          "expected": [
+            "Cu(NO3)2",
+            "Ag"
+          ],
+          "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper nitrate and silver.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 959,
+          "total_ms": 1694,
+          "tokens": 45,
+          "tokens_from": "usage",
+          "decode_tps": 61.2,
+          "runs": [
+            {
+              "at": 1793636810.9,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper nitrate and silver.",
+              "ttft_ms": 1077,
+              "total_ms": 1848,
+              "tokens": 45,
+              "tokens_from": "usage",
+              "decode_tps": 58.3
+            },
+            {
+              "at": 1793637021.6,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper nitrate and silver.",
+              "ttft_ms": 959,
+              "total_ms": 1694,
+              "tokens": 45,
+              "tokens_from": "usage",
+              "decode_tps": 61.2
+            },
+            {
+              "at": 1793637236.0,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper nitrate and silver.",
+              "ttft_ms": 850,
+              "total_ms": 1541,
+              "tokens": 45,
+              "tokens_from": "usage",
+              "decode_tps": 65.1
+            }
+          ]
+        },
+        {
+          "reactants": "C + O2",
+          "expected": [
+            "CO2"
+          ],
+          "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+          "grade": "wrong products",
+          "deterministic": true,
+          "ttft_ms": 891,
+          "total_ms": 1442,
+          "tokens": 31,
+          "tokens_from": "usage",
+          "decode_tps": 56.9,
+          "runs": [
+            {
+              "at": 1793636822.1,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 944,
+              "total_ms": 1488,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 56.9
+            },
+            {
+              "at": 1793637032.3,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 891,
+              "total_ms": 1442,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 56.3
+            },
+            {
+              "at": 1793637246.1,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 859,
+              "total_ms": 1362,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 61.6
+            }
+          ]
+        },
+        {
+          "reactants": "N2 + H2",
+          "expected": [
+            "NH3"
+          ],
+          "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen react to form ammonia.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 936,
+          "total_ms": 1623,
+          "tokens": 32,
+          "tokens_from": "usage",
+          "decode_tps": 46.4,
+          "runs": [
+            {
+              "at": 1793636831.4,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 1094,
+              "total_ms": 1623,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 60.5
+            },
+            {
+              "at": 1793637041.7,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 865,
+              "total_ms": 1555,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 46.4
+            },
+            {
+              "at": 1793637255.5,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 936,
+              "total_ms": 1651,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 44.8
+            }
+          ]
+        },
+        {
+          "reactants": "Al + O2",
+          "expected": [
+            "Al2O3"
+          ],
+          "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum burns in oxygen to form aluminum oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 1077,
+          "total_ms": 1669,
+          "tokens": 36,
+          "tokens_from": "usage",
+          "decode_tps": 55.0,
+          "runs": [
+            {
+              "at": 1793636853.2,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum burns in oxygen to form aluminum oxide.",
+              "ttft_ms": 1077,
+              "total_ms": 1669,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 60.9
+            },
+            {
+              "at": 1793637064.1,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum burns in oxygen to form aluminum oxide.",
+              "ttft_ms": 976,
+              "total_ms": 1631,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 55.0
+            },
+            {
+              "at": 1793637277.7,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum burns in oxygen to form aluminum oxide.",
+              "ttft_ms": 1121,
+              "total_ms": 1816,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 51.8
+            }
+          ]
+        },
+        {
+          "reactants": "Ca + H2O",
+          "expected": [
+            "Ca(OH)2",
+            "H2"
+          ],
+          "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A synthesis reaction in which calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 1114,
+          "total_ms": 1894,
+          "tokens": 42,
+          "tokens_from": "usage",
+          "decode_tps": 53.8,
+          "runs": [
+            {
+              "at": 1793636863.3,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A synthesis reaction in which calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 1175,
+              "total_ms": 1969,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 52.9
+            },
+            {
+              "at": 1793637074.0,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A synthesis reaction in which calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 947,
+              "total_ms": 1723,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 54.1
+            },
+            {
+              "at": 1793637288.2,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A synthesis reaction in which calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 1114,
+              "total_ms": 1894,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 53.8
+            }
+          ]
+        },
+        {
+          "reactants": "K + Cl2",
+          "expected": [
+            "KCl"
+          ],
+          "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 1021,
+          "total_ms": 1583,
+          "tokens": 30,
+          "tokens_from": "usage",
+          "decode_tps": 53.4,
+          "runs": [
+            {
+              "at": 1793636873.8,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 1021,
+              "total_ms": 1583,
+              "tokens": 30,
+              "tokens_from": "usage",
+              "decode_tps": 53.4
+            },
+            {
+              "at": 1793637085.6,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 1042,
+              "total_ms": 1625,
+              "tokens": 30,
+              "tokens_from": "usage",
+              "decode_tps": 51.4
+            },
+            {
+              "at": 1793637298.7,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 906,
+              "total_ms": 1406,
+              "tokens": 30,
+              "tokens_from": "usage",
+              "decode_tps": 60.0
+            }
+          ]
+        },
+        {
+          "reactants": "2 H2 + 2 O2",
+          "expected": [
+            "H2O"
+          ],
+          "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen and oxygen react to form water.",
+          "grade": "unbalanced",
+          "deterministic": true,
+          "ttft_ms": 1062,
+          "total_ms": 1853,
+          "tokens": 39,
+          "tokens_from": "usage",
+          "decode_tps": 49.3,
+          "runs": [
+            {
+              "at": 1793636883.5,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen and oxygen react to form water.",
+              "ttft_ms": 1194,
+              "total_ms": 2021,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 47.2
+            },
+            {
+              "at": 1793637095.8,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen and oxygen react to form water.",
+              "ttft_ms": 1062,
+              "total_ms": 1853,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 49.3
+            },
+            {
+              "at": 1793637308.3,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen and oxygen react to form water.",
+              "ttft_ms": 1042,
+              "total_ms": 1746,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 55.4
+            }
+          ]
+        },
+        {
+          "reactants": "Pt + HCl",
+          "expected": "none",
+          "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A synthesis reaction in which platinum reacts with hydrochloric acid to form platinum chloride and hydrogen gas.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 985,
+          "total_ms": 1741,
+          "tokens": 40,
+          "tokens_from": "usage",
+          "decode_tps": 52.6,
+          "runs": [
+            {
+              "at": 1793636907.0,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A synthesis reaction in which platinum reacts with hydrochloric acid to form platinum chloride and hydrogen gas.",
+              "ttft_ms": 985,
+              "total_ms": 1677,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 57.9
+            },
+            {
+              "at": 1793637120.0,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A synthesis reaction in which platinum reacts with hydrochloric acid to form platinum chloride and hydrogen gas.",
+              "ttft_ms": 980,
+              "total_ms": 1741,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 52.6
+            },
+            {
+              "at": 1793637340.9,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A synthesis reaction in which platinum reacts with hydrochloric acid to form platinum chloride and hydrogen gas.",
+              "ttft_ms": 1970,
+              "total_ms": 3245,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 31.4
+            }
+          ]
+        },
+        {
+          "reactants": "Ne + O2",
+          "expected": "none",
+          "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 1037,
+          "total_ms": 1747,
+          "tokens": 36,
+          "tokens_from": "usage",
+          "decode_tps": 50.6,
+          "runs": [
+            {
+              "at": 1793636916.3,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+              "ttft_ms": 785,
+              "total_ms": 1411,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 57.6
+            },
+            {
+              "at": 1793637129.9,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+              "ttft_ms": 1037,
+              "total_ms": 1747,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 50.6
+            },
+            {
+              "at": 1793637355.2,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+              "ttft_ms": 2480,
+              "total_ms": 3670,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 30.2
+            }
+          ]
+        },
+        {
+          "reactants": "Xq + O2",
+          "expected": "invalid",
+          "reply": "EQUATION: 2Xq + O2 → 2XO\nDESCRIPTION: A synthesis reaction in which a gas reacts with oxygen to form a compound.",
+          "grade": "wrong",
+          "deterministic": true,
+          "ttft_ms": 1149,
+          "total_ms": 1752,
+          "tokens": 34,
+          "tokens_from": "usage",
+          "decode_tps": 56.4,
+          "runs": [
+            {
+              "at": 1793636926.4,
+              "reply": "EQUATION: 2Xq + O2 → 2XO\nDESCRIPTION: A synthesis reaction in which a gas reacts with oxygen to form a compound.",
+              "ttft_ms": 971,
+              "total_ms": 1549,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 58.8
+            },
+            {
+              "at": 1793637140.8,
+              "reply": "EQUATION: 2Xq + O2 → 2XO\nDESCRIPTION: A synthesis reaction in which a gas reacts with oxygen to form a compound.",
+              "ttft_ms": 1149,
+              "total_ms": 1752,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 56.4
+            },
+            {
+              "at": 1793637374.1,
+              "reply": "EQUATION: 2Xq + O2 → 2XO\nDESCRIPTION: A synthesis reaction in which a gas reacts with oxygen to form a compound.",
+              "ttft_ms": 1841,
+              "total_ms": 2618,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 43.8
+            }
+          ]
+        }
+      ]
+    },
+    "Sapient CPU": {
+      "summary": {
+        "correct": 10,
+        "cases": 16,
+        "accuracy": 0.625,
+        "median_ttft_ms": 233.0,
+        "median_total_ms": 1374.5,
+        "median_decode_tps": 33.9,
+        "grades": {
+          "correct": 10,
+          "wrong products": 1,
+          "unbalanced": 2,
+          "invented a reaction": 2,
+          "wrong": 1
+        }
+      },
+      "cases": [
+        {
+          "reactants": "Mg + O2",
+          "expected": [
+            "MgO"
+          ],
+          "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 208,
+          "total_ms": 1165,
+          "tokens": 34,
+          "tokens_from": "usage",
+          "decode_tps": 35.8,
+          "runs": [
+            {
+              "at": 1793636728.4,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 215,
+              "total_ms": 1165,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 35.8
+            },
+            {
+              "at": 1793636938.6,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 154,
+              "total_ms": 1089,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 36.4
+            },
+            {
+              "at": 1793637154.0,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 208,
+              "total_ms": 1524,
+              "tokens": 34,
+              "tokens_from": "usage",
+              "decode_tps": 25.8
+            }
+          ]
+        },
+        {
+          "reactants": "Fe + O2",
+          "expected": [
+            "Fe2O3"
+          ],
+          "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 168,
+          "total_ms": 1281,
+          "tokens": 39,
+          "tokens_from": "usage",
+          "decode_tps": 35.0,
+          "runs": [
+            {
+              "at": 1793636737.7,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 168,
+              "total_ms": 1281,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 35.0
+            },
+            {
+              "at": 1793636947.6,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 145,
+              "total_ms": 1210,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 36.6
+            },
+            {
+              "at": 1793637163.5,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 263,
+              "total_ms": 1382,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 34.8
+            }
+          ]
+        },
+        {
+          "reactants": "CH4 + O2",
+          "expected": [
+            "CO2",
+            "H2O"
+          ],
+          "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 274,
+          "total_ms": 1388,
+          "tokens": 39,
+          "tokens_from": "usage",
+          "decode_tps": 35.5,
+          "runs": [
+            {
+              "at": 1793636761.1,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 274,
+              "total_ms": 1629,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 28.8
+            },
+            {
+              "at": 1793636970.9,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 307,
+              "total_ms": 1388,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 36.1
+            },
+            {
+              "at": 1793637186.4,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 241,
+              "total_ms": 1339,
+              "tokens": 39,
+              "tokens_from": "usage",
+              "decode_tps": 35.5
+            }
+          ]
+        },
+        {
+          "reactants": "Zn + HCl",
+          "expected": [
+            "ZnCl2",
+            "H2"
+          ],
+          "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which zinc reacts with hydrochloric acid to form zinc chloride and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 291,
+          "total_ms": 1770,
+          "tokens": 49,
+          "tokens_from": "usage",
+          "decode_tps": 33.1,
+          "runs": [
+            {
+              "at": 1793636772.2,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which zinc reacts with hydrochloric acid to form zinc chloride and hydrogen gas.",
+              "ttft_ms": 303,
+              "total_ms": 2151,
+              "tokens": 49,
+              "tokens_from": "usage",
+              "decode_tps": 26.5
+            },
+            {
+              "at": 1793636981.6,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which zinc reacts with hydrochloric acid to form zinc chloride and hydrogen gas.",
+              "ttft_ms": 291,
+              "total_ms": 1770,
+              "tokens": 49,
+              "tokens_from": "usage",
+              "decode_tps": 33.1
+            },
+            {
+              "at": 1793637197.1,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which zinc reacts with hydrochloric acid to form zinc chloride and hydrogen gas.",
+              "ttft_ms": 285,
+              "total_ms": 1745,
+              "tokens": 49,
+              "tokens_from": "usage",
+              "decode_tps": 33.6
+            }
+          ]
+        },
+        {
+          "reactants": "NaOH + HCl",
+          "expected": [
+            "NaCl",
+            "H2O"
+          ],
+          "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 221,
+          "total_ms": 1367,
+          "tokens": 42,
+          "tokens_from": "usage",
+          "decode_tps": 36.5,
+          "runs": [
+            {
+              "at": 1793636781.8,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 173,
+              "total_ms": 1324,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 36.5
+            },
+            {
+              "at": 1793636991.7,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 221,
+              "total_ms": 1367,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 36.6
+            },
+            {
+              "at": 1793637206.9,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 221,
+              "total_ms": 1481,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 33.3
+            }
+          ]
+        },
+        {
+          "reactants": "Na + H2O",
+          "expected": [
+            "NaOH",
+            "H2"
+          ],
+          "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 201,
+          "total_ms": 1382,
+          "tokens": 41,
+          "tokens_from": "usage",
+          "decode_tps": 34.9,
+          "runs": [
+            {
+              "at": 1793636791.2,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 158,
+              "total_ms": 1277,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 36.6
+            },
+            {
+              "at": 1793637001.4,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 201,
+              "total_ms": 1392,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 34.4
+            },
+            {
+              "at": 1793637216.3,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 206,
+              "total_ms": 1382,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 34.9
+            }
+          ]
+        },
+        {
+          "reactants": "Cu + AgNO3",
+          "expected": [
+            "Cu(NO3)2",
+            "Ag"
+          ],
+          "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 233,
+          "total_ms": 1957,
+          "tokens": 49,
+          "tokens_from": "usage",
+          "decode_tps": 30.1,
+          "runs": [
+            {
+              "at": 1793636815.5,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 205,
+              "total_ms": 2516,
+              "tokens": 49,
+              "tokens_from": "usage",
+              "decode_tps": 21.2
+            },
+            {
+              "at": 1793637025.5,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 328,
+              "total_ms": 1957,
+              "tokens": 49,
+              "tokens_from": "usage",
+              "decode_tps": 30.1
+            },
+            {
+              "at": 1793637239.6,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 233,
+              "total_ms": 1647,
+              "tokens": 49,
+              "tokens_from": "usage",
+              "decode_tps": 34.7
+            }
+          ]
+        },
+        {
+          "reactants": "C + O2",
+          "expected": [
+            "CO2"
+          ],
+          "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+          "grade": "wrong products",
+          "deterministic": true,
+          "ttft_ms": 233,
+          "total_ms": 1127,
+          "tokens": 31,
+          "tokens_from": "usage",
+          "decode_tps": 34.7,
+          "runs": [
+            {
+              "at": 1793636825.2,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 236,
+              "total_ms": 1110,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 35.5
+            },
+            {
+              "at": 1793637035.4,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 233,
+              "total_ms": 1127,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 34.7
+            },
+            {
+              "at": 1793637249.3,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 224,
+              "total_ms": 1140,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 33.8
+            }
+          ]
+        },
+        {
+          "reactants": "N2 + H2",
+          "expected": [
+            "NH3"
+          ],
+          "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen form ammonia, releasing heat and light.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 221,
+          "total_ms": 1236,
+          "tokens": 35,
+          "tokens_from": "usage",
+          "decode_tps": 35.8,
+          "runs": [
+            {
+              "at": 1793636834.6,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen form ammonia, releasing heat and light.",
+              "ttft_ms": 221,
+              "total_ms": 1177,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 36.6
+            },
+            {
+              "at": 1793637045.0,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen form ammonia, releasing heat and light.",
+              "ttft_ms": 194,
+              "total_ms": 1343,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 30.5
+            },
+            {
+              "at": 1793637258.8,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A synthesis reaction in which nitrogen and hydrogen form ammonia, releasing heat and light.",
+              "ttft_ms": 259,
+              "total_ms": 1236,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 35.8
+            }
+          ]
+        },
+        {
+          "reactants": "Al + O2",
+          "expected": [
+            "Al2O3"
+          ],
+          "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 181,
+          "total_ms": 1216,
+          "tokens": 36,
+          "tokens_from": "usage",
+          "decode_tps": 35.3,
+          "runs": [
+            {
+              "at": 1793636843.7,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 161,
+              "total_ms": 1149,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 36.4
+            },
+            {
+              "at": 1793637054.3,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 181,
+              "total_ms": 1247,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 33.8
+            },
+            {
+              "at": 1793637267.9,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 197,
+              "total_ms": 1216,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 35.3
+            }
+          ]
+        },
+        {
+          "reactants": "Ca + H2O",
+          "expected": [
+            "Ca(OH)2",
+            "H2"
+          ],
+          "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 345,
+          "total_ms": 1753,
+          "tokens": 40,
+          "tokens_from": "usage",
+          "decode_tps": 27.5,
+          "runs": [
+            {
+              "at": 1793636867.1,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 345,
+              "total_ms": 1753,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 28.4
+            },
+            {
+              "at": 1793637078.7,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 352,
+              "total_ms": 2751,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 16.7
+            },
+            {
+              "at": 1793637292.0,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 266,
+              "total_ms": 1722,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 27.5
+            }
+          ]
+        },
+        {
+          "reactants": "K + Cl2",
+          "expected": [
+            "KCl"
+          ],
+          "reply": "EQUATION: K + Cl2 → KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+          "grade": "unbalanced",
+          "deterministic": true,
+          "ttft_ms": 200,
+          "total_ms": 1126,
+          "tokens": 26,
+          "tokens_from": "usage",
+          "decode_tps": 28.1,
+          "runs": [
+            {
+              "at": 1793636876.8,
+              "reply": "EQUATION: K + Cl2 → KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 194,
+              "total_ms": 947,
+              "tokens": 26,
+              "tokens_from": "usage",
+              "decode_tps": 34.5
+            },
+            {
+              "at": 1793637089.4,
+              "reply": "EQUATION: K + Cl2 → KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 422,
+              "total_ms": 1755,
+              "tokens": 26,
+              "tokens_from": "usage",
+              "decode_tps": 19.5
+            },
+            {
+              "at": 1793637301.8,
+              "reply": "EQUATION: K + Cl2 → KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 200,
+              "total_ms": 1126,
+              "tokens": 26,
+              "tokens_from": "usage",
+              "decode_tps": 28.1
+            }
+          ]
+        },
+        {
+          "reactants": "2 H2 + 2 O2",
+          "expected": [
+            "H2O"
+          ],
+          "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+          "grade": "unbalanced",
+          "deterministic": true,
+          "ttft_ms": 245,
+          "total_ms": 1786,
+          "tokens": 41,
+          "tokens_from": "usage",
+          "decode_tps": 28.7,
+          "runs": [
+            {
+              "at": 1793636886.9,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 245,
+              "total_ms": 1448,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 34.1
+            },
+            {
+              "at": 1793637099.6,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 357,
+              "total_ms": 1786,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 28.7
+            },
+            {
+              "at": 1793637312.2,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 219,
+              "total_ms": 1950,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 23.7
+            }
+          ]
+        },
+        {
+          "reactants": "Pt + HCl",
+          "expected": "none",
+          "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 286,
+          "total_ms": 1955,
+          "tokens": 47,
+          "tokens_from": "usage",
+          "decode_tps": 29.1,
+          "runs": [
+            {
+              "at": 1793636897.1,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 244,
+              "total_ms": 1610,
+              "tokens": 47,
+              "tokens_from": "usage",
+              "decode_tps": 34.4
+            },
+            {
+              "at": 1793637109.9,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 341,
+              "total_ms": 1955,
+              "tokens": 47,
+              "tokens_from": "usage",
+              "decode_tps": 29.1
+            },
+            {
+              "at": 1793637325.8,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 286,
+              "total_ms": 5082,
+              "tokens": 47,
+              "tokens_from": "usage",
+              "decode_tps": 9.8
+            }
+          ]
+        },
+        {
+          "reactants": "Ne + O2",
+          "expected": "none",
+          "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 336,
+          "total_ms": 1745,
+          "tokens": 36,
+          "tokens_from": "usage",
+          "decode_tps": 25.6,
+          "runs": [
+            {
+              "at": 1793636919.6,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+              "ttft_ms": 195,
+              "total_ms": 1331,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 31.7
+            },
+            {
+              "at": 1793637133.7,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+              "ttft_ms": 336,
+              "total_ms": 1745,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 25.6
+            },
+            {
+              "at": 1793637366.0,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon reacts with oxygen to form neon oxide.",
+              "ttft_ms": 1580,
+              "total_ms": 8825,
+              "tokens": 36,
+              "tokens_from": "usage",
+              "decode_tps": 5.0
+            }
+          ]
+        },
+        {
+          "reactants": "Xq + O2",
+          "expected": "invalid",
+          "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a compound with a higher oxidation state.",
+          "grade": "wrong",
+          "deterministic": true,
+          "ttft_ms": 261,
+          "total_ms": 1331,
+          "tokens": 35,
+          "tokens_from": "usage",
+          "decode_tps": 32.7,
+          "runs": [
+            {
+              "at": 1793636929.5,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a compound with a higher oxidation state.",
+              "ttft_ms": 168,
+              "total_ms": 1171,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 34.9
+            },
+            {
+              "at": 1793637144.2,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a compound with a higher oxidation state.",
+              "ttft_ms": 261,
+              "total_ms": 1331,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 32.7
+            },
+            {
+              "at": 1793637380.0,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a compound with a higher oxidation state.",
+              "ttft_ms": 999,
+              "total_ms": 3894,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 12.1
+            }
+          ]
+        }
+      ]
+    },
+    "llama.cpp Metal": {
+      "summary": {
+        "correct": 11,
+        "cases": 16,
+        "accuracy": 0.688,
+        "median_ttft_ms": 94.0,
+        "median_total_ms": 731.5,
+        "median_decode_tps": 62.9,
+        "grades": {
+          "correct": 11,
+          "wrong products": 1,
+          "unbalanced": 1,
+          "invented a reaction": 2,
+          "wrong": 1
+        }
+      },
+      "cases": [
+        {
+          "reactants": "Mg + O2",
+          "expected": [
+            "MgO"
+          ],
+          "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 95,
+          "total_ms": 640,
+          "tokens": 35,
+          "tokens_from": "usage",
+          "decode_tps": 62.7,
+          "runs": [
+            {
+              "at": 1793636731.0,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 82,
+              "total_ms": 640,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 62.7
+            },
+            {
+              "at": 1793636941.2,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 95,
+              "total_ms": 629,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 65.5
+            },
+            {
+              "at": 1793637156.9,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 217,
+              "total_ms": 830,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 57.1
+            }
+          ]
+        },
+        {
+          "reactants": "Fe + O2",
+          "expected": [
+            "Fe2O3"
+          ],
+          "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 93,
+          "total_ms": 738,
+          "tokens": 40,
+          "tokens_from": "usage",
+          "decode_tps": 62.0,
+          "runs": [
+            {
+              "at": 1793636740.4,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 81,
+              "total_ms": 717,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 62.9
+            },
+            {
+              "at": 1793636950.4,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 107,
+              "total_ms": 784,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 59.1
+            },
+            {
+              "at": 1793637166.2,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 93,
+              "total_ms": 738,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 62.0
+            }
+          ]
+        },
+        {
+          "reactants": "CH4 + O2",
+          "expected": [
+            "CO2",
+            "H2O"
+          ],
+          "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 100,
+          "total_ms": 725,
+          "tokens": 40,
+          "tokens_from": "usage",
+          "decode_tps": 63.0,
+          "runs": [
+            {
+              "at": 1793636750.3,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 100,
+              "total_ms": 722,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 64.3
+            },
+            {
+              "at": 1793636960.4,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 237,
+              "total_ms": 907,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 59.7
+            },
+            {
+              "at": 1793637176.0,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 90,
+              "total_ms": 725,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 63.0
+            }
+          ]
+        },
+        {
+          "reactants": "Zn + HCl",
+          "expected": [
+            "ZnCl2",
+            "H2"
+          ],
+          "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 63,
+          "total_ms": 561,
+          "tokens": 33,
+          "tokens_from": "usage",
+          "decode_tps": 65.8,
+          "runs": [
+            {
+              "at": 1793636774.8,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+              "ttft_ms": 50,
+              "total_ms": 551,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 65.8
+            },
+            {
+              "at": 1793636984.3,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+              "ttft_ms": 110,
+              "total_ms": 659,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 60.2
+            },
+            {
+              "at": 1793637199.7,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+              "ttft_ms": 63,
+              "total_ms": 561,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 66.2
+            }
+          ]
+        },
+        {
+          "reactants": "NaOH + HCl",
+          "expected": [
+            "NaCl",
+            "H2O"
+          ],
+          "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 93,
+          "total_ms": 754,
+          "tokens": 43,
+          "tokens_from": "usage",
+          "decode_tps": 64.1,
+          "runs": [
+            {
+              "at": 1793636784.6,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 82,
+              "total_ms": 754,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 64.1
+            },
+            {
+              "at": 1793636994.6,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 119,
+              "total_ms": 832,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 60.3
+            },
+            {
+              "at": 1793637209.6,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 93,
+              "total_ms": 751,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 65.4
+            }
+          ]
+        },
+        {
+          "reactants": "Na + H2O",
+          "expected": [
+            "NaOH",
+            "H2"
+          ],
+          "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 78,
+          "total_ms": 742,
+          "tokens": 42,
+          "tokens_from": "usage",
+          "decode_tps": 63.3,
+          "runs": [
+            {
+              "at": 1793636793.9,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 71,
+              "total_ms": 720,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 64.7
+            },
+            {
+              "at": 1793637004.1,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 81,
+              "total_ms": 756,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 62.3
+            },
+            {
+              "at": 1793637219.1,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 78,
+              "total_ms": 742,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 63.3
+            }
+          ]
+        },
+        {
+          "reactants": "Cu + AgNO3",
+          "expected": [
+            "Cu(NO3)2",
+            "Ag"
+          ],
+          "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 87,
+          "total_ms": 905,
+          "tokens": 50,
+          "tokens_from": "usage",
+          "decode_tps": 60.9,
+          "runs": [
+            {
+              "at": 1793636803.6,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 84,
+              "total_ms": 905,
+              "tokens": 50,
+              "tokens_from": "usage",
+              "decode_tps": 60.9
+            },
+            {
+              "at": 1793637014.4,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 116,
+              "total_ms": 944,
+              "tokens": 50,
+              "tokens_from": "usage",
+              "decode_tps": 60.4
+            },
+            {
+              "at": 1793637229.0,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 87,
+              "total_ms": 870,
+              "tokens": 50,
+              "tokens_from": "usage",
+              "decode_tps": 63.9
+            }
+          ]
+        },
+        {
+          "reactants": "C + O2",
+          "expected": [
+            "CO2"
+          ],
+          "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+          "grade": "wrong products",
+          "deterministic": true,
+          "ttft_ms": 76,
+          "total_ms": 583,
+          "tokens": 32,
+          "tokens_from": "usage",
+          "decode_tps": 64.6,
+          "runs": [
+            {
+              "at": 1793636827.8,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 71,
+              "total_ms": 566,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 64.6
+            },
+            {
+              "at": 1793637038.1,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 76,
+              "total_ms": 743,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 48.0
+            },
+            {
+              "at": 1793637251.9,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 99,
+              "total_ms": 583,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 66.2
+            }
+          ]
+        },
+        {
+          "reactants": "N2 + H2",
+          "expected": [
+            "NH3"
+          ],
+          "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 126,
+          "total_ms": 696,
+          "tokens": 37,
+          "tokens_from": "usage",
+          "decode_tps": 64.8,
+          "runs": [
+            {
+              "at": 1793636837.3,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 126,
+              "total_ms": 696,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 64.8
+            },
+            {
+              "at": 1793637047.8,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 112,
+              "total_ms": 738,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 59.1
+            },
+            {
+              "at": 1793637261.5,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 126,
+              "total_ms": 694,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 65.2
+            }
+          ]
+        },
+        {
+          "reactants": "Al + O2",
+          "expected": [
+            "Al2O3"
+          ],
+          "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 111,
+          "total_ms": 688,
+          "tokens": 37,
+          "tokens_from": "usage",
+          "decode_tps": 64.5,
+          "runs": [
+            {
+              "at": 1793636846.3,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 72,
+              "total_ms": 640,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 65.1
+            },
+            {
+              "at": 1793637057.0,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 111,
+              "total_ms": 734,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 59.4
+            },
+            {
+              "at": 1793637270.6,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 114,
+              "total_ms": 688,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 64.5
+            }
+          ]
+        },
+        {
+          "reactants": "Ca + H2O",
+          "expected": [
+            "Ca(OH)2",
+            "H2"
+          ],
+          "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 126,
+          "total_ms": 813,
+          "tokens": 41,
+          "tokens_from": "usage",
+          "decode_tps": 62.8,
+          "runs": [
+            {
+              "at": 1793636856.1,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 168,
+              "total_ms": 813,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 63.5
+            },
+            {
+              "at": 1793637066.8,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 118,
+              "total_ms": 771,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 62.8
+            },
+            {
+              "at": 1793637280.7,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 126,
+              "total_ms": 936,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 50.6
+            }
+          ]
+        },
+        {
+          "reactants": "K + Cl2",
+          "expected": [
+            "KCl"
+          ],
+          "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 71,
+          "total_ms": 639,
+          "tokens": 31,
+          "tokens_from": "usage",
+          "decode_tps": 54.3,
+          "runs": [
+            {
+              "at": 1793636879.4,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 61,
+              "total_ms": 639,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 53.7
+            },
+            {
+              "at": 1793637091.9,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 71,
+              "total_ms": 549,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 64.9
+            },
+            {
+              "at": 1793637304.5,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 109,
+              "total_ms": 680,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 54.3
+            }
+          ]
+        },
+        {
+          "reactants": "2 H2 + 2 O2",
+          "expected": [
+            "H2O"
+          ],
+          "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+          "grade": "unbalanced",
+          "deterministic": true,
+          "ttft_ms": 140,
+          "total_ms": 859,
+          "tokens": 42,
+          "tokens_from": "usage",
+          "decode_tps": 60.7,
+          "runs": [
+            {
+              "at": 1793636889.9,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 140,
+              "total_ms": 979,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 50.1
+            },
+            {
+              "at": 1793637102.5,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 193,
+              "total_ms": 859,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 63.1
+            },
+            {
+              "at": 1793637315.0,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 110,
+              "total_ms": 803,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 60.7
+            }
+          ]
+        },
+        {
+          "reactants": "Pt + HCl",
+          "expected": "none",
+          "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 130,
+          "total_ms": 908,
+          "tokens": 48,
+          "tokens_from": "usage",
+          "decode_tps": 62.3,
+          "runs": [
+            {
+              "at": 1793636899.9,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 68,
+              "total_ms": 822,
+              "tokens": 48,
+              "tokens_from": "usage",
+              "decode_tps": 63.7
+            },
+            {
+              "at": 1793637112.9,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 138,
+              "total_ms": 908,
+              "tokens": 48,
+              "tokens_from": "usage",
+              "decode_tps": 62.3
+            },
+            {
+              "at": 1793637328.9,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 130,
+              "total_ms": 1090,
+              "tokens": 48,
+              "tokens_from": "usage",
+              "decode_tps": 50.0
+            }
+          ]
+        },
+        {
+          "reactants": "Ne + O2",
+          "expected": "none",
+          "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 140,
+          "total_ms": 820,
+          "tokens": 37,
+          "tokens_from": "usage",
+          "decode_tps": 54.4,
+          "runs": [
+            {
+              "at": 1793636909.7,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+              "ttft_ms": 76,
+              "total_ms": 645,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 65.1
+            },
+            {
+              "at": 1793637122.9,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+              "ttft_ms": 140,
+              "total_ms": 820,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 54.4
+            },
+            {
+              "at": 1793637344.3,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+              "ttft_ms": 142,
+              "total_ms": 1347,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 30.7
+            }
+          ]
+        },
+        {
+          "reactants": "Xq + O2",
+          "expected": "invalid",
+          "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+          "grade": "wrong",
+          "deterministic": true,
+          "ttft_ms": 58,
+          "total_ms": 585,
+          "tokens": 33,
+          "tokens_from": "usage",
+          "decode_tps": 63.3,
+          "runs": [
+            {
+              "at": 1793636932.1,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+              "ttft_ms": 58,
+              "total_ms": 566,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 64.9
+            },
+            {
+              "at": 1793637146.8,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+              "ttft_ms": 75,
+              "total_ms": 596,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 63.3
+            },
+            {
+              "at": 1793637382.6,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+              "ttft_ms": 58,
+              "total_ms": 585,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 62.6
+            }
+          ]
+        }
+      ]
+    },
+    "llama.cpp Metal, no prompt cache": {
+      "summary": {
+        "correct": 11,
+        "cases": 16,
+        "accuracy": 0.688,
+        "median_ttft_ms": 673.0,
+        "median_total_ms": 1321.5,
+        "median_decode_tps": 62.5,
+        "grades": {
+          "correct": 11,
+          "wrong products": 1,
+          "unbalanced": 1,
+          "invented a reaction": 2,
+          "wrong": 1
+        }
+      },
+      "cases": [
+        {
+          "reactants": "Mg + O2",
+          "expected": [
+            "MgO"
+          ],
+          "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 660,
+          "total_ms": 1200,
+          "tokens": 35,
+          "tokens_from": "usage",
+          "decode_tps": 64.9,
+          "runs": [
+            {
+              "at": 1793636734.4,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 828,
+              "total_ms": 1394,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 61.8
+            },
+            {
+              "at": 1793636944.4,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 650,
+              "total_ms": 1184,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 65.6
+            },
+            {
+              "at": 1793637160.1,
+              "reply": "EQUATION: 2Mg + O2 → 2MgO\nDESCRIPTION: A combustion reaction in which magnesium reacts with oxygen to form magnesium oxide.",
+              "ttft_ms": 660,
+              "total_ms": 1200,
+              "tokens": 35,
+              "tokens_from": "usage",
+              "decode_tps": 64.9
+            }
+          ]
+        },
+        {
+          "reactants": "Fe + O2",
+          "expected": [
+            "Fe2O3"
+          ],
+          "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 667,
+          "total_ms": 1310,
+          "tokens": 40,
+          "tokens_from": "usage",
+          "decode_tps": 62.0,
+          "runs": [
+            {
+              "at": 1793636743.8,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 692,
+              "total_ms": 1337,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 62.0
+            },
+            {
+              "at": 1793636953.7,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 658,
+              "total_ms": 1310,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 61.3
+            },
+            {
+              "at": 1793637169.5,
+              "reply": "EQUATION: 4Fe + 3O2 → 2Fe2O3\nDESCRIPTION: A combustion reaction in which iron reacts with oxygen to form iron(III) oxide.",
+              "ttft_ms": 667,
+              "total_ms": 1285,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 64.7
+            }
+          ]
+        },
+        {
+          "reactants": "CH4 + O2",
+          "expected": [
+            "CO2",
+            "H2O"
+          ],
+          "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 672,
+          "total_ms": 1405,
+          "tokens": 40,
+          "tokens_from": "usage",
+          "decode_tps": 54.6,
+          "runs": [
+            {
+              "at": 1793636753.7,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 696,
+              "total_ms": 1434,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 54.1
+            },
+            {
+              "at": 1793636963.8,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 672,
+              "total_ms": 1405,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 54.6
+            },
+            {
+              "at": 1793637179.3,
+              "reply": "EQUATION: CH4 + 2O2 → CO2 + 2H2O\nDESCRIPTION: A combustion reaction in which methane reacts with oxygen to produce carbon dioxide and water.",
+              "ttft_ms": 671,
+              "total_ms": 1287,
+              "tokens": 40,
+              "tokens_from": "usage",
+              "decode_tps": 64.9
+            }
+          ]
+        },
+        {
+          "reactants": "Zn + HCl",
+          "expected": [
+            "ZnCl2",
+            "H2"
+          ],
+          "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 680,
+          "total_ms": 1215,
+          "tokens": 33,
+          "tokens_from": "usage",
+          "decode_tps": 62.0,
+          "runs": [
+            {
+              "at": 1793636764.3,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+              "ttft_ms": 664,
+              "total_ms": 1194,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 62.2
+            },
+            {
+              "at": 1793636974.1,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+              "ttft_ms": 680,
+              "total_ms": 1215,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 61.7
+            },
+            {
+              "at": 1793637189.6,
+              "reply": "EQUATION: Zn + 2HCl → ZnCl2 + H2\nDESCRIPTION: A reaction type not commonly observed in everyday conditions.",
+              "ttft_ms": 701,
+              "total_ms": 1234,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 62.0
+            }
+          ]
+        },
+        {
+          "reactants": "NaOH + HCl",
+          "expected": [
+            "NaCl",
+            "H2O"
+          ],
+          "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 669,
+          "total_ms": 1329,
+          "tokens": 43,
+          "tokens_from": "usage",
+          "decode_tps": 65.1,
+          "runs": [
+            {
+              "at": 1793636787.9,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 669,
+              "total_ms": 1329,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 65.1
+            },
+            {
+              "at": 1793636998.0,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 689,
+              "total_ms": 1398,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 60.6
+            },
+            {
+              "at": 1793637212.9,
+              "reply": "EQUATION: NaOH + HCl → NaCl + H2O\nDESCRIPTION: A neutralization reaction in which sodium hydroxide reacts with hydrochloric acid to form sodium chloride and water.",
+              "ttft_ms": 667,
+              "total_ms": 1321,
+              "tokens": 43,
+              "tokens_from": "usage",
+              "decode_tps": 65.7
+            }
+          ]
+        },
+        {
+          "reactants": "Na + H2O",
+          "expected": [
+            "NaOH",
+            "H2"
+          ],
+          "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 674,
+          "total_ms": 1339,
+          "tokens": 42,
+          "tokens_from": "usage",
+          "decode_tps": 63.1,
+          "runs": [
+            {
+              "at": 1793636797.2,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 660,
+              "total_ms": 1310,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 64.6
+            },
+            {
+              "at": 1793637007.6,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 743,
+              "total_ms": 1523,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 53.9
+            },
+            {
+              "at": 1793637222.4,
+              "reply": "EQUATION: 2Na + 2H2O → 2NaOH + H2\nDESCRIPTION: A reaction where sodium reacts with water to form sodium hydroxide and hydrogen gas.",
+              "ttft_ms": 674,
+              "total_ms": 1339,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 63.1
+            }
+          ]
+        },
+        {
+          "reactants": "Cu + AgNO3",
+          "expected": [
+            "Cu(NO3)2",
+            "Ag"
+          ],
+          "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 656,
+          "total_ms": 1423,
+          "tokens": 50,
+          "tokens_from": "usage",
+          "decode_tps": 64.8,
+          "runs": [
+            {
+              "at": 1793636807.1,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 647,
+              "total_ms": 1419,
+              "tokens": 50,
+              "tokens_from": "usage",
+              "decode_tps": 64.8
+            },
+            {
+              "at": 1793637017.9,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 656,
+              "total_ms": 1438,
+              "tokens": 50,
+              "tokens_from": "usage",
+              "decode_tps": 64.0
+            },
+            {
+              "at": 1793637232.4,
+              "reply": "EQUATION: Cu + 2AgNO3 → Cu(NO3)2 + 2Ag\nDESCRIPTION: A displacement reaction in which copper displaces silver from silver nitrate, forming copper(II) nitrate and silver metal.",
+              "ttft_ms": 667,
+              "total_ms": 1423,
+              "tokens": 50,
+              "tokens_from": "usage",
+              "decode_tps": 66.1
+            }
+          ]
+        },
+        {
+          "reactants": "C + O2",
+          "expected": [
+            "CO2"
+          ],
+          "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+          "grade": "wrong products",
+          "deterministic": true,
+          "ttft_ms": 661,
+          "total_ms": 1153,
+          "tokens": 32,
+          "tokens_from": "usage",
+          "decode_tps": 63.8,
+          "runs": [
+            {
+              "at": 1793636818.6,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 651,
+              "total_ms": 1153,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 63.7
+            },
+            {
+              "at": 1793637028.8,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 768,
+              "total_ms": 1270,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 63.8
+            },
+            {
+              "at": 1793637242.8,
+              "reply": "EQUATION: 2C + O2 → 2CO\nDESCRIPTION: A combustion reaction in which carbon reacts with oxygen to form carbon dioxide.",
+              "ttft_ms": 661,
+              "total_ms": 1140,
+              "tokens": 32,
+              "tokens_from": "usage",
+              "decode_tps": 66.7
+            }
+          ]
+        },
+        {
+          "reactants": "N2 + H2",
+          "expected": [
+            "NH3"
+          ],
+          "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 656,
+          "total_ms": 1229,
+          "tokens": 37,
+          "tokens_from": "usage",
+          "decode_tps": 64.9,
+          "runs": [
+            {
+              "at": 1793636840.5,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 662,
+              "total_ms": 1229,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 65.2
+            },
+            {
+              "at": 1793637051.0,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 656,
+              "total_ms": 1241,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 63.3
+            },
+            {
+              "at": 1793637264.7,
+              "reply": "EQUATION: N2 + 3H2 → 2NH3\nDESCRIPTION: A combination (synthesis) reaction in which nitrogen and hydrogen react to form ammonia.",
+              "ttft_ms": 650,
+              "total_ms": 1220,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 64.9
+            }
+          ]
+        },
+        {
+          "reactants": "Al + O2",
+          "expected": [
+            "Al2O3"
+          ],
+          "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 734,
+          "total_ms": 1314,
+          "tokens": 37,
+          "tokens_from": "usage",
+          "decode_tps": 64.7,
+          "runs": [
+            {
+              "at": 1793636849.6,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 659,
+              "total_ms": 1231,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 64.7
+            },
+            {
+              "at": 1793637060.4,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 734,
+              "total_ms": 1410,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 54.7
+            },
+            {
+              "at": 1793637273.9,
+              "reply": "EQUATION: 4Al + 3O2 → 2Al2O3\nDESCRIPTION: A combustion reaction in which aluminum reacts with oxygen to form aluminum oxide.",
+              "ttft_ms": 745,
+              "total_ms": 1314,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 64.9
+            }
+          ]
+        },
+        {
+          "reactants": "Ca + H2O",
+          "expected": [
+            "Ca(OH)2",
+            "H2"
+          ],
+          "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 700,
+          "total_ms": 1401,
+          "tokens": 41,
+          "tokens_from": "usage",
+          "decode_tps": 58.5,
+          "runs": [
+            {
+              "at": 1793636859.4,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 662,
+              "total_ms": 1287,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 65.6
+            },
+            {
+              "at": 1793637070.2,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 700,
+              "total_ms": 1401,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 58.5
+            },
+            {
+              "at": 1793637284.3,
+              "reply": "EQUATION: Ca + 2H2O → Ca(OH)2 + H2\nDESCRIPTION: A reaction where calcium reacts with water to form calcium hydroxide and hydrogen gas.",
+              "ttft_ms": 827,
+              "total_ms": 1663,
+              "tokens": 41,
+              "tokens_from": "usage",
+              "decode_tps": 49.1
+            }
+          ]
+        },
+        {
+          "reactants": "K + Cl2",
+          "expected": [
+            "KCl"
+          ],
+          "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+          "grade": "correct",
+          "deterministic": true,
+          "ttft_ms": 744,
+          "total_ms": 1258,
+          "tokens": 31,
+          "tokens_from": "usage",
+          "decode_tps": 60.2,
+          "runs": [
+            {
+              "at": 1793636870.3,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 678,
+              "total_ms": 1164,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 63.7
+            },
+            {
+              "at": 1793637082.0,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 744,
+              "total_ms": 1258,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 60.2
+            },
+            {
+              "at": 1793637295.3,
+              "reply": "EQUATION: 2K + Cl2 → 2KCl\nDESCRIPTION: A synthesis reaction in which potassium and chlorine form potassium chloride.",
+              "ttft_ms": 788,
+              "total_ms": 1310,
+              "tokens": 31,
+              "tokens_from": "usage",
+              "decode_tps": 59.5
+            }
+          ]
+        },
+        {
+          "reactants": "2 H2 + 2 O2",
+          "expected": [
+            "H2O"
+          ],
+          "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+          "grade": "unbalanced",
+          "deterministic": true,
+          "ttft_ms": 736,
+          "total_ms": 1553,
+          "tokens": 42,
+          "tokens_from": "usage",
+          "decode_tps": 49.2,
+          "runs": [
+            {
+              "at": 1793636893.5,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 784,
+              "total_ms": 1553,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 54.6
+            },
+            {
+              "at": 1793637106.0,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 668,
+              "total_ms": 1522,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 49.2
+            },
+            {
+              "at": 1793637318.7,
+              "reply": "EQUATION: 2H2 + 2O2 → 2H2O\nDESCRIPTION: A combination (synthesis) reaction in which hydrogen gas reacts with oxygen gas to form water.",
+              "ttft_ms": 736,
+              "total_ms": 1637,
+              "tokens": 42,
+              "tokens_from": "usage",
+              "decode_tps": 46.6
+            }
+          ]
+        },
+        {
+          "reactants": "Pt + HCl",
+          "expected": "none",
+          "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 671,
+          "total_ms": 1433,
+          "tokens": 48,
+          "tokens_from": "usage",
+          "decode_tps": 63.0,
+          "runs": [
+            {
+              "at": 1793636903.3,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 670,
+              "total_ms": 1408,
+              "tokens": 48,
+              "tokens_from": "usage",
+              "decode_tps": 65.1
+            },
+            {
+              "at": 1793637116.3,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 671,
+              "total_ms": 1433,
+              "tokens": 48,
+              "tokens_from": "usage",
+              "decode_tps": 63.0
+            },
+            {
+              "at": 1793637335.7,
+              "reply": "EQUATION: Pt + 2HCl → PtCl2 + H2\nDESCRIPTION: A reduction-oxidation (redox) reaction in which platinum metal reduces hydrochloric acid to form hydrogen gas and chloride ions.",
+              "ttft_ms": 1170,
+              "total_ms": 4819,
+              "tokens": 48,
+              "tokens_from": "usage",
+              "decode_tps": 13.2
+            }
+          ]
+        },
+        {
+          "reactants": "Ne + O2",
+          "expected": "none",
+          "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+          "grade": "invented a reaction",
+          "deterministic": true,
+          "ttft_ms": 682,
+          "total_ms": 1279,
+          "tokens": 37,
+          "tokens_from": "usage",
+          "decode_tps": 62.0,
+          "runs": [
+            {
+              "at": 1793636912.9,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+              "ttft_ms": 647,
+              "total_ms": 1215,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 65.2
+            },
+            {
+              "at": 1793637126.2,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+              "ttft_ms": 682,
+              "total_ms": 1279,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 62.0
+            },
+            {
+              "at": 1793637349.5,
+              "reply": "EQUATION: 2Ne + O2 → 2NeO\nDESCRIPTION: A combination (synthesis) reaction in which neon combines with oxygen to form neon oxide.",
+              "ttft_ms": 1162,
+              "total_ms": 3259,
+              "tokens": 37,
+              "tokens_from": "usage",
+              "decode_tps": 17.6
+            }
+          ]
+        },
+        {
+          "reactants": "Xq + O2",
+          "expected": "invalid",
+          "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+          "grade": "wrong",
+          "deterministic": true,
+          "ttft_ms": 739,
+          "total_ms": 1412,
+          "tokens": 33,
+          "tokens_from": "usage",
+          "decode_tps": 55.9,
+          "runs": [
+            {
+              "at": 1793636922.8,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+              "ttft_ms": 672,
+              "total_ms": 1182,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 64.7
+            },
+            {
+              "at": 1793637137.1,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+              "ttft_ms": 821,
+              "total_ms": 1412,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 55.9
+            },
+            {
+              "at": 1793637369.5,
+              "reply": "EQUATION: Xq + O2 → XO3\nDESCRIPTION: A combustion reaction in which a gas reacts with oxygen to form a corresponding oxide.",
+              "ttft_ms": 739,
+              "total_ms": 1436,
+              "tokens": 33,
+              "tokens_from": "usage",
+              "decode_tps": 47.4
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

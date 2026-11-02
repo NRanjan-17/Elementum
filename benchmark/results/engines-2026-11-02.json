@@ -1,0 +1,1020 @@
+{
+  "date": "2026-11-02",
+  "machine": {
+    "chip": "Apple M2",
+    "memory_gb": 16,
+    "performance_cores": "4",
+    "os": "macOS 27.2"
+  },
+  "model": "Qwen2.5-1.5B-Instruct Q4_K_M",
+  "gguf": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "prompt": "Explain in detail how a bicycle stays upright when it is moving.",
+  "tokens": 128,
+  "runs": 5,
+  "rounds": 2,
+  "sapient_version": "sapient 0.6.9",
+  "rounds_data": [
+    {
+      "round": 1,
+      "background_before": [
+        "87.0 /usr/libexec/spotlightknowledged.updater",
+        "29.5 /Applications/Xcode.app/Contents/SharedFrameworks/DVTITunesSoftware.framework/Versions/A/XPCServices/com.apple.dt.Xcode.ITunesSoftwareService.xpc/Contents/MacOS/com.apple.dt.Xcode.ITunesSoftwareService",
+        "29.0 /Users/nalinishranjan/Desktop/Claude agent/venv/lib/python3.14/site-packages/claude_agent_sdk/_bundled/claude"
+      ],
+      "engines": {
+        "Sapient Metal": {
+          "tps": [
+            64.9,
+            67.3,
+            67.0,
+            66.2,
+            65.9
+          ],
+          "ttft_ms": [
+            65,
+            64,
+            64,
+            64,
+            62
+          ],
+          "peak_rss_mb": 2432,
+          "load_ms": 3530,
+          "raw": {
+            "backend": "metal",
+            "load_time_ms": 3530,
+            "max_tokens": 128,
+            "method": "greedy; tps = decode-only (tokens \u2212 1) / (t_last_token \u2212 t_first_token); ttft_ms = prompt prefill + first token; warm-up runs excluded from means; peak_rss_mb = getrusage ru_maxrss (process high-water mark)",
+            "mmap": false,
+            "model": "qwen2.5-1.5b-q4",
+            "prompt": "Explain in detail how a bicycle stays upright when it is moving.",
+            "prompt_tokens": 22,
+            "runs": [
+              {
+                "e2e_tps": 63.4,
+                "elapsed_ms": 2020,
+                "hit_eos": false,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 64.9,
+                "ttft_ms": 65
+              },
+              {
+                "e2e_tps": 65.6,
+                "elapsed_ms": 1951,
+                "hit_eos": false,
+                "run": 2,
+                "total_tokens": 128,
+                "tps": 67.3,
+                "ttft_ms": 64
+              },
+              {
+                "e2e_tps": 65.3,
+                "elapsed_ms": 1960,
+                "hit_eos": false,
+                "run": 3,
+                "total_tokens": 128,
+                "tps": 67.0,
+                "ttft_ms": 64
+              },
+              {
+                "e2e_tps": 64.6,
+                "elapsed_ms": 1981,
+                "hit_eos": false,
+                "run": 4,
+                "total_tokens": 128,
+                "tps": 66.2,
+                "ttft_ms": 64
+              },
+              {
+                "e2e_tps": 64.3,
+                "elapsed_ms": 1990,
+                "hit_eos": false,
+                "run": 5,
+                "total_tokens": 128,
+                "tps": 65.9,
+                "ttft_ms": 62
+              }
+            ],
+            "sapient_version": "0.6.9",
+            "summary": {
+              "decode_tps": 66.3,
+              "mean_tps": 66.3,
+              "mean_ttft_ms": 63,
+              "peak_rss_mb": 2432
+            },
+            "threads": 8,
+            "warmup": [
+              {
+                "elapsed_ms": 2119,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 67.7,
+                "ttft_ms": 243
+              }
+            ]
+          }
+        },
+        "llama.cpp Metal": {
+          "prefill_tps": [
+            605.5,
+            606.9,
+            604.9,
+            606.2,
+            581.7
+          ],
+          "tps": [
+            68.3,
+            68.4,
+            68.4,
+            68.6,
+            68.4
+          ],
+          "build": "5e18eb021",
+          "raw": [
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 99,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 32,
+              "n_gen": 0,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:12:43Z",
+              "avg_ns": 53253716,
+              "stddev_ns": 983343,
+              "avg_ts": 601.057046,
+              "stddev_ts": 10.832928,
+              "samples_ns": [
+                52850583,
+                52724250,
+                52897167,
+                52787750,
+                55008833
+              ],
+              "samples_ts": [
+                605.481,
+                606.931,
+                604.947,
+                606.201,
+                581.725
+              ]
+            },
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 99,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 0,
+              "n_gen": 128,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:12:44Z",
+              "avg_ns": 1870644416,
+              "stddev_ns": 2854457,
+              "avg_ts": 68.425745,
+              "stddev_ts": 0.104498,
+              "samples_ns": [
+                1873798250,
+                1870063208,
+                1872000208,
+                1866155791,
+                1871204625
+              ],
+              "samples_ts": [
+                68.3104,
+                68.4469,
+                68.3761,
+                68.5902,
+                68.4051
+              ]
+            }
+          ]
+        },
+        "Sapient CPU": {
+          "tps": [
+            44.8,
+            41.0,
+            40.0,
+            42.0,
+            44.4
+          ],
+          "ttft_ms": [
+            247,
+            245,
+            496,
+            269,
+            256
+          ],
+          "peak_rss_mb": 1557,
+          "load_ms": 837,
+          "raw": {
+            "backend": "cpu",
+            "load_time_ms": 837,
+            "max_tokens": 128,
+            "method": "greedy; tps = decode-only (tokens \u2212 1) / (t_last_token \u2212 t_first_token); ttft_ms = prompt prefill + first token; warm-up runs excluded from means; peak_rss_mb = getrusage ru_maxrss (process high-water mark)",
+            "mmap": false,
+            "model": "qwen2.5-1.5b-q4",
+            "prompt": "Explain in detail how a bicycle stays upright when it is moving.",
+            "prompt_tokens": 22,
+            "runs": [
+              {
+                "e2e_tps": 41.6,
+                "elapsed_ms": 3080,
+                "hit_eos": false,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 44.8,
+                "ttft_ms": 247
+              },
+              {
+                "e2e_tps": 38.3,
+                "elapsed_ms": 3346,
+                "hit_eos": false,
+                "run": 2,
+                "total_tokens": 128,
+                "tps": 41.0,
+                "ttft_ms": 245
+              },
+              {
+                "e2e_tps": 34.9,
+                "elapsed_ms": 3671,
+                "hit_eos": false,
+                "run": 3,
+                "total_tokens": 128,
+                "tps": 40.0,
+                "ttft_ms": 496
+              },
+              {
+                "e2e_tps": 38.9,
+                "elapsed_ms": 3291,
+                "hit_eos": false,
+                "run": 4,
+                "total_tokens": 128,
+                "tps": 42.0,
+                "ttft_ms": 269
+              },
+              {
+                "e2e_tps": 41.1,
+                "elapsed_ms": 3116,
+                "hit_eos": false,
+                "run": 5,
+                "total_tokens": 128,
+                "tps": 44.4,
+                "ttft_ms": 256
+              }
+            ],
+            "sapient_version": "0.6.9",
+            "summary": {
+              "decode_tps": 42.4,
+              "mean_tps": 42.4,
+              "mean_ttft_ms": 302,
+              "peak_rss_mb": 1557
+            },
+            "threads": 8,
+            "warmup": [
+              {
+                "elapsed_ms": 3401,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 40.3,
+                "ttft_ms": 246
+              }
+            ]
+          }
+        },
+        "llama.cpp CPU 4t": {
+          "prefill_tps": [
+            220.7,
+            224.3,
+            221.8,
+            226.2,
+            229.4
+          ],
+          "tps": [
+            59.0,
+            59.2,
+            59.4,
+            57.4,
+            54.4
+          ],
+          "build": "5e18eb021",
+          "raw": [
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 0,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 32,
+              "n_gen": 0,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:13:25Z",
+              "avg_ns": 142578241,
+              "stddev_ns": 2210864,
+              "avg_ts": 224.48154,
+              "stddev_ts": 3.496248,
+              "samples_ns": [
+                144989750,
+                142639542,
+                144298875,
+                141476166,
+                139486875
+              ],
+              "samples_ts": [
+                220.705,
+                224.342,
+                221.762,
+                226.187,
+                229.412
+              ]
+            },
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 0,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 0,
+              "n_gen": 128,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:13:26Z",
+              "avg_ns": 2214064199,
+              "stddev_ns": 83886171,
+              "avg_ts": 57.876309,
+              "stddev_ts": 2.114385,
+              "samples_ns": [
+                2170433583,
+                2161179125,
+                2155325875,
+                2228663500,
+                2354718916
+              ],
+              "samples_ts": [
+                58.9744,
+                59.2269,
+                59.3878,
+                57.4335,
+                54.3589
+              ]
+            }
+          ]
+        },
+        "mlx-lm (MLX 4-bit, context)": {
+          "tps": [
+            84.926,
+            76.576,
+            74.181,
+            86.142,
+            82.442
+          ],
+          "peak_gb": [
+            1.012,
+            1.012,
+            1.012,
+            1.012,
+            1.012
+          ]
+        }
+      }
+    },
+    {
+      "round": 2,
+      "background_before": [
+        "97.3 /usr/libexec/spotlightknowledged.updater",
+        "28.1 /Applications/Xcode.app/Contents/SharedFrameworks/DVTITunesSoftware.framework/Versions/A/XPCServices/com.apple.dt.Xcode.ITunesSoftwareService.xpc/Contents/MacOS/com.apple.dt.Xcode.ITunesSoftwareService",
+        "25.2 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer"
+      ],
+      "engines": {
+        "Sapient Metal": {
+          "tps": [
+            60.6,
+            56.2,
+            62.0,
+            63.0,
+            62.3
+          ],
+          "ttft_ms": [
+            65,
+            72,
+            66,
+            65,
+            65
+          ],
+          "peak_rss_mb": 2247,
+          "load_ms": 4356,
+          "raw": {
+            "backend": "metal",
+            "load_time_ms": 4356,
+            "max_tokens": 128,
+            "method": "greedy; tps = decode-only (tokens \u2212 1) / (t_last_token \u2212 t_first_token); ttft_ms = prompt prefill + first token; warm-up runs excluded from means; peak_rss_mb = getrusage ru_maxrss (process high-water mark)",
+            "mmap": false,
+            "model": "qwen2.5-1.5b-q4",
+            "prompt": "Explain in detail how a bicycle stays upright when it is moving.",
+            "prompt_tokens": 22,
+            "runs": [
+              {
+                "e2e_tps": 59.3,
+                "elapsed_ms": 2159,
+                "hit_eos": false,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 60.6,
+                "ttft_ms": 65
+              },
+              {
+                "e2e_tps": 54.9,
+                "elapsed_ms": 2331,
+                "hit_eos": false,
+                "run": 2,
+                "total_tokens": 128,
+                "tps": 56.2,
+                "ttft_ms": 72
+              },
+              {
+                "e2e_tps": 60.5,
+                "elapsed_ms": 2114,
+                "hit_eos": false,
+                "run": 3,
+                "total_tokens": 128,
+                "tps": 62.0,
+                "ttft_ms": 66
+              },
+              {
+                "e2e_tps": 61.5,
+                "elapsed_ms": 2081,
+                "hit_eos": false,
+                "run": 4,
+                "total_tokens": 128,
+                "tps": 63.0,
+                "ttft_ms": 65
+              },
+              {
+                "e2e_tps": 60.9,
+                "elapsed_ms": 2102,
+                "hit_eos": false,
+                "run": 5,
+                "total_tokens": 128,
+                "tps": 62.3,
+                "ttft_ms": 65
+              }
+            ],
+            "sapient_version": "0.6.9",
+            "summary": {
+              "decode_tps": 60.8,
+              "mean_tps": 60.8,
+              "mean_ttft_ms": 66,
+              "peak_rss_mb": 2247
+            },
+            "threads": 8,
+            "warmup": [
+              {
+                "elapsed_ms": 2174,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 63.6,
+                "ttft_ms": 176
+              }
+            ]
+          }
+        },
+        "llama.cpp Metal": {
+          "prefill_tps": [
+            602.5,
+            601.8,
+            600.8,
+            604.4,
+            589.0
+          ],
+          "tps": [
+            68.5,
+            68.7,
+            68.3,
+            68.4,
+            68.5
+          ],
+          "build": "5e18eb021",
+          "raw": [
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 99,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 32,
+              "n_gen": 0,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:18:30Z",
+              "avg_ns": 53362325,
+              "stddev_ns": 550771,
+              "avg_ts": 599.724514,
+              "stddev_ts": 6.115169,
+              "samples_ns": [
+                53108083,
+                53172458,
+                53263167,
+                52942834,
+                54325083
+              ],
+              "samples_ts": [
+                602.545,
+                601.815,
+                600.79,
+                604.426,
+                589.046
+              ]
+            },
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 99,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 0,
+              "n_gen": 128,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:18:30Z",
+              "avg_ns": 1868860783,
+              "stddev_ns": 3614930,
+              "avg_ts": 68.491128,
+              "stddev_ts": 0.132536,
+              "samples_ns": [
+                1868127916,
+                1863750958,
+                1873176541,
+                1871331875,
+                1867916625
+              ],
+              "samples_ts": [
+                68.5178,
+                68.6787,
+                68.3331,
+                68.4005,
+                68.5255
+              ]
+            }
+          ]
+        },
+        "Sapient CPU": {
+          "tps": [
+            44.2,
+            44.5,
+            43.7,
+            44.2,
+            43.6
+          ],
+          "ttft_ms": [
+            240,
+            313,
+            255,
+            256,
+            262
+          ],
+          "peak_rss_mb": 1549,
+          "load_ms": 778,
+          "raw": {
+            "backend": "cpu",
+            "load_time_ms": 778,
+            "max_tokens": 128,
+            "method": "greedy; tps = decode-only (tokens \u2212 1) / (t_last_token \u2212 t_first_token); ttft_ms = prompt prefill + first token; warm-up runs excluded from means; peak_rss_mb = getrusage ru_maxrss (process high-water mark)",
+            "mmap": false,
+            "model": "qwen2.5-1.5b-q4",
+            "prompt": "Explain in detail how a bicycle stays upright when it is moving.",
+            "prompt_tokens": 22,
+            "runs": [
+              {
+                "e2e_tps": 41.1,
+                "elapsed_ms": 3112,
+                "hit_eos": false,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 44.2,
+                "ttft_ms": 240
+              },
+              {
+                "e2e_tps": 40.4,
+                "elapsed_ms": 3166,
+                "hit_eos": false,
+                "run": 2,
+                "total_tokens": 128,
+                "tps": 44.5,
+                "ttft_ms": 313
+              },
+              {
+                "e2e_tps": 40.5,
+                "elapsed_ms": 3160,
+                "hit_eos": false,
+                "run": 3,
+                "total_tokens": 128,
+                "tps": 43.7,
+                "ttft_ms": 255
+              },
+              {
+                "e2e_tps": 40.9,
+                "elapsed_ms": 3129,
+                "hit_eos": false,
+                "run": 4,
+                "total_tokens": 128,
+                "tps": 44.2,
+                "ttft_ms": 256
+              },
+              {
+                "e2e_tps": 40.4,
+                "elapsed_ms": 3172,
+                "hit_eos": false,
+                "run": 5,
+                "total_tokens": 128,
+                "tps": 43.6,
+                "ttft_ms": 262
+              }
+            ],
+            "sapient_version": "0.6.9",
+            "summary": {
+              "decode_tps": 44.1,
+              "mean_tps": 44.1,
+              "mean_ttft_ms": 265,
+              "peak_rss_mb": 1549
+            },
+            "threads": 8,
+            "warmup": [
+              {
+                "elapsed_ms": 3091,
+                "run": 1,
+                "total_tokens": 128,
+                "tps": 44.5,
+                "ttft_ms": 239
+              }
+            ]
+          }
+        },
+        "llama.cpp CPU 4t": {
+          "prefill_tps": [
+            250.2,
+            250.3,
+            250.6,
+            249.7,
+            248.9
+          ],
+          "tps": [
+            58.8,
+            57.5,
+            53.2,
+            55.0,
+            53.0
+          ],
+          "build": "5e18eb021",
+          "raw": [
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 0,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 32,
+              "n_gen": 0,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:19:10Z",
+              "avg_ns": 128035266,
+              "stddev_ns": 339088,
+              "avg_ts": 249.932538,
+              "stddev_ts": 0.66037,
+              "samples_ns": [
+                127881333,
+                127862250,
+                127704958,
+                128163041,
+                128564750
+              ],
+              "samples_ts": [
+                250.232,
+                250.269,
+                250.578,
+                249.682,
+                248.902
+              ]
+            },
+            {
+              "build_commit": "5e18eb021",
+              "build_number": 12047,
+              "cpu_info": "Accelerate, Apple M2",
+              "gpu_info": "Apple M2",
+              "backends": "MTL,BLAS",
+              "model_filename": "/Users/nalinishranjan/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "model_type": "qwen2 1.5B Q4_K - Medium",
+              "model_size": 1111370240,
+              "model_n_params": 1777088000,
+              "n_batch": 2048,
+              "n_ubatch": 512,
+              "n_threads": 4,
+              "cpu_mask": "0x0",
+              "cpu_strict": false,
+              "poll": 50,
+              "type_k": "f16",
+              "type_v": "f16",
+              "n_gpu_layers": 0,
+              "n_cpu_moe": 0,
+              "split_mode": "layer",
+              "main_gpu": 0,
+              "no_kv_offload": false,
+              "flash_attn": -1,
+              "devices": "auto",
+              "tensor_split": "0.00",
+              "tensor_buft_overrides": "none",
+              "load_mode": "auto",
+              "lazy_mode": "auto",
+              "embeddings": false,
+              "no_op_offload": 0,
+              "no_host": false,
+              "repack": true,
+              "fit_target": 0,
+              "fit_min_ctx": 0,
+              "n_prompt": 0,
+              "n_gen": 128,
+              "n_depth": 0,
+              "test_time": "2026-11-02T16:19:11Z",
+              "avg_ns": 2310212500,
+              "stddev_ns": 107298908,
+              "avg_ts": 55.502899,
+              "stddev_ts": 2.604385,
+              "samples_ns": [
+                2175703209,
+                2224930667,
+                2407252583,
+                2328368833,
+                2414807208
+              ],
+              "samples_ts": [
+                58.8316,
+                57.5299,
+                53.1727,
+                54.9741,
+                53.0063
+              ]
+            }
+          ]
+        },
+        "mlx-lm (MLX 4-bit, context)": {
+          "tps": [
+            85.036,
+            82.168,
+            85.427,
+            84.075,
+            85.386
+          ],
+          "peak_gb": [
+            1.012,
+            1.012,
+            1.012,
+            1.012,
+            1.012
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "Sapient Metal": {
+      "decode_tps_median": 64.0,
+      "decode_tps_min": 56.2,
+      "decode_tps_max": 67.3,
+      "ttft_ms_median": 65.0,
+      "peak_rss_mb": 2432,
+      "samples": 10
+    },
+    "llama.cpp Metal": {
+      "decode_tps_median": 68.4,
+      "decode_tps_min": 68.3,
+      "decode_tps_max": 68.7,
+      "ttft_ms_median": null,
+      "peak_rss_mb": null,
+      "samples": 10
+    },
+    "Sapient CPU": {
+      "decode_tps_median": 44.0,
+      "decode_tps_min": 40.0,
+      "decode_tps_max": 44.8,
+      "ttft_ms_median": 256.0,
+      "peak_rss_mb": 1557,
+      "samples": 10
+    },
+    "llama.cpp CPU 4t": {
+      "decode_tps_median": 57.5,
+      "decode_tps_min": 53.0,
+      "decode_tps_max": 59.4,
+      "ttft_ms_median": null,
+      "peak_rss_mb": null,
+      "samples": 10
+    },
+    "mlx-lm (MLX 4-bit, context)": {
+      "decode_tps_median": 84.5,
+      "decode_tps_min": 74.181,
+      "decode_tps_max": 86.142,
+      "ttft_ms_median": null,
+      "peak_rss_mb": null,
+      "samples": 10
+    }
+  }
+}
